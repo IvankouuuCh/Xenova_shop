@@ -1,0 +1,24 @@
+{
+    "name": "xenova-frontend",
+    "private": true,
+    "version": "1.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build"
+    },
+    "devDependencies": {
+        "@tailwindcss/postcss": "^4.3.4",
+        "autoprefixer": "^10.6.2",
+        "postcss": "^8.5.32",
+        "tailwindcss": "^4.3.4",
+        "vite": "^8.3.6"
+    },
+    "dependencies": {
+        "alpinejs": "^3.17.5",
+        "gsap": "^3.15.1",
+        "notyf": "^3.10.0",
+        "photoswipe": "^5.4.4",
+        "swiper": "^14.4.0"
+    }
+}

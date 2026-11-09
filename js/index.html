@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html lang="sk" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warhammer 40,000 | Miniatúry & Armády | Warhammer E-Shop Slovensko</title>
+
+    <!-- Meta SEO Tags (Pre-launch Strategy Compliant) -->
+    <meta name="description"
+        content="Najväčší výber Warhammer 40,000 miniatúr, armád, Citadel farieb a náradia na Slovensku. Rýchle doručenie, oficiálny predajca Games Workshop.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        whDark: '#0b0d10',
+                        whCard: '#14171d',
+                        whCardHover: '#1c2029',
+                        whBorder: '#262b36',
+                        whRed: '#dc2626',
+                        whRedHover: '#ef4444',
+                        whGold: '#d97706',
+                        whGoldLight: '#f59e0b',
+                        whMuted: '#9ca3af',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        gothic: ['Cinzel', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Notyf CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css" />
+    <!-- PhotoSwipe CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.2/photoswipe.min.css" />
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <style>
+        /* Custom Gothic Touches & Range Slider Styling */
+        body {
+            background-color: #0b0d10;
+            color: #e5e7eb;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .font-gothic {
+            font-family: 'Cinzel', serif;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #0b0d10;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #262b36;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #dc2626;
+        }
+
+        /* Range Slider Custom Styling */
+        input[type=range] {
+            appearance: none;
+            -webkit-appearance: none;
+            width: 100%;
+            background: transparent;
+        }
+
+        input[type=range]:focus {
+            outline: none;
+        }
+
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 18px;
+            width: 18px;
+            border-radius: 50%;
+            background: #dc2626;
+            cursor: pointer;
+            border: 2px solid #ffffff;
+            box-shadow: 0 0 10px rgba(220, 38, 38, 0.5);
+            margin-top: -6px;
+        }
+
+        input[type=range]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 6px;
+            cursor: pointer;
+            background: #262b36;
+            border-radius: 3px;
+        }
+
+        /* Red Accent Glows */
+        .glow-red-sm {
+            box-shadow: 0 0 15px rgba(220, 38, 38, 0.25);
+        }
+
+        .glow-red-hover:hover {
+            box-shadow: 0 0 20px rgba(220, 38, 38, 0.4);
+        }
+
+        /* Subcategory Swiper Navigation override */
+        .subcat-swiper .swiper-slide {
+            width: auto !important;
+        }
+
+        /* Notyf Custom Styling overrides */
+        .notyf__toast {
+            border-radius: 6px;
+            font-family: 'Inter', sans-serif;
+            border: 1px solid rgba(220, 38, 38, 0.3);
+        }
+    </style>
+</head>
+
+<body x-data="storeApp()" x-init="initApp()"
+    class="min-h-screen flex flex-col justify-between antialiased selection:bg-whRed selection:text-white">
+
+    <!-- TOP ANNOUNCEMENT / UTILITY BAR -->
+    <div
+        class="bg-black/90 border-b border-whBorder text-xs text-whMuted py-2 px-4 sm:px-8 flex justify-between items-center flex-wrap gap-2">
+        <div class="flex items-center space-x-6 overflow-x-auto whitespace-nowrap py-0.5">
+            <span class="flex items-center text-gray-300">
+                <i class="fa-solid fa-truck-fast text-whRed mr-2"></i>
+                <span>Doprava <strong>ZDARMA</strong> nad 70€</span>
+            </span>
+            <span class="hidden md:flex items-center">
+                <i class="fa-solid fa-clock text-whRed mr-2"></i>
+                <span>Rýchle doručenie 1-2 pracovné dni</span>
+            </span>
+            <span class="hidden lg:flex items-center text-whGold">
+                <i class="fa-solid fa-shield-halved mr-2"></i>
+                <span>Oficiálny predajca Games Workshop</span>
+            </span>
+        </div>
+
+        <div class="flex items-center space-x-4 ml-auto">
+            <a href="#" class="hover:text-white transition flex items-center gap-1">
+                <i class="fa-solid fa-headset text-whRed"></i>
+                <span class="hidden sm:inline">Kontakt</span>
+            </a>
+            <span class="text-whBorder">|</span>
+            <a href="#" class="hover:text-white transition flex items-center gap-1">
+                <i class="fa-solid fa-box text-whRed"></i>
+                <span class="hidden sm:inline">Sledovať objednávku</span>
+            </a>
+            <span class="text-whBorder">|</span>
+            <!-- Language Selector -->
+            <div class="flex items-center space-x-1 cursor-pointer font-semibold text-gray-200">
+                <span>SK</span>
+                <i class="fa-solid fa-chevron-down text-[10px]"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN NAVIGATION HEADER -->
+    <header class="bg-whDark/95 sticky top-0 z-40 border-b border-whBorder backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex items-center justify-between gap-4">
+
+            <!-- Mobile Menu Trigger -->
+            <button @click="mobileMenuOpen = true" class="lg:hidden text-gray-300 hover:text-white p-2">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div
+                    class="w-10 h-10 rounded bg-whRed/10 border border-whRed/40 flex items-center justify-between p-1 group-hover:border-whRed transition">
+                    <svg viewBox="0 0 24 24" class="w-full h-full fill-current text-whRed"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                    </svg>
+                </div>
+                <div>
+                    <span
+                        class="font-gothic text-lg sm:text-xl font-black tracking-widest text-white block leading-none">WARHAMMER</span>
+                    <span class="text-[10px] tracking-widest uppercase text-whRed font-bold block mt-1">ESHOP
+                        SLOVENSKO</span>
+                </div>
+            </a>
+
+            <!-- Search Bar -->
+            <div class="hidden md:flex flex-1 max-w-lg mx-4 relative">
+                <input type="text" x-model="searchQuery" placeholder="Hľadať produkty, frakcie, farby..."
+                    class="w-full bg-whCard border border-whBorder rounded-lg py-2 pl-4 pr-10 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-whRed transition">
+                <button class="absolute right-3 top-2.5 text-gray-400 hover:text-whRed transition">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+
+            <!-- Header Action Icons -->
+            <div class="flex items-center space-x-3 sm:space-x-5">
+                <a href="#"
+                    class="hidden sm:flex items-center space-x-2 text-sm text-gray-300 hover:text-white transition">
+                    <i class="fa-regular fa-user text-lg text-whRed"></i>
+                    <span>Prihlásiť sa</span>
+                </a>
+
+                <a href="#" class="relative p-2 text-gray-300 hover:text-white transition">
+                    <i class="fa-regular fa-heart text-xl"></i>
+                    <span x-show="wishlistCount > 0" x-text="wishlistCount"
+                        class="absolute top-0 right-0 bg-whRed text-white text-[10px] font-bold rounded-full w-4 h-4 flex items-center justify-center"></span>
+                </a>
+
+                <!-- Cart Icon & Drawer Trigger -->
+                <button @click="cartDrawerOpen = true"
+                    class="relative bg-whRed hover:bg-whRedHover text-white px-3.5 py-2 rounded-lg flex items-center gap-2.5 transition glow-red-sm">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="font-semibold text-sm hidden sm:inline">Košík</span>
+                    <span x-text="cartCount"
+                        class="bg-white/20 text-white text-xs px-2 py-0.5 rounded-full font-bold"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- CATEGORIES NAV BAR -->
+        <nav class="hidden lg:block bg-black/60 border-t border-whBorder">
+            <div
+                class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center space-x-1 text-xs font-bold uppercase tracking-wider overflow-x-auto">
+                <a href="#" class="py-3 px-4 bg-whRed text-white flex items-center gap-1.5 font-gothic tracking-widest">
+                    <span>WARHAMMER 40,000</span>
+                    <i class="fa-solid fa-chevron-down text-[10px]"></i>
+                </a>
+                <a href="#"
+                    class="py-3 px-4 text-gray-300 hover:text-whRed hover:bg-whCard transition flex items-center gap-1.5">
+                    <span>AGE OF SIGMAR</span>
+                    <i class="fa-solid fa-chevron-down text-[10px]"></i>
+                </a>
+                <a href="#" class="py-3 px-4 text-gray-300 hover:text-whRed hover:bg-whCard transition">FARBY &
+                    NÁSTROJE</a>
+                <a href="#" class="py-3 px-4 text-gray-300 hover:text-whRed hover:bg-whCard transition">KILL TEAM</a>
+                <a href="#" class="py-3 px-4 text-whRed hover:bg-whCard transition flex items-center gap-1">
+                    <i class="fa-solid fa-fire text-whRed"></i>
+                    <span>AKCIE</span>
+                </a>
+                <a href="#"
+                    class="py-3 px-4 text-gray-300 hover:text-whRed hover:bg-whCard transition">PRÍSLUŠENSTVO</a>
+                <a href="#" class="py-3 px-4 text-gray-300 hover:text-whRed hover:bg-whCard transition">MERCH</a>
+                <a href="#" class="py-3 px-4 text-gray-300 hover:text-whRed hover:bg-whCard transition">BLOG</a>
+                <a href="#" class="py-3 px-4 text-whGold hover:bg-whCard transition font-gothic">PRE ZAČIATOČNÍKOV</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- MAIN CONTAINER -->
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6">
+
+        <!-- BREADCRUMBS -->
+        <nav class="flex text-xs text-whMuted space-x-2" aria-label="Breadcrumb">
+            <a href="#" class="hover:text-whRed transition">Domov</a>
+            <span>/</span>
+            <span class="text-gray-300 font-medium">Warhammer 40,000</span>
+        </nav>
+
+        <!-- HERO CATEGORY BANNER -->
+        <section
+            class="relative rounded-2xl overflow-hidden bg-gradient-to-r from-whCard via-[#191d26] to-[#0d0f12] border border-whBorder p-6 sm:p-10 flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl">
+            <!-- Atmospheric Background Overlay -->
+            <div
+                class="absolute inset-0 opacity-20 bg-[radial-gradient(#dc2626_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none">
+            </div>
+
+            <div class="relative z-10 max-w-2xl space-y-3">
+                <div
+                    class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-whRed/10 border border-whRed/30 text-whRed text-xs font-semibold uppercase tracking-wider">
+                    <i class="fa-solid fa-skull"></i>
+                    <span>Oficiálna Kolekcia 2026</span>
+                </div>
+                <h1
+                    class="text-3xl sm:text-5xl font-black font-gothic tracking-wider text-white uppercase leading-tight">
+                    WARHAMMER 40,000
+                </h1>
+                <p class="text-gray-400 text-sm sm:text-base leading-relaxed">
+                    V temnej budúcnosti niet mieru. Iba vojna. Preskúmajte univerzum Warhammer 40,000 a veďte svoju
+                    armádu ku sláve v mene Cisára!
+                </p>
+                <div class="pt-2 flex items-center space-x-4">
+                    <a href="#products-grid"
+                        class="bg-whRed hover:bg-whRedHover text-white px-6 py-2.5 rounded-lg text-sm font-bold uppercase tracking-wider transition glow-red-sm inline-flex items-center gap-2">
+                        <span>Prezrieť armády</span>
+                        <i class="fa-solid fa-arrow-down text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Space Marine Visual Graphic Element -->
+            <div class="relative z-10 w-full md:w-auto flex justify-center">
+                <div
+                    class="relative w-48 h-48 sm:w-60 sm:h-60 rounded-full bg-gradient-to-tr from-whRed/20 to-whGold/10 flex items-center justify-center border border-whRed/30 shadow-2xl">
+                    <img src="https://placehold.co/400x400/14171d/dc2626?text=SPACE+MARINE" alt="Space Marine Hero"
+                        class="w-44 h-44 sm:w-56 sm:h-56 object-contain rounded-full drop-shadow-[0_10px_20px_rgba(220,38,38,0.4)]">
+                </div>
+            </div>
+        </section>
+
+        <!-- TRUST ADVANTAGES STRIP -->
+        <section class="grid grid-cols-2 md:grid-cols-5 gap-3 py-2 text-xs">
+            <div class="bg-whCard/70 border border-whBorder rounded-xl p-3 flex items-center space-x-3">
+                <i class="fa-solid fa-certificate text-whRed text-xl"></i>
+                <div>
+                    <strong class="block text-white font-semibold">Oficiálne produkty</strong>
+                    <span class="text-whMuted text-[11px]">Games Workshop</span>
+                </div>
+            </div>
+            <div class="bg-whCard/70 border border-whBorder rounded-xl p-3 flex items-center space-x-3">
+                <i class="fa-solid fa-boxes-packing text-whRed text-xl"></i>
+                <div>
+                    <strong class="block text-white font-semibold">Široký výber</strong>
+                    <span class="text-whMuted text-[11px]">40K frakcie</span>
+                </div>
+            </div>
+            <div class="bg-whCard/70 border border-whBorder rounded-xl p-3 flex items-center space-x-3">
+                <i class="fa-solid fa-truck-ramp-box text-whRed text-xl"></i>
+                <div>
+                    <strong class="block text-white font-semibold">Rýchle doručenie</strong>
+                    <span class="text-whMuted text-[11px]">1-2 pracovné dni</span>
+                </div>
+            </div>
+            <div class="bg-whCard/70 border border-whBorder rounded-xl p-3 flex items-center space-x-3">
+                <i class="fa-solid fa-gift text-whRed text-xl"></i>
+                <div>
+                    <strong class="block text-white font-semibold">Doprava zdarma</strong>
+                    <span class="text-whMuted text-[11px]">nad 70 €</span>
+                </div>
+            </div>
+            <div
+                class="col-span-2 md:col-span-1 bg-whCard/70 border border-whBorder rounded-xl p-3 flex items-center space-x-3">
+                <i class="fa-solid fa-coins text-whGold text-xl"></i>
+                <div>
+                    <strong class="block text-white font-semibold">Vernostný program</strong>
+                    <span class="text-whMuted text-[11px]">Zbieraj body a šetri</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- HORIZONTAL SUBCATEGORY CAROUSEL (SWIPER JS) -->
+        <section class="space-y-3">
+            <div class="flex justify-between items-center">
+                <h2 class="text-sm font-bold uppercase tracking-wider text-gray-300">Подкатегории Фракций</h2>
+                <div class="flex space-x-2">
+                    <button
+                        class="subcat-prev w-7 h-7 rounded bg-whCard border border-whBorder flex items-center justify-center text-xs text-gray-400 hover:text-white hover:border-whRed transition">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button
+                        class="subcat-next w-7 h-7 rounded bg-whCard border border-whBorder flex items-center justify-center text-xs text-gray-400 hover:text-white hover:border-whRed transition">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Swiper Slider -->
+            <div class="swiper subcat-swiper">
+                <div class="swiper-wrapper">
+                    <!-- Category Item: All -->
+                    <div class="swiper-slide">
+                        <button @click="selectedSubcat = 'all'"
+                            :class="selectedSubcat === 'all' ? 'border-whRed bg-whRed/20 text-white' : 'border-whBorder bg-whCard text-gray-400 hover:border-gray-600'"
+                            class="px-4 py-2.5 rounded-xl border flex items-center space-x-3 transition">
+                            <div
+                                class="w-8 h-8 rounded-lg bg-whRed/20 flex items-center justify-center text-whRed font-bold text-xs">
+                                26</div>
+                            <div class="text-left">
+                                <span class="block text-xs font-bold leading-tight">VŠETKY PRODUKTY</span>
+                                <span class="text-[10px] opacity-70">26 produktov</span>
+                            </div>
+                        </button>
+                    </div>
+
+                    <!-- Category Item: Space Marines -->
+                    <div class="swiper-slide">
+                        <button @click="selectedSubcat = 'Space Marines'"
+                            :class="selectedSubcat === 'Space Marines' ? 'border-whRed bg-whRed/20 text-white' : 'border-whBorder bg-whCard text-gray-400 hover:border-gray-600'"
+                            class="px-4 py-2.5 rounded-xl border flex items-center space-x-3 transition">
+                            <img src="https://placehold.co/80x80/1a1d24/dc2626?text=SM"
+                                class="w-8 h-8 rounded-lg object-cover">
+                            <div class="text-left">
+                                <span class="block text-xs font-bold leading-tight">SPACE MARINES</span>
+                                <span class="text-[10px] opacity-70">5 produktov</span>
+                            </div>
+                        </button>
+                    </div>
+
+                    <!-- Category Item: Astra Militarum -->
+                    <div class="swiper-slide">
+                        <button @click="selectedSubcat = 'Astra Militarum'"
+                            :class="selectedSubcat === 'Astra Militarum' ? 'border-whRed bg-whRed/20 text-white' : 'border-whBorder bg-whCard text-gray-400 hover:border-gray-600'"
+                            class="px-4 py-2.5 rounded-xl border flex items-center space-x-3 transition">
+                            <img src="https://placehold.co/80x80/1a1d24/3b82f6?text=AM"
+                                class="w-8 h-8 rounded-lg object-cover">
+                            <div class="text-left">
+                                <span class="block text-xs font-bold leading-tight">ASTRA MILITARUM</span>
+                                <span class="text-[10px] opacity-70">3 produkty</span>
+                            </div>
+                        </button>
+                    </div>
+
+                    <!-- Category Item: Necrons -->
+                    <div class="swiper-slide">
+                        <button @click="selectedSubcat = 'Necrons'"
+                            :class="selectedSubcat === 'Necrons' ? 'border-whRed bg-whRed/20 text-white' : 'border-whBorder bg-whCard text-gray-400 hover:border-gray-600'"
+                            class="px-4 py-2.5 rounded-xl border flex items-center space-x-3 transition">
+                            <img src="https://placehold.co/80x80/1a1d24/22c55e?text=NEC"
+                                class="w-8 h-8 rounded-lg object-cover">
+                            <div class="text-left">
+                                <span class="block text-xs font-bold leading-tight">NECRONS</span>
+                                <span class="text-[10px] opacity-70">2 produkty</span>
+                            </div>
+                        </button>
+                    </div>
+
+                    <!-- Category Item: Chaos -->
+                    <div class="swiper-slide">
+                        <button @click="selectedSubcat = 'Chaos'"
+                            :class="selectedSubcat === 'Chaos' ? 'border-whRed bg-whRed/20 text-white' : 'border-whBorder bg-whCard text-gray-400 hover:border-gray-600'"
+                            class="px-4 py-2.5 rounded-xl border flex items-center space-x-3 transition">
+                            <img src="https://placehold.co/80x80/1a1d24/eab308?text=CHS"
+                                class="w-8 h-8 rounded-lg object-cover">
+                            <div class="text-left">
+                                <span class="block text-xs font-bold leading-tight">CHAOS</span>
+                                <span class="text-[10px] opacity-70">5 produktov</span>
+                            </div>
+                        </button>
+                    </div>
+
+                    <!-- Category Item: Xenos -->
+                    <div class="swiper-slide">
+                        <button @click="selectedSubcat = 'Xenos'"
+                            :class="selectedSubcat === 'Xenos' ? 'border-whRed bg-whRed/20 text-white' : 'border-whBorder bg-whCard text-gray-400 hover:border-gray-600'"
+                            class="px-4 py-2.5 rounded-xl border flex items-center space-x-3 transition">
+                            <img src="https://placehold.co/80x80/1a1d24/a855f7?text=XEN"
+                                class="w-8 h-8 rounded-lg object-cover">
+                            <div class="text-left">
+                                <span class="block text-xs font-bold leading-tight">XENOS</span>
+                                <span class="text-[10px] opacity-70">4 produkty</span>
+                            </div>
+                        </button>
+                    </div>
+
+                    <!-- Category Item: Imperium -->
+                    <div class="swiper-slide">
+                        <button @click="selectedSubcat = 'Imperium'"
+                            :class="selectedSubcat === 'Imperium' ? 'border-whRed bg-whRed/20 text-white' : 'border-whBorder bg-whCard text-gray-400 hover:border-gray-600'"
+                            class="px-4 py-2.5 rounded-xl border flex items-center space-x-3 transition">
+                            <img src="https://placehold.co/80x80/1a1d24/ec4899?text=IMP"
+                                class="w-8 h-8 rounded-lg object-cover">
+                            <div class="text-left">
+                                <span class="block text-xs font-bold leading-tight">IMPERIUM</span>
+                                <span class="text-[10px] opacity-70">4 produkty</span>
+                            </div>
+                        </button>
+                    </div>
+
+                    <!-- Category Item: Starter Sets -->
+                    <div class="swiper-slide">
+                        <button @click="selectedSubcat = 'Starter Sets'"
+                            :class="selectedSubcat === 'Starter Sets' ? 'border-whRed bg-whRed/20 text-white' : 'border-whBorder bg-whCard text-gray-400 hover:border-gray-600'"
+                            class="px-4 py-2.5 rounded-xl border flex items-center space-x-3 transition">
+                            <img src="https://placehold.co/80x80/1a1d24/14b8a6?text=SET"
+                                class="w-8 h-8 rounded-lg object-cover">
+                            <div class="text-left">
+                                <span class="block text-xs font-bold leading-tight">STARTER SETS</span>
+                                <span class="text-[10px] opacity-70">3 produkty</span>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MAIN LAYOUT: SIDEBAR FILTERS + PRODUCT GRID -->
+        <div id="products-grid" class="grid grid-cols-1 lg:grid-cols-4 gap-6 pt-4">
+
+            <!-- LEFT SIDEBAR FILTERS -->
+            <aside class="space-y-6">
+                <!-- Mobile Filter Toggle Button -->
+                <button @click="filtersMobileOpen = !filtersMobileOpen"
+                    class="lg:hidden w-full bg-whCard border border-whBorder p-3 rounded-xl flex justify-between items-center text-sm font-bold text-white">
+                    <span class="flex items-center gap-2">
+                        <i class="fa-solid fa-sliders text-whRed"></i>
+                        <span>Filtre a Kategórie</span>
+                    </span>
+                    <i class="fa-solid fa-chevron-down text-xs transition"
+                        :class="filtersMobileOpen ? 'rotate-180' : ''"></i>
+                </button>
+
+                <!-- Filters Container (Desktop + Mobile accordion) -->
+                <div :class="filtersMobileOpen ? 'block' : 'hidden lg:block'" class="space-y-6">
+
+                    <!-- Categories Block -->
+                    <div class="bg-whCard border border-whBorder rounded-xl p-4 space-y-3">
+                        <div class="flex justify-between items-center border-b border-whBorder pb-2">
+                            <h3 class="text-xs font-bold uppercase tracking-wider text-gray-200">Kategórie</h3>
+                            <button @click="selectedSubcat = 'all'"
+                                class="text-[11px] text-whRed hover:underline">Zrušiť выбор</button>
+                        </div>
+                        <ul class="space-y-1.5 text-xs">
+                            <li class="flex justify-between items-center py-1">
+                                <button @click="selectedSubcat = 'all'" class="hover:text-whRed transition"
+                                    :class="selectedSubcat === 'all' ? 'text-whRed font-bold' : 'text-gray-300'">Všetky
+                                    produkty</button>
+                                <span class="bg-black/50 text-whMuted px-2 py-0.5 rounded-full text-[10px]">26</span>
+                            </li>
+                            <li class="flex justify-between items-center py-1">
+                                <button @click="selectedSubcat = 'Space Marines'" class="hover:text-whRed transition"
+                                    :class="selectedSubcat === 'Space Marines' ? 'text-whRed font-bold' : 'text-gray-400'">Space
+                                    Marines</button>
+                                <span class="bg-black/50 text-whMuted px-2 py-0.5 rounded-full text-[10px]">5</span>
+                            </li>
+                            <li class="flex justify-between items-center py-1">
+                                <button @click="selectedSubcat = 'Astra Militarum'" class="hover:text-whRed transition"
+                                    :class="selectedSubcat === 'Astra Militarum' ? 'text-whRed font-bold' : 'text-gray-400'">Astra
+                                    Militarum</button>
+                                <span class="bg-black/50 text-whMuted px-2 py-0.5 rounded-full text-[10px]">3</span>
+                            </li>
+                            <li class="flex justify-between items-center py-1">
+                                <button @click="selectedSubcat = 'Necrons'" class="hover:text-whRed transition"
+                                    :class="selectedSubcat === 'Necrons' ? 'text-whRed font-bold' : 'text-gray-400'">Necrons</button>
+                                <span class="bg-black/50 text-whMuted px-2 py-0.5 rounded-full text-[10px]">2</span>
+                            </li>
+                            <li class="flex justify-between items-center py-1">
+                                <button @click="selectedSubcat = 'Chaos'" class="hover:text-whRed transition"
+                                    :class="selectedSubcat === 'Chaos' ? 'text-whRed font-bold' : 'text-gray-400'">Chaos</button>
+                                <span class="bg-black/50 text-whMuted px-2 py-0.5 rounded-full text-[10px]">5</span>
+                            </li>
+                            <li class="flex justify-between items-center py-1">
+                                <button @click="selectedSubcat = 'Xenos'" class="hover:text-whRed transition"
+                                    :class="selectedSubcat === 'Xenos' ? 'text-whRed font-bold' : 'text-gray-400'">Xenos</button>
+                                <span class="bg-black/50 text-whMuted px-2 py-0.5 rounded-full text-[10px]">4</span>
+                            </li>
+                            <li class="flex justify-between items-center py-1">
+                                <button @click="selectedSubcat = 'Imperium'" class="hover:text-whRed transition"
+                                    :class="selectedSubcat === 'Imperium' ? 'text-whRed font-bold' : 'text-gray-400'">Imperium</button>
+                                <span class="bg-black/50 text-whMuted px-2 py-0.5 rounded-full text-[10px]">4</span>
+                            </li>
+                            <li class="flex justify-between items-center py-1">
+                                <button @click="selectedSubcat = 'Starter Sets'" class="hover:text-whRed transition"
+                                    :class="selectedSubcat === 'Starter Sets' ? 'text-whRed font-bold' : 'text-gray-400'">Starter
+                                    Sets</button>
+                                <span class="bg-black/50 text-whMuted px-2 py-0.5 rounded-full text-[10px]">3</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Filters Section -->
+                    <div class="bg-whCard border border-whBorder rounded-xl p-4 space-y-5">
+                        <div class="flex justify-between items-center border-b border-whBorder pb-2">
+                            <h3 class="text-xs font-bold uppercase tracking-wider text-gray-200">Filtre</h3>
+                            <button @click="resetFilters()" class="text-[11px] text-whRed hover:underline">Zmazať
+                                filtre</button>
+                        </div>
+
+                        <!-- Availability Filter -->
+                        <div class="space-y-2">
+                            <span class="text-xs font-semibold text-gray-300 block">Dostupnosť</span>
+                            <label class="flex items-center space-x-2 text-xs text-gray-400 cursor-pointer">
+                                <input type="checkbox" x-model="filterInStockOnly"
+                                    class="rounded bg-black border-whBorder text-whRed focus:ring-0">
+                                <span>Skladom (25)</span>
+                            </label>
+                            <label class="flex items-center space-x-2 text-xs text-gray-400 cursor-pointer">
+                                <input type="checkbox" class="rounded bg-black border-whBorder text-whRed focus:ring-0">
+                                <span>Na objednávku (1)</span>
+                            </label>
+                        </div>
+
+                        <!-- Interactive Price Range Slider -->
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center">
+                                <span class="text-xs font-semibold text-gray-300">Cena (€)</span>
+                                <span class="text-xs text-whRed font-bold" x-text="maxPrice + ' €'"></span>
+                            </div>
+
+                            <input type="range" min="20" max="250" x-model="maxPrice" step="5">
+
+                            <div class="flex items-center space-x-2 text-xs">
+                                <div
+                                    class="bg-black border border-whBorder rounded p-1.5 flex-1 text-center text-gray-300">
+                                    <span>20 €</span>
+                                </div>
+                                <span class="text-gray-500">-</span>
+                                <div
+                                    class="bg-black border border-whBorder rounded p-1.5 flex-1 text-center text-gray-300">
+                                    <span x-text="maxPrice + ' €'"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Type Filter -->
+                        <div class="space-y-2 border-t border-whBorder pt-3">
+                            <span class="text-xs font-semibold text-gray-300 block">Produktový Typ</span>
+                            <template x-for="type in ['Miniatúry', 'Vozidlá', 'Postavy', 'Príslušenstvo']">
+                                <label class="flex items-center space-x-2 text-xs text-gray-400 cursor-pointer">
+                                    <input type="checkbox"
+                                        class="rounded bg-black border-whBorder text-whRed focus:ring-0">
+                                    <span x-text="type"></span>
+                                </label>
+                            </template>
+                        </div>
+
+                        <!-- Faction Filter Checklist -->
+                        <div class="space-y-2 border-t border-whBorder pt-3">
+                            <span class="text-xs font-semibold text-gray-300 block">Frakcia</span>
+                            <div class="max-h-40 overflow-y-auto space-y-1.5 pr-1">
+                                <template
+                                    x-for="fac in ['Space Marines', 'Astra Militarum', 'Necrons', 'Chaos', 'Xenos', 'Imperium', 'Starter Sets']">
+                                    <label class="flex items-center space-x-2 text-xs text-gray-400 cursor-pointer">
+                                        <input type="checkbox" :value="fac" x-model="selectedFactions"
+                                            class="rounded bg-black border-whBorder text-whRed focus:ring-0">
+                                        <span x-text="fac"></span>
+                                    </label>
+                                </template>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </aside>
+
+            <!-- RIGHT PRODUCT GRID & CONTROL HEADER -->
+            <div class="lg:col-span-3 space-y-4">
+
+                <!-- Grid Sorting Header Controls -->
+                <div
+                    class="bg-whCard border border-whBorder rounded-xl p-3 sm:p-4 flex flex-col sm:flex-row justify-between items-center gap-3">
+                    <div class="text-xs text-gray-400">
+                        Zobrazené <strong class="text-white" x-text="filteredProducts.length"></strong> produktov z
+                        <strong class="text-white">26</strong>
+                    </div>
+
+                    <div class="flex items-center space-x-4 w-full sm:w-auto justify-end">
+                        <!-- Sort Dropdown -->
+                        <div class="flex items-center space-x-2 text-xs">
+                            <span class="text-gray-400 hidden sm:inline">Zradiť podľa:</span>
+                            <select x-model="sortBy"
+                                class="bg-black border border-whBorder rounded-lg px-3 py-1.5 text-xs text-gray-200 focus:outline-none focus:border-whRed">
+                                <option value="popular">Najpopulárnejšie</option>
+                                <option value="price-asc">Cena: Od najlacnejších</option>
+                                <option value="price-desc">Cena: Od najdrahších</option>
+                                <option value="name">Názov (A-Z)</option>
+                            </select>
+                        </div>
+
+                        <!-- Grid View Mode Switchers -->
+                        <div class="flex items-center space-x-1 border-l border-whBorder pl-3">
+                            <button @click="viewMode = 'grid'"
+                                :class="viewMode === 'grid' ? 'text-whRed' : 'text-gray-500'"
+                                class="p-1.5 hover:text-white transition">
+                                <i class="fa-solid fa-border-all text-sm"></i>
+                            </button>
+                            <button @click="viewMode = 'list'"
+                                :class="viewMode === 'list' ? 'text-whRed' : 'text-gray-500'"
+                                class="p-1.5 hover:text-white transition">
+                                <i class="fa-solid fa-list text-sm"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUCT CARDS GRID (4x3 Matching Uploaded Concept) -->
+                <div id="cards-container"
+                    :class="viewMode === 'grid' ? 'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4' : 'space-y-4'">
+
+                    <template x-for="product in filteredProducts" :key="product.id">
+                        <div
+                            class="product-card group bg-whCard border border-whBorder hover:border-whRed/60 rounded-xl p-3 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:-translate-y-1 relative">
+
+                            <!-- Heart / Wishlist Toggle -->
+                            <button @click="toggleWishlist(product.id)"
+                                class="absolute top-3 right-3 z-10 w-8 h-8 rounded-full bg-black/60 backdrop-blur-sm border border-whBorder flex items-center justify-center text-gray-400 hover:text-whRed transition">
+                                <i
+                                    :class="wishlist.includes(product.id) ? 'fa-solid fa-heart text-whRed' : 'fa-regular fa-heart'"></i>
+                            </button>
+
+                            <!-- Badge tag if any -->
+                            <template x-if="product.badge">
+                                <span
+                                    class="absolute top-3 left-3 z-10 bg-whRed text-white text-[10px] font-extrabold uppercase px-2 py-0.5 rounded glow-red-sm"
+                                    x-text="product.badge"></span>
+                            </template>
+
+                            <!-- Product Image Block + PhotoSwipe trigger -->
+                            <div class="relative overflow-hidden rounded-lg bg-black/40 mb-3 aspect-square flex items-center justify-center p-2 cursor-pointer"
+                                @click="openLightbox(product.image, product.title)">
+                                <img :src="product.image" :alt="product.title"
+                                    class="w-full h-full object-contain group-hover:scale-105 transition duration-500">
+
+                                <div
+                                    class="absolute inset-0 bg-whRed/10 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                                    <span
+                                        class="bg-black/80 text-white text-xs px-3 py-1 rounded-full border border-whRed/50">
+                                        <i class="fa-solid fa-magnifying-glass-plus mr-1 text-whRed"></i> Náhľad
+                                    </span>
+                                </div>
+                            </div>
+
+                            <!-- Product Text Metadata -->
+                            <div class="space-y-1.5 flex-grow">
+                                <span class="text-[10px] uppercase font-bold text-whMuted block tracking-wider"
+                                    x-text="product.faction"></span>
+                                <h3 class="text-xs font-bold text-white group-hover:text-whRed transition line-clamp-2 leading-snug"
+                                    x-text="product.title"></h3>
+
+                                <div class="flex items-center space-x-1">
+                                    <span class="inline-block w-2 h-2 rounded-full bg-emerald-500"></span>
+                                    <span class="text-[11px] text-emerald-400 font-medium">Skladom</span>
+                                </div>
+                            </div>
+
+                            <!-- Price & Add To Cart Button Footer -->
+                            <div class="pt-3 mt-2 border-t border-whBorder/60 flex items-center justify-between">
+                                <div>
+                                    <span class="text-base font-black text-white"
+                                        x-text="product.price.toFixed(2) + ' €'"></span>
+                                </div>
+
+                                <button @click="addToCart(product)"
+                                    class="bg-whCard border border-whBorder group-hover:border-whRed group-hover:bg-whRed text-gray-200 group-hover:text-white w-9 h-9 rounded-lg flex items-center justify-center transition glow-red-hover">
+                                    <i class="fa-solid fa-cart-plus text-xs"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </template>
+
+                </div>
+
+                <!-- PAGINATION BAR -->
+                <div class="bg-whCard border border-whBorder rounded-xl p-4 flex justify-between items-center text-xs">
+                    <span class="text-whMuted">Strana 1 z 3</span>
+                    <div class="flex space-x-1.5">
+                        <button
+                            class="w-8 h-8 rounded bg-whRed text-white font-bold border border-whRed flex items-center justify-center">1</button>
+                        <button
+                            class="w-8 h-8 rounded bg-black border border-whBorder text-gray-400 hover:text-white hover:border-gray-600 flex items-center justify-center transition">2</button>
+                        <button
+                            class="w-8 h-8 rounded bg-black border border-whBorder text-gray-400 hover:text-white hover:border-gray-600 flex items-center justify-center transition">3</button>
+                        <button
+                            class="w-8 h-8 rounded bg-black border border-whBorder text-gray-400 hover:text-white hover:border-gray-600 flex items-center justify-center transition">
+                            <i class="fa-solid fa-chevron-right text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <!-- FOOTER NEWSLETTER & COMMUNITY STRIP -->
+    <section class="bg-whCard border-t border-whBorder mt-12 py-8 px-4 sm:px-8">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="space-y-1 text-center md:text-left">
+                <div
+                    class="flex items-center justify-center md:justify-start gap-2 text-whRed text-sm font-bold uppercase tracking-wider">
+                    <i class="fa-solid fa-envelope-open-text"></i>
+                    <span>NEZMEŠKAJ NOVINKY A EXKLUZÍVNE PONUKY</span>
+                </div>
+                <p class="text-xs text-whMuted">Prihlás sa na odber noviniek a buď vždy o krok vpred przed ostatnými
+                    veliteľmi.</p>
+            </div>
+
+            <!-- Newsletter Box -->
+            <form @submit.prevent="subscribeNewsletter()" class="flex w-full md:w-auto max-w-md gap-2">
+                <input type="email" x-model="newsletterEmail" placeholder="Zadaj svoj e-mail" required
+                    class="bg-black border border-whBorder rounded-lg px-4 py-2.5 text-xs text-white placeholder-gray-500 flex-1 focus:outline-none focus:border-whRed">
+                <button type="submit"
+                    class="bg-whRed hover:bg-whRedHover text-white px-5 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider transition glow-red-sm whitespace-nowrap">
+                    PRIHLÁSIŤ SA
+                </button>
+            </form>
+
+            <!-- Social Links -->
+            <div class="flex items-center space-x-3 text-lg text-gray-400">
+                <a href="#" class="hover:text-whRed transition"><i class="fa-brands fa-discord"></i></a>
+                <a href="#" class="hover:text-whRed transition"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="hover:text-whRed transition"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="hover:text-whRed transition"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black border-t border-whBorder text-xs text-whMuted py-12 px-4 sm:px-8">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-8">
+
+            <!-- Col 1: Brand Info -->
+            <div class="space-y-3 md:col-span-1">
+                <div class="flex items-center gap-2">
+                    <span class="font-gothic text-base font-black text-white">WARHAMMER</span>
+                    <span class="text-[9px] text-whRed font-bold">SLOVENSKO</span>
+                </div>
+                <p class="text-[11px] text-gray-500 leading-relaxed">
+                    Oficiálny e-shop zameral na produkty Games Workshop. Tvoj svet, tvoje pravidlá, tvoja armáda.
+                </p>
+                <div class="text-[10px] text-gray-600">
+                    &copy; 2026 Warhammer E-Shop Slovensko. Všetky práva vyhradené.
+                </div>
+            </div>
+
+            <!-- Col 2: Informácie -->
+            <div class="space-y-2">
+                <h4 class="text-white font-bold text-xs uppercase tracking-wider border-b border-whBorder pb-2">
+                    Informácie</h4>
+                <ul class="space-y-1.5 text-[11px]">
+                    <li><a href="#" class="hover:text-whRed transition">O nás</a></li>
+                    <li><a href="#" class="hover:text-whRed transition">Doprava a platba</a></li>
+                    <li><a href="#" class="hover:text-whRed transition">Obchodné podmienky</a></li>
+                    <li><a href="#" class="hover:text-whRed transition">Reklamácie a vrátenie</a></li>
+                    <li><a href="#" class="hover:text-whRed transition">Ochrana osobných údajov</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 3: Zákaznícka podpora -->
+            <div class="space-y-2">
+                <h4 class="text-white font-bold text-xs uppercase tracking-wider border-b border-whBorder pb-2">
+                    Zákaznícka Podpora</h4>
+                <ul class="space-y-1.5 text-[11px]">
+                    <li><a href="#" class="hover:text-whRed transition">Kontakt</a></li>
+                    <li><a href="#" class="hover:text-whRed transition">FAQ - Časté otázky</a></li>
+                    <li><a href="#" class="hover:text-whRed transition">Sledovať objednávku</a></li>
+                    <li><a href="#" class="hover:text-whRed transition">Vernostný program</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 4: Kategórie -->
+            <div class="space-y-2">
+                <h4 class="text-white font-bold text-xs uppercase tracking-wider border-b border-whBorder pb-2">
+                    Kategórie</h4>
+                <ul class="space-y-1.5 text-[11px]">
+                    <li><a href="#" class="hover:text-whRed transition">Warhammer 40,000</a></li>
+                    <li><a href="#" class="hover:text-whRed transition">Age of Sigmar</a></li>
+                    <li><a href="#" class="hover:text-whRed transition">Farby & náradie</a></li>
+                    <li><a href="#" class="hover:text-whRed transition">Kill Team</a></li>
+                    <li><a href="#" class="hover:text-whRed transition">Merch</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 5: Platby & GPay -->
+            <div class="space-y-3">
+                <h4 class="text-white font-bold text-xs uppercase tracking-wider border-b border-whBorder pb-2">Platby
+                </h4>
+                <div class="flex flex-wrap gap-2 text-xl text-gray-400">
+                    <span
+                        class="bg-whCard px-2 py-1 rounded border border-whBorder text-white text-xs flex items-center gap-1 font-bold">
+                        <i class="fa-brands fa-cc-visa text-blue-500 text-sm"></i> VISA
+                    </span>
+                    <span
+                        class="bg-whCard px-2 py-1 rounded border border-whBorder text-white text-xs flex items-center gap-1 font-bold">
+                        <i class="fa-brands fa-cc-mastercard text-red-500 text-sm"></i> Mastercard
+                    </span>
+                    <span
+                        class="bg-whCard px-2 py-1 rounded border border-whBorder text-white text-xs flex items-center gap-1 font-bold">
+                        <i class="fa-brands fa-apple text-white text-sm"></i> Pay
+                    </span>
+                    <span
+                        class="bg-whCard px-2 py-1 rounded border border-whBorder text-white text-xs flex items-center gap-1 font-bold">
+                        <i class="fa-brands fa-google text-amber-400 text-sm"></i> Pay
+                    </span>
+                </div>
+                <div class="pt-1">
+                    <span class="text-[10px] text-gray-500 block">Vytvorené pre komunitu Warhammer 🇸🇰</span>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- CART DRAWER (ALPINE.JS MODAL) -->
+    <div x-show="cartDrawerOpen" x-transition:enter="transition ease-out duration-300"
+        x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
+        x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100"
+        x-transition:leave-end="opacity-0" class="fixed inset-0 z-50 overflow-hidden" style="display: none;">
+
+        <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" @click="cartDrawerOpen = false"></div>
+
+        <div class="fixed inset-y-0 right-0 max-w-full flex pl-10">
+            <div
+                class="w-screen max-w-md bg-whDark border-l border-whBorder p-6 flex flex-col justify-between shadow-2xl">
+
+                <div class="space-y-4">
+                    <div class="flex justify-between items-center border-b border-whBorder pb-4">
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-cart-shopping text-whRed text-lg"></i>
+                            <h3 class="font-bold text-white uppercase tracking-wider text-sm">Nákupný Košík</h3>
+                        </div>
+                        <button @click="cartDrawerOpen = false" class="text-gray-400 hover:text-white">
+                            <i class="fa-solid fa-xmark text-lg"></i>
+                        </button>
+                    </div>
+
+                    <!-- Cart Items List -->
+                    <div class="space-y-3 max-h-[60vh] overflow-y-auto pr-1">
+                        <template x-if="cart.length === 0">
+                            <div class="text-center py-12 text-whMuted space-y-2">
+                                <i class="fa-solid fa-basket-shopping text-4xl text-gray-700"></i>
+                                <p class="text-sm">Váš košík je momentálne prázdny</p>
+                            </div>
+                        </template>
+
+                        <template x-for="item in cart" :key="item.id">
+                            <div
+                                class="bg-whCard border border-whBorder rounded-lg p-3 flex items-center justify-between gap-3">
+                                <img :src="item.image" class="w-12 h-12 object-contain rounded bg-black">
+                                <div class="flex-1 text-xs">
+                                    <h4 class="font-bold text-white" x-text="item.title"></h4>
+                                    <span class="text-whRed font-semibold" x-text="item.price.toFixed(2) + ' €'"></span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <span class="text-xs text-gray-400" x-text="'x' + item.qty"></span>
+                                    <button @click="removeFromCart(item.id)" class="text-gray-500 hover:text-whRed p-1">
+                                        <i class="fa-solid fa-trash text-xs"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+
+                <!-- Cart Footer Total & Checkout -->
+                <div class="border-t border-whBorder pt-4 space-y-3">
+                    <div class="flex justify-between text-sm font-bold">
+                        <span class="text-gray-300">Spolu s DPH:</span>
+                        <span class="text-whRed text-base" x-text="cartTotal.toFixed(2) + ' €'"></span>
+                    </div>
+                    <button @click="checkout()"
+                        class="w-full bg-whRed hover:bg-whRedHover text-white py-3 rounded-lg font-bold text-xs uppercase tracking-wider transition glow-red-sm">
+                        Pokračovať k objednávke
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- JS LIBRARIES -->
+    <!-- Alpine.js -->
+    <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Notyf JS -->
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+
+    <!-- MAIN APP STATE & LOGIC (ALPINE.JS) -->
+    <script>
+        document.addEventListener('alpine:init', () => {
+            Alpine.data('storeApp', () => ({
+                // App State
+                cartDrawerOpen: false,
+                mobileMenuOpen: false,
+                filtersMobileOpen: false,
+                searchQuery: '',
+                selectedSubcat: 'all',
+                maxPrice: 250,
+                filterInStockOnly: false,
+                selectedFactions: [],
+                sortBy: 'popular',
+                viewMode: 'grid',
+                newsletterEmail: '',
+
+                wishlist: [],
+                cart: [],
+
+                // Initial 12 Products matching the Slovakia Warhammer Screenshot Concept
+                products: [
+                    {id: 1, title: 'Primaris Intercessors', faction: 'Space Marines', price: 45.00, badge: 'NOVINKA', image: 'https://placehold.co/400x400/14171d/dc2626?text=Intercessors'},
+                    {id: 2, title: 'Redemptor Dreadnought', faction: 'Space Marines', price: 85.00, badge: '', image: 'https://placehold.co/400x400/14171d/3b82f6?text=Dreadnought'},
+                    {id: 3, title: 'Gladiator Lancer', faction: 'Space Marines', price: 75.00, badge: '', image: 'https://placehold.co/400x400/14171d/10b981?text=Gladiator'},
+                    {id: 4, title: 'Captain in Terminator Armour', faction: 'Space Marines', price: 35.00, badge: '', image: 'https://placehold.co/400x400/14171d/f59e0b?text=Captain'},
+                    {id: 5, title: 'Cadian Shock Troops', faction: 'Astra Militarum', price: 35.00, badge: '', image: 'https://placehold.co/400x400/14171d/8b5cf6?text=Cadians'},
+                    {id: 6, title: 'Leman Russ Battle Tank', faction: 'Astra Militarum', price: 60.00, badge: '', image: 'https://placehold.co/400x400/14171d/ec4899?text=Leman+Russ'},
+                    {id: 7, title: 'Necron Warriors', faction: 'Necrons', price: 40.00, badge: '', image: 'https://placehold.co/400x400/14171d/22c55e?text=Necron+Warriors'},
+                    {id: 8, title: 'Necron Overlord', faction: 'Necrons', price: 32.50, badge: '', image: 'https://placehold.co/400x400/14171d/06b6d4?text=Necron+Overlord'},
+                    {id: 9, title: 'Chaos Space Marines', faction: 'Chaos', price: 45.00, badge: '', image: 'https://placehold.co/400x400/14171d/ef4444?text=Chaos+Marines'},
+                    {id: 10, title: 'Winged Hive Tyrant', faction: 'Xenos', price: 115.00, badge: 'TOP', image: 'https://placehold.co/400x400/14171d/a855f7?text=Hive+Tyrant'},
+                    {id: 11, title: 'Battle Sisters Squad', faction: 'Imperium', price: 50.00, badge: '', image: 'https://placehold.co/400x400/14171d/f43f5e?text=Battle+Sisters'},
+                    {id: 12, title: 'Ultimate Starter Set', faction: 'Starter Sets', price: 130.00, badge: 'AKCIA -15%', image: 'https://placehold.co/400x400/14171d/d97706?text=Starter+Set'},
+                ],
+
+                notyf: null,
+
+                initApp() {
+                    // Initialize Notyf
+                    this.notyf = new Notyf({
+                        duration: 3000,
+                        position: {x: 'right', y: 'bottom'},
+                        types: [
+                            {
+                                type: 'success',
+                                background: '#dc2626',
+                                icon: {className: 'fa-solid fa-cart-shopping', text: ''}
+                            }
+                        ]
+                    });
+
+                    // Initialize Swiper Carousel for Subcategories
+                    setTimeout(() => {
+                        new Swiper('.subcat-swiper', {
+                            slidesPerView: 'auto',
+                            spaceBetween: 12,
+                            navigation: {
+                                nextEl: '.subcat-next',
+                                prevEl: '.subcat-prev',
+                            },
+                        });
+
+                        // Trigger GSAP Card Reveal Animation
+                        gsap.from('.product-card', {
+                            duration: 0.6,
+                            y: 20,
+                            opacity: 0,
+                            stagger: 0.05,
+                            ease: 'power2.out'
+                        });
+                    }, 100);
+                },
+
+                // Getters for Computed State
+                get filteredProducts() {
+                    return this.products.filter(p => {
+                        const matchSubcat = this.selectedSubcat === 'all' || p.faction === this.selectedSubcat;
+                        const matchPrice = p.price <= this.maxPrice;
+                        const matchSearch = p.title.toLowerCase().includes(this.searchQuery.toLowerCase());
+                        const matchFactionCheck = this.selectedFactions.length === 0 || this.selectedFactions.includes(p.faction);
+                        return matchSubcat && matchPrice && matchSearch && matchFactionCheck;
+                    }).sort((a, b) => {
+                        if (this.sortBy === 'price-asc') return a.price - b.price;
+                        if (this.sortBy === 'price-desc') return b.price - a.price;
+                        if (this.sortBy === 'name') return a.title.localeCompare(b.title);
+                        return a.id - b.id; // default popular
+                    });
+                },
+
+                get cartCount() {
+                    return this.cart.reduce((sum, item) => sum + item.qty, 0);
+                },
+
+                get wishlistCount() {
+                    return this.wishlist.length;
+                },
+
+                get cartTotal() {
+                    return this.cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+                },
+
+                // Actions
+                addToCart(product) {
+                    const existing = this.cart.find(item => item.id === product.id);
+                    if (existing) {
+                        existing.qty++;
+                    } else {
+                        this.cart.push({...product, qty: 1});
+                    }
+                    this.notyf.success(`Pridané do košíka: ${product.title}`);
+                },
+
+                removeFromCart(id) {
+                    this.cart = this.cart.filter(item => item.id !== id);
+                },
+
+                toggleWishlist(id) {
+                    if (this.wishlist.includes(id)) {
+                        this.wishlist = this.wishlist.filter(item => item !== id);
+                        this.notyf.open({type: 'info', message: 'Odststránené z obľúbených'});
+                    } else {
+                        this.wishlist.push(id);
+                        this.notyf.success('Pridané do obľúbených!');
+                    }
+                },
+
+                resetFilters() {
+                    this.selectedSubcat = 'all';
+                    this.maxPrice = 250;
+                    this.selectedFactions = [];
+                    this.filterInStockOnly = false;
+                    this.searchQuery = '';
+                },
+
+                subscribeNewsletter() {
+                    this.notyf.success('Ďakujeme за prihlásenie k odberu noviniek!');
+                    this.newsletterEmail = '';
+                },
+
+                checkout() {
+                    if (this.cart.length === 0) return;
+                    alert('Преход к оформлению заказа (WooCommerce Checkout flow Integration)');
+                },
+
+                openLightbox(imgUrl, title) {
+                    // Simple custom Lightbox preview alert
+                    this.notyf.open({
+                        type: 'info',
+                        message: `Náhľad: ${title}`
+                    });
+                }
+            }));
+        });
+    </script>
+</body>
+
+</html>

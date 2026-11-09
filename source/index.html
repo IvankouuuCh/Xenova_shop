@@ -1,0 +1,1731 @@
+<!DOCTYPE html>
+<html lang="sk" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warhammer E-Shop Slovensko | Official Games Workshop Store</title>
+    <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+    <script type="module" src="/src/js/main.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body x-data="homepageApp()"
+    class="min-h-screen flex flex-col justify-between antialiased bg-[#030303] text-gray-200 font-sans overflow-x-hidden">
+
+    <!-- 1. TOP ANNOUNCEMENT BAR -->
+    <div
+        class="bg-[#030303] border-b border-[#1e1e24] text-[11px] text-[#f5f4f5] h-9 flex justify-between items-center z-50 overflow-hidden px-3 sm:px-6">
+        <div class="flex items-center h-full overflow-hidden whitespace-nowrap">
+            <div class="announcement-item-1 items-center space-x-2 px-3 h-full border-r border-[#1e1e24]">
+                <svg class="w-3.5 h-3.5 text-[#f5f4f5] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                        d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                        d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8h4l3 3v5h-2m-4 0h2">
+                    </path>
+                </svg>
+                <span>Doprava <strong>ZDARMA</strong> nad 70 €</span>
+            </div>
+            <div class="announcement-item-2 items-center space-x-2 px-3 h-full border-r border-[#1e1e24]">
+                <svg class="w-3.5 h-3.5 text-[#f5f4f5] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <span>Rýchle doručenie 1-2 pracovné dni</span>
+            </div>
+            <div class="announcement-item-3 items-center space-x-2 px-3 h-full border-r border-[#1e1e24]">
+                <svg class="w-3.5 h-3.5 text-[#f5f4f5] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                    </path>
+                </svg>
+                <span>Oficiálne produkty <strong>Games Workshop</strong></span>
+            </div>
+            <div class="announcement-item-4 items-center space-x-2 px-3 h-full border-r border-[#1e1e24]">
+                <svg class="w-3.5 h-3.5 text-[#f5f4f5] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                        d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z">
+                    </path>
+                </svg>
+                <span>Bezpečné platby <strong>100% ochrana</strong></span>
+            </div>
+        </div>
+
+        <div
+            class="flex items-center space-x-3 sm:space-x-4 px-2 sm:px-4 text-xs text-[#f5f4f5] ml-auto shrink-0 whitespace-nowrap">
+            <a href="#" class="hover:text-[#99241d] transition flex items-center gap-1.5" title="Kontakt">
+                <svg class="w-3.5 h-3.5 text-[#f5f4f5] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                        d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z">
+                    </path>
+                </svg>
+                <span class="hidden sm:inline">Kontakt</span>
+            </a>
+            <span class="text-[#1e1e24]">|</span>
+            <a href="#" class="hover:text-[#99241d] transition" title="Sledovať objednávku">
+                <span>Sledovať objednávku</span>
+            </a>
+            <span class="text-[#1e1e24]">|</span>
+            <div class="flex items-center space-x-1 cursor-pointer hover:text-[#99241d] transition">
+                <svg class="w-3.5 h-3.5 text-[#f5f4f5] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                        d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9">
+                    </path>
+                </svg>
+                <span>SK</span>
+                <svg class="w-2.5 h-2.5 text-[#888894]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. MAIN HEADER -->
+    <header class="bg-[#030303] sticky top-0 z-40 border-b border-[#1e1e24]">
+        <div class="w-full px-6 py-3.5 flex items-center justify-between gap-6">
+
+            <!-- Кнопка відкриття мобільного меню -->
+            <button @click="mobileNavOpen = true" class="burger-btn text-[#f5f4f5] hover:text-[#99241d] p-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
+
+            <!-- Логотип -->
+            <a href="index.html" class="flex items-center gap-3 group shrink-0 brand-logo-text">
+                <div
+                    class="w-10 h-10 rounded-[4px] bg-white/10 border border-white/20 flex items-center justify-center p-1.5 group-hover:border-white transition">
+                    <svg viewBox="0 0 24 24" class="w-full h-full fill-current text-white"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                    </svg>
+                </div>
+                <div>
+                    <span class="text-xl tracking-widest text-white block leading-none font-sans">WARHAMMER</span>
+                    <span class="text-[11px] tracking-widest uppercase text-white block mt-1 font-sans">ESHOP
+                        SLOVENSKO</span>
+                </div>
+            </a>
+
+            <!-- Пошук -->
+            <div class="header-search flex-1 max-w-xl mx-4 relative">
+                <input type="text" x-model="searchQuery" placeholder="Hľadať produkty, frakcie, farby..."
+                    class="w-full bg-[#0f0f0f] border border-[#1e1e24] rounded-[4px] py-2.5 px-5 text-sm text-[#f5f4f5] placeholder-gray-500 focus:outline-none focus:border-[#99241d] transition">
+                <button class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white transition">
+                    <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Користувач та Кошик -->
+            <div class="flex items-center space-x-6 shrink-0">
+                <a href="#"
+                    class="hidden sm:flex items-center space-x-2 text-sm text-[#f5f4f5] hover:text-[#99241d] transition">
+                    <svg class="w-5 h-5 text-[#f5f4f5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                            d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                    </svg>
+                    <span>Prihlásiť sa</span>
+                </a>
+
+                <a href="#"
+                    class="hidden sm:flex items-center space-x-2 text-sm text-[#f5f4f5] hover:text-[#99241d] transition">
+                    <svg class="w-5 h-5 text-[#f5f4f5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z">
+                        </path>
+                    </svg>
+                    <span>Obľúbené</span>
+                </a>
+
+                <!-- Кнопка відкриття кошика -->
+                <button @click="cartDrawerOpen = true"
+                    class="flex items-center space-x-2 text-sm text-white hover:text-[#99241d] transition relative">
+                    <div class="relative flex items-center justify-center">
+                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+                        </svg>
+                        <span x-show="cart.length > 0" x-text="cartCount"
+                            class="absolute -top-1.5 -right-2 bg-[#c12824] text-white text-[10px] font-bold rounded-full w-4 h-4 flex items-center justify-center"></span>
+                    </div>
+                    <span class="text-white font-medium">Košík</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- 3. PRIMARY NAVIGATION BAR -->
+        <nav @click.outside="megaMenuOpen = false" class="main-nav relative">
+            <div class="nav-container py-1">
+                <div class="nav-row">
+                    <button @click.stop="toggleMegaMenu('wh40k')"
+                        :class="{ 'active': megaMenuOpen && activeCategory === 'wh40k' }"
+                        class="nav-link cursor-pointer bg-transparent border-0">
+                        <span class="nav-link-text">WARHAMMER 40,000</span>
+                        <svg class="w-2.5 h-2.5 text-[#888894] nav-arrow"
+                            :class="{ 'rotate-180': megaMenuOpen && activeCategory === 'wh40k' }" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+
+                    <button @click.stop="toggleMegaMenu('aos')"
+                        :class="{ 'active': megaMenuOpen && activeCategory === 'aos' }"
+                        class="nav-link cursor-pointer bg-transparent border-0">
+                        <span class="nav-link-text">AGE OF SIGMAR</span>
+                        <svg class="w-2.5 h-2.5 text-[#888894] nav-arrow"
+                            :class="{ 'rotate-180': megaMenuOpen && activeCategory === 'aos' }" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+
+                    <button @click.stop="toggleMegaMenu('paints')"
+                        :class="{ 'active': megaMenuOpen && activeCategory === 'paints' }"
+                        class="nav-link cursor-pointer bg-transparent border-0">
+                        <span class="nav-link-text">FARBY & NÁSTROJE</span>
+                        <svg class="w-2.5 h-2.5 text-[#888894] nav-arrow"
+                            :class="{ 'rotate-180': megaMenuOpen && activeCategory === 'paints' }" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+
+                    <a href="#" class="nav-link"><span class="nav-link-text">KILL TEAM</span></a>
+                    <a href="#" class="nav-link text-[#99241d] font-bold"><span
+                            class="nav-link-text text-[#99241d]">AKCIE</span></a>
+                    <a href="#" class="nav-link"><span class="nav-link-text">PRÍSLUŠENSTVO</span></a>
+                    <a href="#" class="nav-link"><span class="nav-link-text">MERCH</span></a>
+                    <a href="#" class="nav-link"><span class="nav-link-text">BLOG</span></a>
+
+                    <a href="#" class="btn-accent">PRE ZAČIATOČNÍKOV</a>
+                </div>
+            </div>
+
+            <!-- 5-КОЛОНКОВЕ МЕГА-МЕНЮ -->
+            <div x-show="megaMenuOpen" x-transition:enter="transition ease-out duration-200"
+                x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0"
+                x-transition:leave="transition ease-in duration-150"
+                x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2"
+                @click.stop
+                class="absolute top-full left-0 w-full bg-[#0f0f0f] border-b border-[#1e1e24] shadow-2xl z-50 text-left font-sans"
+                style="display: none;">
+
+                <div class="max-w-[1536px] mx-auto px-6 py-8">
+                    <div class="mega-menu-grid">
+
+                        <!-- КОЛОНКА 1: ГОЛОВНІ ФРАКЦІЇ -->
+                        <div class="border-r border-[#1e1e24] pr-5 flex flex-col justify-between space-y-4">
+                            <div>
+                                <h3 class="text-[#99241d] font-semibold text-xs uppercase tracking-wider px-3 mb-3"
+                                    x-text="activeCategory === 'aos' ? 'AGE OF SIGMAR' : 'WARHAMMER 40,000'"></h3>
+
+                                <div class="space-y-1">
+                                    <button @mouseenter="activeFaction = 'space-marines'"
+                                        @click="activeFaction = 'space-marines'"
+                                        :class="activeFaction === 'space-marines' ? 'bg-[#18181c] text-white font-semibold' : 'text-gray-400 hover:text-white hover:bg-[#121216]'"
+                                        class="w-full flex items-center justify-between px-3 py-2.5 rounded-[4px] text-xs transition text-left group">
+                                        <div class="flex items-center gap-3">
+                                            <svg class="w-4 h-4 text-[#99241d] shrink-0" fill="none"
+                                                stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                                                </path>
+                                            </svg>
+                                            <span>Space Marines</span>
+                                        </div>
+                                        <svg class="w-3 h-3 text-gray-500 group-hover:text-white" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M9 5l7 7-7 7"></path>
+                                        </svg>
+                                    </button>
+
+                                    <button @mouseenter="activeFaction = 'astra-militarum'"
+                                        @click="activeFaction = 'astra-militarum'"
+                                        :class="activeFaction === 'astra-militarum' ? 'bg-[#18181c] text-white font-semibold' : 'text-gray-400 hover:text-white hover:bg-[#121216]'"
+                                        class="w-full flex items-center justify-between px-3 py-2.5 rounded-[4px] text-xs transition text-left group">
+                                        <div class="flex items-center gap-3">
+                                            <svg class="w-4 h-4 text-gray-400 group-hover:text-white shrink-0"
+                                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                                    d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10">
+                                                </path>
+                                            </svg>
+                                            <span>Astra Militarum</span>
+                                        </div>
+                                    </button>
+
+                                    <button @mouseenter="activeFaction = 'necrons'" @click="activeFaction = 'necrons'"
+                                        :class="activeFaction === 'necrons' ? 'bg-[#18181c] text-white font-semibold' : 'text-gray-400 hover:text-white hover:bg-[#121216]'"
+                                        class="w-full flex items-center justify-between px-3 py-2.5 rounded-[4px] text-xs transition text-left group">
+                                        <div class="flex items-center gap-3">
+                                            <svg class="w-4 h-4 text-gray-400 group-hover:text-white shrink-0"
+                                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                                    d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                            </svg>
+                                            <span>Necrons</span>
+                                        </div>
+                                    </button>
+
+                                    <button @mouseenter="activeFaction = 'chaos'" @click="activeFaction = 'chaos'"
+                                        :class="activeFaction === 'chaos' ? 'bg-[#18181c] text-white font-semibold' : 'text-gray-400 hover:text-white hover:bg-[#121216]'"
+                                        class="w-full flex items-center justify-between px-3 py-2.5 rounded-[4px] text-xs transition text-left group">
+                                        <div class="flex items-center gap-3">
+                                            <svg class="w-4 h-4 text-gray-400 group-hover:text-white shrink-0"
+                                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                                    d="M12 3v18m9-9H3m15.364-6.364l-12.728 12.728m0-12.728l12.728 12.728">
+                                                </path>
+                                            </svg>
+                                            <span>Chaos</span>
+                                        </div>
+                                        <svg class="w-3 h-3 text-gray-500 group-hover:text-white" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M9 5l7 7-7 7"></path>
+                                        </svg>
+                                    </button>
+
+                                    <button @mouseenter="activeFaction = 'xenos'" @click="activeFaction = 'xenos'"
+                                        :class="activeFaction === 'xenos' ? 'bg-[#18181c] text-white font-semibold' : 'text-gray-400 hover:text-white hover:bg-[#121216]'"
+                                        class="w-full flex items-center justify-between px-3 py-2.5 rounded-[4px] text-xs transition text-left group">
+                                        <div class="flex items-center gap-3">
+                                            <svg class="w-4 h-4 text-gray-400 group-hover:text-white shrink-0"
+                                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                                    d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z">
+                                                </path>
+                                            </svg>
+                                            <span>Xenos</span>
+                                        </div>
+                                        <svg class="w-3 h-3 text-gray-500 group-hover:text-white" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M9 5l7 7-7 7"></path>
+                                        </svg>
+                                    </button>
+
+                                    <button @mouseenter="activeFaction = 'imperium'" @click="activeFaction = 'imperium'"
+                                        :class="activeFaction === 'imperium' ? 'bg-[#18181c] text-white font-semibold' : 'text-gray-400 hover:text-white hover:bg-[#121216]'"
+                                        class="w-full flex items-center justify-between px-3 py-2.5 rounded-[4px] text-xs transition text-left group">
+                                        <div class="flex items-center gap-3">
+                                            <svg class="w-4 h-4 text-gray-400 group-hover:text-white shrink-0"
+                                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                                    d="M3 21h18M3 10h18M3 7l9-4 9 4M4 10v11M20 10v11M8 10v11M12 10v11M16 10v11">
+                                                </path>
+                                            </svg>
+                                            <span>Imperium</span>
+                                        </div>
+                                        <svg class="w-3 h-3 text-gray-500 group-hover:text-white" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M9 5l7 7-7 7"></path>
+                                        </svg>
+                                    </button>
+
+                                    <button @mouseenter="activeFaction = 'starter-sets'"
+                                        @click="activeFaction = 'starter-sets'"
+                                        :class="activeFaction === 'starter-sets' ? 'bg-[#18181c] text-white font-semibold' : 'text-gray-400 hover:text-white hover:bg-[#121216]'"
+                                        class="w-full flex items-center justify-between px-3 py-2.5 rounded-[4px] text-xs transition text-left group">
+                                        <div class="flex items-center gap-3">
+                                            <svg class="w-4 h-4 text-gray-400 group-hover:text-white shrink-0"
+                                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                                    d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4">
+                                                </path>
+                                            </svg>
+                                            <span>Starter Sets</span>
+                                        </div>
+                                    </button>
+                                </div>
+
+                                <div class="pt-2 px-3">
+                                    <a href="category.html"
+                                        class="text-[#99241d] hover:text-red-400 text-xs font-bold flex items-center gap-1.5 transition">
+                                        <span>Zobraziť všetky 40K</span>
+                                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="pt-3 border-t border-[#1e1e24] px-1">
+                                <div class="flex items-start gap-3">
+                                    <img src="https://placehold.co/120x120/121212/dc2626?text=40K"
+                                        class="w-16 h-16 object-cover rounded-[4px] shrink-0 border border-[#1e1e24]">
+                                    <div class="space-y-2">
+                                        <div>
+                                            <div
+                                                class="text-[11px] font-bold text-white uppercase tracking-wider leading-tight">
+                                                ZAČNITE S WARHAMMER 40K</div>
+                                            <div class="text-[10px] text-gray-400 leading-snug mt-0.5">Všetko, čo
+                                                potrebujete na svoj prvý krok</div>
+                                        </div>
+                                        <div>
+                                            <a href="#"
+                                                class="inline-block px-3 py-1.5 border border-white/40 hover:border-white text-white text-[10px] font-bold uppercase rounded-[3px] transition">
+                                                ZISTIŤ VIAC
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- КОЛОНКА 2: СПИСОК ПІДКАТЕГОРІЙ -->
+                        <div class="border-r border-[#1e1e24] pr-4 space-y-4">
+                            <h3 class="text-white font-semibold text-xs uppercase tracking-wider"
+                                x-text="activeFaction.replace('-', ' ')"></h3>
+
+                            <ul class="space-y-2.5 text-xs text-gray-400">
+                                <li><a href="category.html" class="hover:text-white transition block py-0.5">Všetky
+                                        produkty</a></li>
+                                <li><a href="category.html" class="hover:text-white transition block py-0.5">Primaris
+                                        Marines</a></li>
+                                <li><a href="category.html"
+                                        class="hover:text-white transition block py-0.5">Ultramarines</a></li>
+                                <li><a href="category.html" class="hover:text-white transition block py-0.5">Dark
+                                        Angels</a></li>
+                                <li><a href="category.html" class="hover:text-white transition block py-0.5">Blood
+                                        Angels</a></li>
+                                <li><a href="category.html" class="hover:text-white transition block py-0.5">Space
+                                        Wolves</a></li>
+                                <li><a href="category.html" class="hover:text-white transition block py-0.5">Black
+                                        Templars</a></li>
+                                <li><a href="category.html"
+                                        class="hover:text-white transition block py-0.5">Salamanders</a></li>
+                                <li><a href="category.html" class="hover:text-white transition block py-0.5">Raven
+                                        Guard</a></li>
+                                <li><a href="category.html" class="hover:text-white transition block py-0.5">Successor
+                                        Chapters</a></li>
+                                <li><a href="category.html" class="hover:text-white transition block py-0.5">Upgrade
+                                        Sets</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- КОЛОНКА 3: ПОПУЛЯРНІ PRODUKTY -->
+                        <div class="border-r border-[#1e1e24] pr-5 flex flex-col justify-between space-y-4">
+                            <div class="space-y-4">
+                                <h3 class="text-white font-semibold text-xs uppercase tracking-wider">POPULÁRNE PRODUKTY
+                                </h3>
+
+                                <div class="space-y-4">
+                                    <a href="product.html" class="flex items-center gap-3.5 py-1.5 group">
+                                        <img src="https://placehold.co/100x100/121212/dc2626?text=Intercessors"
+                                            class="w-14 h-14 object-cover rounded-[4px] bg-black border border-[#1e1e24] group-hover:border-[#99241d] transition shrink-0">
+                                        <div class="text-xs space-y-1">
+                                            <div
+                                                class="text-gray-300 group-hover:text-white transition font-medium leading-snug">
+                                                Primaris Intercessors</div>
+                                            <div class="text-white font-bold text-sm">€45,00</div>
+                                        </div>
+                                    </a>
+
+                                    <a href="product.html" class="flex items-center gap-3.5 py-1.5 group">
+                                        <img src="https://placehold.co/100x100/121212/dc2626?text=Infernus"
+                                            class="w-14 h-14 object-cover rounded-[4px] bg-black border border-[#1e1e24] group-hover:border-[#99241d] transition shrink-0">
+                                        <div class="text-xs space-y-1">
+                                            <div
+                                                class="text-gray-300 group-hover:text-white transition font-medium leading-snug">
+                                                Primaris Infernus Squad</div>
+                                            <div class="text-white font-bold text-sm">€50,00</div>
+                                        </div>
+                                    </a>
+
+                                    <a href="product.html" class="flex items-center gap-3.5 py-1.5 group">
+                                        <img src="https://placehold.co/100x100/121212/dc2626?text=Dreadnought"
+                                            class="w-14 h-14 object-cover rounded-[4px] bg-black border border-[#1e1e24] group-hover:border-[#99241d] transition shrink-0">
+                                        <div class="text-xs space-y-1">
+                                            <div
+                                                class="text-gray-300 group-hover:text-white transition font-medium leading-snug">
+                                                Redemptor Dreadnought</div>
+                                            <div class="text-white font-bold text-sm">€85,00</div>
+                                        </div>
+                                    </a>
+
+                                    <a href="product.html" class="flex items-center gap-3.5 py-1.5 group">
+                                        <img src="https://placehold.co/100x100/121212/dc2626?text=Bladeguard"
+                                            class="w-14 h-14 object-cover rounded-[4px] bg-black border border-[#1e1e24] group-hover:border-[#99241d] transition shrink-0">
+                                        <div class="text-xs space-y-1">
+                                            <div
+                                                class="text-gray-300 group-hover:text-white transition font-medium leading-snug">
+                                                Bladeguard Veterans</div>
+                                            <div class="text-white font-bold text-sm">€55,00</div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="pt-3 border-t border-[#1e1e24] flex items-center justify-start h-10">
+                                <a href="category.html"
+                                    class="text-gray-300 hover:text-white text-xs font-extrabold uppercase tracking-wider flex items-center gap-2 transition">
+                                    <span>ZOBRAZIŤ VŠETKO</span>
+                                    <svg class="w-3.5 h-3.5 text-gray-400" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                            d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- КОЛОНКА 4: SÚVISIACE KATEGÓRIE -->
+                        <div class="border-r border-[#1e1e24] pr-4 space-y-4">
+                            <h3 class="text-white font-semibold text-xs uppercase tracking-wider">SÚVISIACE KATEGÓRIE
+                            </h3>
+
+                            <div class="space-y-4 text-xs text-gray-300 pt-1">
+                                <a href="#" class="flex items-center gap-3 hover:text-[#99241d] transition py-1">
+                                    <svg class="w-4 h-4 text-gray-400 shrink-0" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                            d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                    </svg>
+                                    <span class="font-medium">KILL TEAM</span>
+                                </a>
+                                <a href="#" class="flex items-center gap-3 hover:text-[#99241d] transition py-1">
+                                    <svg class="w-4 h-4 text-gray-400 shrink-0" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                            d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01">
+                                        </path>
+                                    </svg>
+                                    <span class="font-medium">FARBY & NÁSTROJE</span>
+                                </a>
+                                <a href="#" class="flex items-center gap-3 hover:text-[#99241d] transition py-1">
+                                    <svg class="w-4 h-4 text-gray-400 shrink-0" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                            d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4">
+                                        </path>
+                                    </svg>
+                                    <span class="font-medium">AKSESÓRY</span>
+                                </a>
+                                <a href="#" class="flex items-center gap-3 hover:text-[#99241d] transition py-1">
+                                    <svg class="w-4 h-4 text-gray-400 shrink-0" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                            d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+                                    </svg>
+                                    <span class="font-medium">MERCH</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- КОЛОНКА 5: ВЕЛИКИЙ ПРОМО-БАНЕР -->
+                        <div class="relative min-h-[380px] rounded-[4px] overflow-hidden group">
+                            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
+                                style="background-image: url('https://placehold.co/800x1000/0f0f12/99241d?text=GLORY+TO+THE+IMPERIUM');">
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
+
+                            <div class="absolute inset-0 p-7 flex flex-col justify-end space-y-4 z-10 text-left">
+                                <div class="space-y-2">
+                                    <h4
+                                        class="text-3xl sm:text-4xl font-extrabold text-white uppercase leading-none font-sans tracking-wide">
+                                        GLORY TO THE<br><span class="text-[#99241d]">IMPERIUM</span>
+                                    </h4>
+                                    <p class="text-xs sm:text-sm text-gray-300 leading-snug">
+                                        Preskúmajte galaxiu a bojujte za ľudstvo.
+                                    </p>
+                                </div>
+                                <div>
+                                    <a href="category.html"
+                                        class="inline-block px-6 py-3 bg-black/40 border-2 border-white hover:bg-white hover:text-black text-white text-xs font-extrabold uppercase tracking-widest rounded-[3px] transition backdrop-blur-sm">
+                                        OBJAVIŤ 40K
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- MAIN PAGE CONTENT -->
+    <main class="flex-grow pb-16">
+
+        <!-- HERO SLIDER SECTION -->
+        <section class="w-full relative overflow-hidden">
+            <div class="swiper hero-swiper relative w-full">
+                <div class="swiper-wrapper">
+
+                    <!-- SLIDE 1 -->
+                    <div
+                        class="swiper-slide relative min-h-[450px] sm:min-h-[520px] flex items-end justify-center p-6 pb-28 sm:pb-32">
+                        <div class="absolute inset-0 bg-cover bg-center"
+                            style="background-image: url('https://placehold.co/1920x800/08080a/dc2626?text=WARHAMMER+HERO+1');">
+                        </div>
+
+                        <div class="absolute inset-0 bg-black/45"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#030303] via-transparent to-[#030303]/60">
+                        </div>
+
+                        <!-- Контент: жирний заголовок, більший підзаголовок з відступами, зсунуто донизу -->
+                        <div class="relative z-20 text-center max-w-3xl mx-auto px-4">
+                            <h1
+                                class="hero-title text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-wider text-white uppercase leading-none font-sans">
+                                PRIPRAV SA<br><span class="text-white font-extrabold">NA VOJNU</span>
+                            </h1>
+                            <p
+                                class="text-gray-200 text-lg sm:text-xl md:text-2xl font-medium leading-relaxed my-5 py-1 max-w-2xl mx-auto">
+                                Najväčší výber Warhammer 40,000<br class="hidden sm:inline"> a Age of Sigmar na
+                                Slovensku
+                            </p>
+                            <div>
+                                <a href="category.html"
+                                    class="inline-block bg-[#99241d] hover:bg-[#b71c1c] text-white px-8 py-3.5 rounded-[4px] font-bold text-xs sm:text-sm uppercase tracking-widest transition-all duration-300 shadow-lg">
+                                    OBJAVIŤ PRODUKTY
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 2 -->
+                    <div
+                        class="swiper-slide relative min-h-[450px] sm:min-h-[520px] flex items-end justify-center p-6 pb-28 sm:pb-32">
+                        <div class="absolute inset-0 bg-cover bg-center"
+                            style="background-image: url('https://placehold.co/1920x800/050508/99241d?text=WARHAMMER+HERO+2');">
+                        </div>
+
+                        <div class="absolute inset-0 bg-black/45"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#030303] via-transparent to-[#030303]/60">
+                        </div>
+
+                        <div class="relative z-20 text-center max-w-3xl mx-auto px-4">
+                            <h1
+                                class="hero-title text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-wider text-white uppercase leading-none font-sans">
+                                NÁJDI SVOJU<br><span class="text-[#99241d] font-extrabold">ARMÁDU</span>
+                            </h1>
+                            <p
+                                class="text-gray-200 text-lg sm:text-xl md:text-2xl font-medium leading-relaxed my-5 py-1 max-w-2xl mx-auto">
+                                Exkluzívne figúrky, farby Citadel a kompletné príslušenstvo
+                            </p>
+                            <div>
+                                <a href="category.html"
+                                    class="inline-block bg-[#99241d] hover:bg-[#b71c1c] text-white px-8 py-3.5 rounded-[4px] font-bold text-xs sm:text-sm uppercase tracking-widest transition-all duration-300 shadow-lg">
+                                    PRESKÚMAŤ KATALÓG
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Стрілки -->
+                <button
+                    class="hero-prev absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 z-30 text-white/70 hover:text-white transition p-2">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7">
+                        </path>
+                    </svg>
+                </button>
+                <button
+                    class="hero-next absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 z-30 text-white/70 hover:text-white transition p-2">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+
+                <!-- Індикатори прямо над картками -->
+                <div
+                    class="swiper-pagination hero-pagination !bottom-24 sm:!bottom-28 z-30 flex items-center justify-center">
+                </div>
+            </div>
+
+            <!-- Градієнтний перехід -->
+            <div
+                class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#030303] via-[#030303]/80 to-transparent pointer-events-none z-20">
+            </div>
+        </section>
+
+        <!-- OVERLAY CATEGORY CARDS (НАКЛАДЕНІ КАРТКИ) -->
+        <section class="max-w-[1536px] mx-auto px-4 sm:px-6 relative z-30 -mt-20 sm:-mt-24">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+
+                <!-- КАРТКА 1 -->
+                <a href="category.html"
+                    class="category-card group relative h-48 sm:h-56 flex flex-col justify-end p-5 text-center bg-cover bg-center"
+                    style="background-image: url('https://placehold.co/400x500/101014/dc2626?text=WH+40K');">
+                    <div class="category-card-overlay"></div>
+                    <div class="relative z-10 space-y-3 py-2">
+                        <h3
+                            class="text-white font-extrabold text-base sm:text-lg uppercase tracking-wider leading-tight">
+                            WARHAMMER<br>40,000
+                        </h3>
+                        <div
+                            class="inline-flex items-center gap-1.5 text-xs font-extrabold text-gray-300 group-hover:text-white tracking-widest uppercase transition-colors">
+                            <span>ZOBRAZIŤ</span>
+                            <svg class="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                    d="M9 5l7 7-7 7">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- КАРТКА 2 -->
+                <a href="category.html"
+                    class="category-card group relative h-48 sm:h-56 flex flex-col justify-end p-5 text-center bg-cover bg-center"
+                    style="background-image: url('https://placehold.co/400x500/101014/d97706?text=AOS');">
+                    <div class="category-card-overlay"></div>
+                    <div class="relative z-10 space-y-3 py-2">
+                        <h3
+                            class="text-white font-extrabold text-base sm:text-lg uppercase tracking-wider leading-tight">
+                            AGE OF SIGMAR
+                        </h3>
+                        <div
+                            class="inline-flex items-center gap-1.5 text-xs font-extrabold text-gray-300 group-hover:text-white tracking-widest uppercase transition-colors">
+                            <span>ZOBRAZIŤ</span>
+                            <svg class="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                    d="M9 5l7 7-7 7">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- КАРТКА 3 -->
+                <a href="category.html"
+                    class="category-card group relative h-48 sm:h-56 flex flex-col justify-end p-5 text-center bg-cover bg-center"
+                    style="background-image: url('https://placehold.co/400x500/101014/059669?text=PAINTS');">
+                    <div class="category-card-overlay"></div>
+                    <div class="relative z-10 space-y-3 py-2">
+                        <h3
+                            class="text-white font-extrabold text-base sm:text-lg uppercase tracking-wider leading-tight">
+                            FARBY<br>A NÁSTROJE
+                        </h3>
+                        <div
+                            class="inline-flex items-center gap-1.5 text-xs font-extrabold text-gray-300 group-hover:text-white tracking-widest uppercase transition-colors">
+                            <span>ZOBRAZIŤ</span>
+                            <svg class="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                    d="M9 5l7 7-7 7">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- КАРТКА 4 -->
+                <a href="category.html"
+                    class="category-card group relative h-48 sm:h-56 flex flex-col justify-end p-5 text-center bg-cover bg-center"
+                    style="background-image: url('https://placehold.co/400x500/101014/2563eb?text=KILL+TEAM');">
+                    <div class="category-card-overlay"></div>
+                    <div class="relative z-10 space-y-3 py-2">
+                        <h3
+                            class="text-white font-extrabold text-base sm:text-lg uppercase tracking-wider leading-tight">
+                            KILL TEAM
+                        </h3>
+                        <div
+                            class="inline-flex items-center gap-1.5 text-xs font-extrabold text-gray-300 group-hover:text-white tracking-widest uppercase transition-colors">
+                            <span>ZOBRAZIŤ</span>
+                            <svg class="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                    d="M9 5l7 7-7 7">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- КАРТКА 5 -->
+                <a href="category.html"
+                    class="category-card group relative h-48 sm:h-56 flex flex-col justify-end p-5 text-center bg-cover bg-center"
+                    style="background-image: url('https://placehold.co/400x500/101014/dc2626?text=AKCIE');">
+                    <div class="category-card-overlay"></div>
+                    <div class="relative z-10 space-y-3 py-2">
+                        <h3
+                            class="text-white font-extrabold text-base sm:text-lg uppercase tracking-wider leading-tight">
+                            AKCIE
+                        </h3>
+                        <div
+                            class="inline-flex items-center gap-1.5 text-xs font-extrabold text-gray-300 group-hover:text-white tracking-widest uppercase transition-colors">
+                            <span>ZOBRAZIŤ</span>
+                            <svg class="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                    d="M9 5l7 7-7 7">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+        <!-- ОКТРЕМА СЕКЦІЯ ПЕРЕВАГ МАЗАЗИНУ -->
+        <section class="w-full max-w-[1536px] mx-auto px-4 sm:px-6 mt-8 sm:mt-12">
+            <div class="bg-[#08080a] border border-[#1e1e24] rounded-[6px] p-5 sm:p-6 shadow-xl">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+
+                    <!-- 1. ВАНТАЖІВКА (Doprava zdarma) -->
+                    <div class="flex items-center gap-4">
+                        <svg class="w-8 h-8 text-gray-200 shrink-0" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"
+                                d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"
+                                d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8h4l3 3v5h-2m-4 0h2">
+                            </path>
+                        </svg>
+                        <div class="space-y-0.5">
+                            <div class="text-xs font-bold text-white uppercase tracking-wider leading-snug">DOPRAVA
+                                ZDARMA</div>
+                            <div class="text-[11px] text-gray-400 font-medium">nad 70 €</div>
+                        </div>
+                    </div>
+
+                    <!-- 2. ГОДИННИК (Rýchle doručenie) -->
+                    <div class="flex items-center gap-4">
+                        <svg class="w-8 h-8 text-gray-200 shrink-0" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"
+                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <div class="space-y-0.5">
+                            <div class="text-xs font-bold text-white uppercase tracking-wider leading-snug">RÝCHLE
+                                DORUČENIE
+                            </div>
+                            <div class="text-[11px] text-gray-400 font-medium">1–2 pracovné dni</div>
+                        </div>
+                    </div>
+
+                    <!-- 3. ЩИТ ІЗ ГАЛОЧКОЮ (Oficiálne produkty) -->
+                    <div class="flex items-center gap-4">
+                        <svg class="w-8 h-8 text-gray-200 shrink-0" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"
+                                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                            </path>
+                        </svg>
+                        <div class="space-y-0.5">
+                            <div class="text-xs font-bold text-white uppercase tracking-wider leading-snug">OFICIÁLNE
+                                PRODUKTY
+                            </div>
+                            <div class="text-[11px] text-gray-400 font-medium">Games Workshop</div>
+                        </div>
+                    </div>
+
+                    <!-- 4. ЗАМОК (Bezpečné platby) -->
+                    <div class="flex items-center gap-4">
+                        <svg class="w-8 h-8 text-gray-200 shrink-0" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"
+                                d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z">
+                            </path>
+                        </svg>
+                        <div class="space-y-0.5">
+                            <div class="text-xs font-bold text-white uppercase tracking-wider leading-snug">BEZPEČNÉ
+                                PLATBY
+                            </div>
+                            <div class="text-[11px] text-gray-400 font-medium">100% ochrana</div>
+                        </div>
+                    </div>
+
+                    <!-- 5. СПІЛЬНОТА / 3 ЛЮДЕЙ (Podpora komunity) -->
+                    <div class="flex items-center gap-4">
+                        <svg class="w-8 h-8 text-gray-200 shrink-0" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"
+                                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z">
+                            </path>
+                        </svg>
+                        <div class="space-y-0.5">
+                            <div class="text-xs font-bold text-white uppercase tracking-wider leading-snug">PODPORA
+                                KOMUNITY
+                            </div>
+                            <div class="text-[11px] text-gray-400 font-medium">Discord, blog, battle reporty</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- СЕКЦІЯ 2: NAJPOPULÁRNEJŠIE PRODUKTY (ДИНАМІЧНИЙ РЕНДЕРИНГ З МАСИВУ) -->
+        <section class="w-full max-w-[1536px] mx-auto px-4 sm:px-6 mt-12 sm:mt-16">
+
+            <!-- Заголовок та посилання ZOBRAZIŤ VŠETKY (Дуже жирні) -->
+            <div class="flex items-center justify-between mb-6">
+                <h2 class="text-xl sm:text-2xl font-extrabold text-white uppercase tracking-wider font-sans">
+                    NAJPOPULÁRNEJŠIE PRODUKTY
+                </h2>
+                <a href="category.html"
+                    class="text-xs sm:text-sm font-extrabold text-gray-300 hover:text-white uppercase tracking-wider flex items-center gap-1.5 transition">
+                    <span>ZOBRAZIŤ VŠETKY</span>
+                    <svg class="w-4 h-4 text-current" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                            d="M14 5l7 7m0 0l-7 7m7-7H3">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Контейнер слайдера -->
+            <div class="relative group">
+                <div class="swiper products-swiper px-0.5 py-1">
+                    <div class="swiper-wrapper">
+
+                        <!-- РЕНДЕРИНГ КАРТОК ЧЕРЕЗ МАСИВ JS (Alpine.js x-for) -->
+                        <template x-for="product in popularProducts" :key="product.id">
+                            <div class="swiper-slide">
+                                <div class="product-card">
+                                    <div>
+                                        <!-- Лейбл -->
+                                        <span x-show="product.badge" x-text="product.badge"
+                                            class="product-card-badge"></span>
+
+                                        <!-- Зображення -->
+                                        <div class="product-card-img-wrapper">
+                                            <img :src="product.image" :alt="product.title">
+                                        </div>
+
+                                        <!-- Категорія та Назва -->
+                                        <div class="product-card-category" x-text="product.category"></div>
+                                        <h3 class="product-card-title" x-text="product.title"></h3>
+                                    </div>
+
+                                    <!-- Нижній блок з ціною та кнопкою (БЕЗ РОЗДІЛЮВАЧА) -->
+                                    <div class="product-card-footer">
+                                        <div>
+                                            <!-- Ціни -->
+                                            <div class="flex items-center gap-2">
+                                                <span
+                                                    :class="product.oldPrice ? 'product-card-price-sale' : 'product-card-price'"
+                                                    x-text="'€' + product.price.toFixed(2).replace('.', ',')"></span>
+                                                <span x-show="product.oldPrice" class="product-card-price-old"
+                                                    x-text="'€' + (product.oldPrice ? product.oldPrice.toFixed(2).replace('.', ',') : '')"></span>
+                                            </div>
+
+                                            <!-- Статус (БЕЗ КРАПКИ) -->
+                                            <div x-if="product.inStock" class="product-card-status-in"
+                                                x-show="product.inStock">
+                                                Skladom
+                                            </div>
+                                            <div x-if="!product.inStock" class="product-card-status-out"
+                                                x-show="!product.inStock">
+                                                Vypredané
+                                            </div>
+                                        </div>
+
+                                        <!-- Кнопка додавання у кошик -->
+                                        <button @click="addToCart(product)" :disabled="!product.inStock"
+                                            class="product-card-btn"
+                                            :title="product.inStock ? 'Pridať do košíka' : 'Vypredané'">
+                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </template>
+
+                    </div>
+                </div>
+
+                <!-- Стрілки навігації -->
+                <button
+                    class="products-prev absolute -left-4 top-1/2 -translate-y-1/2 z-30 w-9 h-9 rounded-full flex items-center justify-center shadow-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7">
+                        </path>
+                    </svg>
+                </button>
+                <button
+                    class="products-next absolute -right-4 top-1/2 -translate-y-1/2 z-30 w-9 h-9 rounded-full flex items-center justify-center shadow-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+            </div>
+        </section>
+        <!-- СЕКЦІЯ 3: ПРОМО-КАРТКИ (АКЦІЇ ТА ДЛЯ ПОЧАТКІВЦІВ) -->
+        <section class="w-full max-w-[1536px] mx-auto px-4 sm:px-6 mt-6 sm:mt-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
+
+                <!-- КАРТКА 1: ZĽAVY A AKCIE -->
+                <div
+                    class="relative rounded-[6px] border border-[#1e1e24] overflow-hidden bg-[#08080a] group min-h-[220px] sm:min-h-[260px] flex items-center">
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                        style="background-image: url('https://placehold.co/800x400/1a0505/dc2626?text=Zlava+Percent');">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-r from-[#030303] via-[#030303]/80 to-transparent"></div>
+
+                    <div class="relative z-10 p-5 sm:p-8 max-w-[85%] sm:max-w-[75%]">
+                        <!-- Надійний font-bold для підпису -->
+                        <div class="text-[#dc2626] font-bold text-sm uppercase tracking-wider mb-2">
+                            Zľavy a akcie
+                        </div>
+                        <!-- Надійний font-bold для заголовка -->
+                        <h3
+                            class="text-white font-bold text-3xl sm:text-4xl leading-tight mb-2 font-sans tracking-wide">
+                            Ušetri až 20%
+                        </h3>
+                        <p class="text-gray-300 text-sm sm:text-base font-medium mb-5">
+                            na vybrané produkty
+                        </p>
+                        <a href="category.html"
+                            class="inline-block bg-[#c12824] hover:bg-[#99241d] text-white px-4 sm:px-5 py-2 rounded-[4px] font-bold text-xs uppercase tracking-widest transition-colors shadow-lg">
+                            Zobraziť akcie
+                        </a>
+                    </div>
+                </div>
+
+                <!-- КАРТКА 2: PRE ZAČIATOČNÍKOV -->
+                <div
+                    class="relative rounded-[6px] border border-[#1e1e24] overflow-hidden bg-[#08080a] group min-h-[220px] sm:min-h-[260px] flex items-center">
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                        style="background-image: url('https://placehold.co/800x400/050f1a/3b82f6?text=Space+Marine+Beginner');">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-r from-[#030303] via-[#030303]/80 to-transparent"></div>
+
+                    <div class="relative z-10 p-5 sm:p-8 max-w-[85%] sm:max-w-[75%]">
+                        <!-- Надійний font-bold для підпису -->
+                        <div class="text-[#60a5fa] font-bold text-sm uppercase tracking-wider mb-2">
+                            Pre začiatočníkov
+                        </div>
+                        <!-- Надійний font-bold для заголовка -->
+                        <h3
+                            class="text-white font-bold text-3xl sm:text-4xl leading-tight mb-2 font-sans tracking-wide">
+                            Nevieš, kde začať?
+                        </h3>
+                        <p class="text-gray-300 text-sm sm:text-base font-medium mb-5">
+                            Pomôžeme ti vstúpiť do sveta Warhammeru
+                        </p>
+                        <a href="#"
+                            class="inline-block bg-[#334155] hover:bg-[#475569] text-white px-4 sm:px-5 py-2 rounded-[4px] font-bold text-xs uppercase tracking-widest transition-colors shadow-lg">
+                            Zistiť viac
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- СЕКЦІЯ 4: KOMUNITA A NOVINKY (Блог та відгуки) -->
+        <section class="w-full max-w-[1536px] mx-auto px-4 sm:px-6 mt-12 sm:mt-16">
+
+            <!-- Заголовок секції та посилання -->
+            <div class="flex items-center justify-between mb-6">
+                <h2 class="text-xl sm:text-2xl font-black text-white uppercase tracking-wider font-sans">
+                    KOMUNITA A NOVINKY
+                </h2>
+                <a href="#"
+                    class="text-xs sm:text-sm font-bold text-gray-300 hover:text-white uppercase tracking-wider flex items-center gap-1.5 transition">
+                    <span>ZOBRAZIŤ VŠETKY ČLÁNKY</span>
+                    <svg class="w-4 h-4 text-current" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                            d="M14 5l7 7m0 0l-7 7m7-7H3">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Сітка карток (Кастомна сітка від найбільшої (1.4fr) до найменшої (0.9fr) колонки) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.4fr_1.2fr_1fr_0.9fr] gap-4 sm:gap-6">
+
+                <!-- КАРТКА 1: БІЛЬША (Battle Report) -->
+                <a href="#"
+                    class="relative rounded-[6px] border border-[#1e1e24] overflow-hidden bg-[#08080a] group min-h-[220px] sm:min-h-[260px] flex flex-col p-5 sm:p-6 transition-colors hover:border-[#99241d]">
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                        style="background-image: url('https://placehold.co/600x400/101014/dc2626?text=Battle+Report');">
+                    </div>
+                    <!-- Градієнт від чорного знизу до прозорого зверху -->
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-[#030303] via-[#030303]/70 to-transparent opacity-90 group-hover:opacity-100 transition">
+                    </div>
+
+                    <div class="relative z-10 flex flex-col h-full justify-between">
+                        <!-- Лейбл з помаранчевою рискою -->
+                        <div
+                            class="text-[10px] sm:text-[11px] font-bold text-white uppercase tracking-widest flex items-center gap-2">
+                            <span class="w-[3px] h-3.5 bg-[#ea580c] rounded-full"></span>
+                            BATTLE REPORT
+                        </div>
+
+                        <!-- Заголовок та метадані -->
+                        <div class="space-y-3 mt-12">
+                            <h3 class="text-white font-bold text-base sm:text-lg leading-snug">
+                                Battle Report: Space Marines vs Chaos Space Marines
+                            </h3>
+                            <div class="flex items-center gap-4 text-[11px] text-gray-400 font-medium">
+                                <div class="flex items-center gap-1.5">
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
+                                        </path>
+                                    </svg>
+                                    24. máj 2024
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                    5 min čítania
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- КАРТКА 2: МЕНША (Novinky) -->
+                <a href="#"
+                    class="relative rounded-[6px] border border-[#1e1e24] overflow-hidden bg-[#08080a] group min-h-[220px] sm:min-h-[260px] flex flex-col p-5 sm:p-6 transition-colors hover:border-[#99241d]">
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                        style="background-image: url('https://placehold.co/500x400/1a1a05/d97706?text=Nove+Modely');">
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-[#030303] via-[#030303]/70 to-transparent opacity-90 group-hover:opacity-100 transition">
+                    </div>
+
+                    <div class="relative z-10 flex flex-col h-full justify-between">
+                        <!-- Лейбл з помаранчевою рискою -->
+                        <div
+                            class="text-[10px] sm:text-[11px] font-bold text-white uppercase tracking-widest flex items-center gap-2">
+                            <span class="w-[3px] h-3.5 bg-[#ea580c] rounded-full"></span>
+                            NOVINKY
+                        </div>
+
+                        <!-- Заголовок та метадані -->
+                        <div class="space-y-3 mt-12">
+                            <h3 class="text-white font-bold text-base sm:text-lg leading-snug">
+                                Nové modely Age of Sigmar už čoskoro!
+                            </h3>
+                            <div class="flex items-center gap-4 text-[11px] text-gray-400 font-medium">
+                                <div class="flex items-center gap-1.5">
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
+                                        </path>
+                                    </svg>
+                                    21. máj 2024
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                    3 min čítania
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- КАРТКА 3: ЩЕ МЕНША (Guide) -->
+                <a href="#"
+                    class="relative rounded-[6px] border border-[#1e1e24] overflow-hidden bg-[#08080a] group min-h-[220px] sm:min-h-[260px] flex flex-col p-5 transition-colors hover:border-[#99241d]">
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                        style="background-image: url('https://placehold.co/400x400/051a1a/059669?text=Farbenie');">
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-[#030303] via-[#030303]/70 to-transparent opacity-90 group-hover:opacity-100 transition">
+                    </div>
+
+                    <div class="relative z-10 flex flex-col h-full justify-between">
+                        <!-- Лейбл з помаранчевою рискою -->
+                        <div
+                            class="text-[10px] sm:text-[11px] font-bold text-white uppercase tracking-widest flex items-center gap-2">
+                            <span class="w-[3px] h-3.5 bg-[#ea580c] rounded-full"></span>
+                            GUIDE
+                        </div>
+
+                        <!-- Заголовок та метадані -->
+                        <div class="space-y-3 mt-12">
+                            <h3 class="text-white font-bold text-base sm:text-[17px] leading-snug">
+                                Ako správne začať s maľovaním miniatúr
+                            </h3>
+                            <div class="flex flex-col gap-2 text-[11px] text-gray-400 font-medium">
+                                <div class="flex items-center gap-1.5">
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
+                                        </path>
+                                    </svg>
+                                    18. máj 2024
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                    6 min čítania
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- КАРТКА 4: НАЙМЕНША (Відгук Heureka) -->
+                <a href="#"
+                    class="relative rounded-[6px] border border-[#1e1e24] bg-[#0d0d10] group min-h-[220px] sm:min-h-[260px] flex flex-col justify-between p-5 transition-colors hover:border-[#3b82f6]">
+
+                    <!-- Стрілочка справа (абсолютне позиціонування) -->
+                    <div
+                        class="absolute right-3 top-1/2 -translate-y-1/2 text-[#1e1e24] group-hover:text-[#3b82f6] transition-colors">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7">
+                            </path>
+                        </svg>
+                    </div>
+
+                    <div class="flex flex-col h-full text-center space-y-4 pr-3">
+                        <!-- Верхній підпис -->
+                        <div class="text-[10px] font-bold text-gray-300 uppercase tracking-widest">
+                            HODNOTENIE ZÁKAZNÍKOV
+                        </div>
+
+                        <!-- Оцінка 4,9 та зірочки -->
+                        <div class="flex flex-col items-center justify-center gap-1.5">
+                            <div class="flex items-center gap-3">
+                                <span class="text-3xl font-black text-white leading-none">4,9</span>
+                                <div class="flex flex-col items-start gap-0.5">
+                                    <div class="flex text-[#22c55e] gap-0.5">
+                                        <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                            </path>
+                                        </svg>
+                                        <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                            </path>
+                                        </svg>
+                                        <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                            </path>
+                                        </svg>
+                                        <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                            </path>
+                                        </svg>
+                                        <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                    <span class="text-[9px] text-[#eab308] font-bold">na Heureka.sk</span>
+                                </div>
+                            </div>
+                            <div class="text-[10px] text-gray-400 font-medium">+ 1200 overených recenzií</div>
+                        </div>
+
+                        <!-- ОРИГІНАЛЬНИЙ ЛОГОТИП HEUREKA З ПАПКИ SRC/IMG -->
+                        <div class="flex items-center justify-center pt-1">
+                            <img src="/src/img/heureka.png" alt="Heureka" class="h-6 object-contain">
+                        </div>
+
+                        <!-- Цитата і автор -->
+                        <div class="space-y-1.5 pt-3 border-t border-[#1e1e24] mt-auto">
+                            <p class="text-[11px] text-gray-300 italic leading-snug">
+                                „Skvelý výber, rýchle doručenie a výborná komunikácia. Odporúčam!“
+                            </p>
+                            <p class="text-[10px] text-gray-500 font-medium">
+                                – Overený zákazník
+                            </p>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+        <!-- СЕКЦІЯ 5: ФОРМА ПІДПИСКИ НА НОВИНКИ -->
+        <section class="w-full max-w-[1536px] mx-auto px-4 sm:px-6 mt-12 sm:mt-16">
+            <div
+                class="relative rounded-[6px] border border-[#1e1e24] bg-[#08080a] py-6 px-6 sm:px-8 overflow-hidden flex flex-col lg:flex-row items-center justify-between gap-6">
+
+                <!-- Фоновий контур -->
+                <div class="absolute right-0 bottom-0 top-0 w-1/3 bg-no-repeat bg-right-bottom opacity-10 pointer-events-none"
+                    style="background-image: url('https://placehold.co/600x300/030303/ffffff?text=Marine+Outline');">
+                </div>
+
+                <!-- Ліва частина -->
+                <div class="flex items-center gap-4 relative z-10 text-left">
+                    <div
+                        class="w-12 h-12 rounded-[4px] bg-white/10 border border-white/20 flex items-center justify-center p-2 shrink-0">
+                        <svg viewBox="0 0 24 24" class="w-full h-full fill-current text-white"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3
+                            class="text-white font-black text-base sm:text-lg uppercase tracking-wider leading-snug font-sans">
+                            NEZMEŠKAJ NOVINKY A EXКLUZÍVNE <span class="text-[#99241d]">PONUKY</span>
+                        </h3>
+                        <p class="text-gray-400 text-xs sm:text-sm mt-0.5">
+                            Prihlás sa na odber noviniek a buď vždy o krok vpred.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Права частина: Інпут, кнопка підписки та кругла кнопка зі стрілкою -->
+                <div class="w-full lg:w-auto relative z-10">
+                    <form @submit.prevent="showToast('Úspešne prihlásené na odber noviniek!')"
+                        class="flex flex-col sm:flex-row items-center gap-2.5">
+                        <div class="relative w-full sm:w-72">
+                            <input type="email" required placeholder="Zadaj svoj e-mail"
+                                class="w-full bg-[#030303] border border-[#1e1e24] rounded-[4px] py-3 pl-4 pr-12 text-xs text-white placeholder-gray-500 focus:outline-none focus:border-[#99241d] transition">
+                            <!-- Кругла кнопка зі стрілкою всередині інпуту -->
+                            <button type="submit"
+                                class="absolute right-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-[#18181c] hover:bg-[#99241d] border border-[#1e1e24] text-gray-300 hover:text-white flex items-center justify-center transition"
+                                title="Odoslať">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                        d="M9 5l7 7-7 7">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                        <button type="submit"
+                            class="w-full sm:w-auto bg-[#c12824] hover:bg-[#99241d] text-white px-6 py-3 rounded-[4px] font-extrabold text-xs uppercase tracking-wider transition shadow-lg shrink-0">
+                            PRIHLÁSIŤ SA
+                        </button>
+                    </form>
+                    <div class="text-[10px] text-gray-500 mt-1.5 text-center sm:text-left">
+                        Prihlásením súhlasíš so spracovaním osobných údajov.
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- 6. ФУТЕР САЙТУ -->
+    <footer class="bg-black border-t border-[#1e1e24] text-xs text-[#888894] pt-16 pb-10 px-4 sm:px-6 mt-16">
+        <div
+            class="w-full max-w-[1536px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 pb-12 border-b border-[#1e1e24]">
+
+            <!-- КОЛОНКА 1: Бренд та соцмережі (без розділювача справа) -->
+            <div class="space-y-4 pr-0 lg:pr-6">
+                <a href="index.html" class="flex items-center gap-3">
+                    <div
+                        class="w-8 h-8 rounded-[4px] bg-white/10 border border-white/20 flex items-center justify-center p-1">
+                        <svg viewBox="0 0 24 24" class="w-full h-full fill-current text-white"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                        </svg>
+                    </div>
+                    <div>
+                        <span
+                            class="text-sm tracking-widest text-white block leading-none font-sans font-extrabold">WARHAMMER</span>
+                        <span class="text-[9px] tracking-widest uppercase text-[#99241d] block mt-0.5 font-bold">ESHOP
+                            SLOVENSKO</span>
+                    </div>
+                </a>
+                <p class="text-[11px] text-gray-400 leading-relaxed">
+                    Oficiálny e-shop zameraný na produkty Games Workshop. Tvoj svet. Tvoja pravda. Tvoja armáda.
+                </p>
+                <div class="flex items-center gap-3 pt-2">
+                    <a href="#"
+                        class="w-8 h-8 rounded-[4px] bg-[#0d0d10] border border-[#1e1e24] flex items-center justify-center text-gray-400 hover:text-white hover:border-[#99241d] transition">
+                        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                            <path
+                                d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-6.17-1.25.077.077 0 0 0-.079.037A19.736 19.736 0 0 0 3.677 20.3a.07.07 0 0 0 .032.027c1.933.918 3.8 1.48 5.657 1.792.038.006.072-.01.087-.035.405-.544.768-1.12 1.085-1.723a.068.068 0 0 0-.037-.094 13.067 13.067 0 0 1-1.854-.886.067.067 0 0 1-.007-.111c.125-.096.251-.196.372-.295a.065.065 0 0 1 .069-.011c3.844 1.756 8.004 1.756 11.802 0a.065.065 0 0 1 .07.011c.12.099.247.2.373.295a.067.067 0 0 1-.006.111 12.186 12.186 0 0 1-1.856.886.067.067 0 0 0-.037.094c.32.602.684 1.178 1.09 1.723.015.025.05.041.088.035 1.86-.312 3.725-.874 5.658-1.792a.07.07 0 0 0 .033-.027c2.253-6.425-.56-11.756-1.571-13.882zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z" />
+                        </svg>
+                    </a>
+                    <a href="#"
+                        class="w-8 h-8 rounded-[4px] bg-[#0d0d10] border border-[#1e1e24] flex items-center justify-center text-gray-400 hover:text-white hover:border-[#99241d] transition">
+                        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                            <path
+                                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                        </svg>
+                    </a>
+                    <a href="#"
+                        class="w-8 h-8 rounded-[4px] bg-[#0d0d10] border border-[#1e1e24] flex items-center justify-center text-gray-400 hover:text-white hover:border-[#99241d] transition">
+                        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                        </svg>
+                    </a>
+                    <a href="#"
+                        class="w-8 h-8 rounded-[4px] bg-[#0d0d10] border border-[#1e1e24] flex items-center justify-center text-gray-400 hover:text-white hover:border-[#99241d] transition">
+                        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                            <path
+                                d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- КОЛОНКА 2: INFORMÁCIE (з вертикальним розділювачем зліва на десктопі) -->
+            <div class="space-y-3 lg:border-l lg:border-[#1e1e24] lg:pl-6">
+                <h4 class="text-white font-bold text-xs uppercase tracking-wider font-sans">Informácie</h4>
+                <ul class="space-y-2 text-xs text-gray-400">
+                    <li><a href="#" class="hover:text-white transition">O nás</a></li>
+                    <li><a href="#" class="hover:text-white transition">Doprava a platba</a></li>
+                    <li><a href="#" class="hover:text-white transition">Obchodné podmienky</a></li>
+                    <li><a href="#" class="hover:text-white transition">Reklamácie a vrátenie</a></li>
+                    <li><a href="#" class="hover:text-white transition">Ochrana osobných údajov</a></li>
+                </ul>
+            </div>
+
+            <!-- КОЛОНКА 3: ZÁKAZNÍCKA PODPORA (з розділювачем) -->
+            <div class="space-y-3 lg:border-l lg:border-[#1e1e24] lg:pl-6">
+                <h4 class="text-white font-bold text-xs uppercase tracking-wider font-sans">Zákaznícka podpora</h4>
+                <ul class="space-y-2 text-xs text-gray-400">
+                    <li><a href="#" class="hover:text-white transition">Kontakt</a></li>
+                    <li><a href="#" class="hover:text-white transition">FAQ</a></li>
+                    <li><a href="#" class="hover:text-white transition">Sledovať objednávku</a></li>
+                    <li><a href="#" class="hover:text-white transition">Vernostný program</a></li>
+                </ul>
+            </div>
+
+            <!-- КОЛОНКА 4: KATEGÓRIE (з розділювачем) -->
+            <div class="space-y-3 lg:border-l lg:border-[#1e1e24] lg:pl-6">
+                <h4 class="text-white font-bold text-xs uppercase tracking-wider font-sans">Kategórie</h4>
+                <ul class="space-y-2 text-xs text-gray-400">
+                    <li><a href="category.html" class="hover:text-white transition">Warhammer 40,000</a></li>
+                    <li><a href="category.html" class="hover:text-white transition">Age of Sigmar</a></li>
+                    <li><a href="category.html" class="hover:text-white transition">Farby & nástroje</a></li>
+                    <li><a href="category.html" class="hover:text-white transition">Kill Team</a></li>
+                    <li><a href="category.html" class="hover:text-white transition">Príslušenstvo</a></li>
+                    <li><a href="category.html" class="hover:text-white transition">Merch</a></li>
+                </ul>
+            </div>
+
+            <!-- КОЛОНКА 5: ПЛАТБИ (з розділювачем та SVG-іконками з /src/img/) -->
+            <div class="space-y-3 lg:border-l lg:border-[#1e1e24] lg:pl-6">
+                <h4 class="text-white font-bold text-xs uppercase tracking-wider font-sans">Platby</h4>
+                <p class="text-[11px] text-gray-400">Bezpečné a rýchle platobné metódy</p>
+
+                <!-- Сітка платіжних систем із вашими SVG файлами -->
+                <div class="grid grid-cols-3 gap-2 pt-1">
+                    <div
+                        class="bg-[#0d0d10] border border-[#1e1e24] rounded-[4px] h-9 flex items-center justify-center p-1.5">
+                        <img src="/src/img/Visa.svg" alt="Visa" class="max-h-full max-w-full object-contain">
+                    </div>
+                    <div
+                        class="bg-[#0d0d10] border border-[#1e1e24] rounded-[4px] h-9 flex items-center justify-center p-1.5">
+                        <img src="/src/img/Mastercard.svg" alt="Mastercard"
+                            class="max-h-full max-w-full object-contain">
+                    </div>
+                    <div
+                        class="bg-[#0d0d10] border border-[#1e1e24] rounded-[4px] h-9 flex items-center justify-center p-1.5">
+                        <img src="/src/img/paypal.svg" alt="PayPal" class="max-h-full max-w-full object-contain">
+                    </div>
+                    <div
+                        class="bg-[#0d0d10] border border-[#1e1e24] rounded-[4px] h-9 flex items-center justify-center p-1.5">
+                        <img src="/src/img/apple-pay.svg" alt="Apple Pay" class="max-h-full max-w-full object-contain">
+                    </div>
+                    <div
+                        class="bg-[#0d0d10] border border-[#1e1e24] rounded-[4px] h-9 flex items-center justify-center p-1.5">
+                        <img src="/src/img/google-pay.svg" alt="Google Pay"
+                            class="max-h-full max-w-full object-contain">
+                    </div>
+                    <div
+                        class="bg-[#0d0d10] border border-[#1e1e24] rounded-[4px] h-9 flex items-center justify-center font-bold text-yellow-500 text-[10px] uppercase text-center px-1">
+                        Bankový prevod
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Нижній рядок копирайту -->
+        <div
+            class="w-full max-w-[1536px] mx-auto pt-6 flex flex-col sm:flex-row items-center justify-between text-gray-500 text-[11px] gap-4">
+            <div>&copy; 2026 Warhammer E-Shop Slovensko. Všetky práva vyhradené.</div>
+            <div class="flex items-center gap-1.5">
+                <span>Vytvorené</span>
+                <span class="text-[#c12824]">❤️</span>
+                <span>pre komunitu Warhammer</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CART DRAWER (МОДАЛЬНЕ ВІКНО КОШИКА) -->
+    <div x-show="cartDrawerOpen" x-transition:enter="transition ease-out duration-300"
+        x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
+        x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100"
+        x-transition:leave-end="opacity-0" class="fixed inset-0 z-[100] overflow-hidden" style="display: none;">
+        <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" @click="cartDrawerOpen = false"></div>
+        <div class="fixed inset-y-0 right-0 max-w-full flex pl-10" x-show="cartDrawerOpen"
+            x-transition:enter="transition ease-out duration-300 transform" x-transition:enter-start="translate-x-full"
+            x-transition:enter-end="translate-x-0" x-transition:leave="transition ease-in duration-200 transform"
+            x-transition:leave-start="translate-x-0" x-transition:leave-end="translate-x-full">
+            <div
+                class="w-screen max-w-md bg-[#030303] border-l border-[#1e1e24] p-6 flex flex-col justify-between shadow-2xl">
+                <div class="space-y-4">
+                    <div class="flex justify-between items-center border-b border-[#1e1e24] pb-4">
+                        <div class="flex items-center gap-2.5">
+                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                    d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+                            </svg>
+                            <h3 class="text-white uppercase tracking-wider text-sm font-sans font-bold">Nákupný Košík
+                            </h3>
+                        </div>
+                        <button @click="cartDrawerOpen = false" class="text-gray-400 hover:text-white p-1 transition">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="space-y-3 max-h-[65vh] overflow-y-auto pr-1">
+                        <template x-if="cart.length === 0">
+                            <div class="text-center py-12 text-gray-500 space-y-2">
+                                <svg class="w-12 h-12 mx-auto text-gray-700" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                        d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+                                </svg>
+                                <p class="text-sm">Váš košík je momentálne prázdny</p>
+                            </div>
+                        </template>
+
+                        <template x-for="item in cart" :key="item.id">
+                            <div
+                                class="bg-[#0f0f12] border border-[#1e1e24] rounded-[4px] p-3 flex items-center justify-between gap-3 group">
+                                <img :src="item.image" class="w-12 h-12 object-contain rounded-[4px] bg-black">
+                                <div class="flex-1 text-xs space-y-0.5">
+                                    <h4 class="text-white font-medium" x-text="item.title"></h4>
+                                    <div class="text-[#c12824] font-semibold"
+                                        x-text="item.price.toFixed(2).replace('.', ',') + ' €'"></div>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <span class="text-xs text-gray-400 font-mono" x-text="'x' + item.qty"></span>
+                                    <button @click="removeFromCart(item.id)" title="Odstrániť položku"
+                                        class="text-gray-500 hover:text-[#99241d] p-1.5 rounded hover:bg-black/50 transition">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                                d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16">
+                                            </path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+
+                <div class="border-t border-[#1e1e24] pt-4 space-y-3">
+                    <div class="flex justify-between text-sm">
+                        <span class="text-gray-300">Spolu s DPH:</span>
+                        <span class="text-[#c12824] text-base font-bold"
+                            x-text="cartTotal.toFixed(2).replace('.', ',') + ' €'"></span>
+                    </div>
+                    <button @click="checkout()"
+                        class="w-full bg-[#99241d] hover:bg-[#b71c1c] text-white py-3 rounded-[4px] text-xs uppercase tracking-wider font-bold transition">
+                        Pokračovať k objednávke
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MOBILE BURGER MENU (МОДАЛЬНЕ БУРГЕР-МЕНЮ) -->
+    <div x-show="mobileNavOpen" x-transition:enter="transition ease-out duration-300"
+        x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
+        x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100"
+        x-transition:leave-end="opacity-0" class="fixed inset-0 z-[100] overflow-hidden" style="display: none;">
+
+        <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" @click="mobileNavOpen = false"></div>
+
+        <div class="fixed inset-y-0 left-0 max-w-full flex pr-10" x-show="mobileNavOpen"
+            x-transition:enter="transition ease-out duration-300 transform" x-transition:enter-start="-translate-x-full"
+            x-transition:enter-end="translate-x-0" x-transition:leave="transition ease-in duration-200 transform"
+            x-transition:leave-start="translate-x-0" x-transition:leave-end="-translate-x-full">
+
+            <div
+                class="w-screen max-w-xs sm:max-w-sm bg-[#030303] border-r border-[#1e1e24] p-5 flex flex-col justify-between shadow-2xl overflow-y-auto">
+                <div class="space-y-5">
+                    <div class="flex justify-between items-center border-b border-[#1e1e24] pb-4">
+                        <span class="font-sans text-base text-white font-bold">NAVIGÁCIA</span>
+                        <button @click="mobileNavOpen = false" class="text-gray-400 hover:text-white p-1">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="relative">
+                        <input type="text" x-model="searchQuery" placeholder="Hľadať produkty, farby..."
+                            class="w-full bg-[#0f0f0f] border border-[#1e1e24] rounded-[4px] py-2 px-3 text-xs text-[#f5f4f5] placeholder-gray-500 focus:outline-none focus:border-[#99241d] transition">
+                        <button
+                            class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white transition">
+                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-2 pb-2 border-b border-[#1e1e24]">
+                        <a href="#"
+                            class="flex items-center justify-center space-x-2 py-2 px-3 bg-[#0f0f12] border border-[#1e1e24] rounded-[4px] text-xs text-[#f5f4f5] hover:text-[#99241d] transition">
+                            <svg class="w-4 h-4 text-[#f5f4f5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                            </svg>
+                            <span>Prihlásiť sa</span>
+                        </a>
+
+                        <a href="#"
+                            class="flex items-center justify-center space-x-2 py-2 px-3 bg-[#0f0f12] border border-[#1e1e24] rounded-[4px] text-xs text-[#f5f4f5] hover:text-[#99241d] transition">
+                            <svg class="w-4 h-4 text-[#f5f4f5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z">
+                                </path>
+                            </svg>
+                            <span>Obľúbené</span>
+                        </a>
+                    </div>
+
+                    <div class="space-y-1 text-xs uppercase tracking-wider text-gray-200"
+                        x-data="{ openSubmenu: null }">
+
+                        <div class="border-b border-[#1e1e24] py-2">
+                            <button @click="openSubmenu = openSubmenu === 'wh40k' ? null : 'wh40k'"
+                                class="w-full flex items-center justify-between py-1 text-left hover:text-[#99241d] transition">
+                                <span>WARHAMMER 40,000</span>
+                                <svg class="w-3 h-3 transition-transform duration-200"
+                                    :class="{ 'rotate-180': openSubmenu === 'wh40k' }" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div x-show="openSubmenu === 'wh40k'" x-transition
+                                class="pl-3 pt-2 space-y-2 text-[11px] text-gray-400">
+                                <a href="category.html" class="block hover:text-white transition">Space Marines</a>
+                                <a href="category.html" class="block hover:text-white transition">Astra Militarum</a>
+                                <a href="category.html" class="block hover:text-white transition">Necrons</a>
+                                <a href="category.html" class="block hover:text-white transition">Chaos (CSM, Death
+                                    Guard, World Eaters, Thousand Sons)</a>
+                                <a href="category.html" class="block hover:text-white transition">Xenos (Orks, Tyranids,
+                                    T'au, Necrons)</a>
+                                <a href="category.html" class="block hover:text-white transition">Imperium (Sororitas,
+                                    Custodes, Mechanicus, Knights)</a>
+                                <a href="category.html"
+                                    class="block text-[#99241d] hover:text-white transition pt-1 border-t border-[#1e1e24]">Štartovacie
+                                    sady</a>
+                            </div>
+                        </div>
+
+                        <div class="border-b border-[#1e1e24] py-2">
+                            <button @click="openSubmenu = openSubmenu === 'aos' ? null : 'aos'"
+                                class="w-full flex items-center justify-between py-1 text-left hover:text-[#99241d] transition">
+                                <span>AGE OF SIGMAR</span>
+                                <svg class="w-3 h-3 transition-transform duration-200"
+                                    :class="{ 'rotate-180': openSubmenu === 'aos' }" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div x-show="openSubmenu === 'aos'" x-transition
+                                class="pl-3 pt-2 space-y-2 text-[11px] text-gray-400">
+                                <a href="category.html" class="block hover:text-white transition">Order (Stormcast,
+                                    Seraphon)</a>
+                                <a href="category.html" class="block hover:text-white transition">Chaos (Slaves to
+                                    Darkness, Maggotkin)</a>
+                                <a href="category.html" class="block hover:text-white transition">Death (Soulblight,
+                                    Nighthaunt)</a>
+                                <a href="category.html" class="block hover:text-white transition">Destruction (Orruks,
+                                    Gloomspite)</a>
+                                <a href="category.html"
+                                    class="block text-[#99241d] hover:text-white transition pt-1 border-t border-[#1e1e24]">Štartovacie
+                                    sady</a>
+                            </div>
+                        </div>
+
+                        <div class="border-b border-[#1e1e24] py-2">
+                            <button @click="openSubmenu = openSubmenu === 'paints' ? null : 'paints'"
+                                class="w-full flex items-center justify-between py-1 text-left hover:text-[#99241d] transition">
+                                <span>FARBY & NÁSTROJE</span>
+                                <svg class="w-3 h-3 transition-transform duration-200"
+                                    :class="{ 'rotate-180': openSubmenu === 'paints' }" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div x-show="openSubmenu === 'paints'" x-transition
+                                class="pl-3 pt-2 space-y-2 text-[11px] text-gray-400">
+                                <a href="#" class="block hover:text-white transition">Základné farby (Base)</a>
+                                <a href="#" class="block hover:text-white transition">Vrstvové farby (Layer)</a>
+                                <a href="#" class="block hover:text-white transition">Contrast farby</a>
+                                <a href="#" class="block hover:text-white transition">Tieňovacie farby (Shade)</a>
+                                <a href="#" class="block hover:text-white transition">Technické farby</a>
+                                <a href="#"
+                                    class="block hover:text-white transition pt-1 border-t border-[#1e1e24]">Štetce</a>
+                                <a href="#" class="block hover:text-white transition">Nástroje</a>
+                            </div>
+                        </div>
+
+                        <div class="border-b border-[#1e1e24] py-2.5">
+                            <a href="#" class="block hover:text-[#99241d] transition">KILL TEAM</a>
+                        </div>
+
+                        <div class="border-b border-[#1e1e24] py-2.5">
+                            <a href="#" class="block hover:text-[#99241d] transition">PRÍSLUŠENSTVO</a>
+                        </div>
+
+                        <div class="border-b border-[#1e1e24] py-2.5">
+                            <a href="#" class="block hover:text-[#99241d] transition">MERCH</a>
+                        </div>
+
+                        <div class="border-b border-[#1e1e24] py-2.5">
+                            <a href="#" class="block hover:text-[#99241d] transition">BLOG</a>
+                        </div>
+
+                        <div class="pt-3">
+                            <a href="#"
+                                class="w-full py-2.5 px-3 bg-[#99241d] hover:bg-[#b71c1c] text-white transition rounded-[6px] font-sans text-xs tracking-widest flex items-center justify-center font-bold">
+                                PRE ZAČIATOČNÍKOV
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ВЛАСНЕ СПОВІЩЕННЯ (знизу по центру, з кнопкою закриття) -->
+    <div x-show="toastVisible" x-transition:enter="transition ease-out duration-300"
+        x-transition:enter-start="opacity-0 translate-y-4" x-transition:enter-end="opacity-100 translate-y-0"
+        x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0"
+        x-transition:leave-end="opacity-0 translate-y-4"
+        class="fixed bottom-6 left-1/2 -translate-x-1/2 z-[200] pointer-events-auto" style="display: none;">
+        <div class="custom-toast flex items-center gap-4 py-3 px-4 rounded-[6px] text-xs font-semibold">
+            <span x-text="toastMessage"></span>
+            <button @click="hideToast()" class="text-gray-400 hover:text-white p-1 transition" title="Zavrieť">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
+            </button>
+        </div>
+    </div>
+</body>
+
+</html>
