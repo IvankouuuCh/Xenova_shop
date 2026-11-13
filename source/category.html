@@ -4,289 +4,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="meta-title">Katalóg produktov Warhammer | Warhammer 40,000, Age of Sigmar & Citadel | Warhammer E-Shop
-        Slovensko</title>
-    <meta id="meta-description" name="description"
-        content="Kompletný katalóg originálnych produktov Games Workshop na Slovensku. Miniatúry Warhammer 40,000, Age of Sigmar, Kill Team a farby Citadel skladom s rýchlym doručením.">
-    <meta id="meta-robots" name="robots" content="index, follow">
-    <link id="meta-canonical" rel="canonical" href="https://xenova-shop.vercel.app/category.html">
-    <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+    <title>Warhammer 40K | Miniatúry & Armády | Warhammer E-Shop Slovensko</title>
+    <meta name="description"
+        content="Preskúmajte kompletnú ponuku Warhammer 40,000, Age of Sigmar a Citadel farieb. Oficiálne produkty Games Workshop s rýchlym doručením 1-2 pracovné dni po celom Slovensku.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" id="canonical-url" href="https://xenova-shop.vercel.app/category.html?cat=warhammer-40k">
 
-    <!-- Open Graph / Social Meta -->
+    <!-- Open Graph / Social SEO -->
     <meta property="og:type" content="website">
-    <meta property="og:locale" content="sk_SK">
     <meta property="og:site_name" content="Warhammer E-Shop Slovensko">
-    <meta id="og-title" property="og:title" content="Katalóg produktov Warhammer | Warhammer E-Shop Slovensko">
-    <meta id="og-description" property="og:description"
-        content="Vyberte si z ponuky miniatúr Warhammer 40,000, Age of Sigmar, Kill Team a modelárskych farieb Citadel skladom na Slovensku.">
-    <meta id="og-url" property="og:url" content="https://xenova-shop.vercel.app/category.html">
+    <meta property="og:locale" content="sk_SK">
+    <meta property="og:title" id="og-title" content="Warhammer 40K | Miniatúry & Armády | Warhammer E-Shop Slovensko">
+    <meta property="og:description" id="og-description"
+        content="Preskúmajte kompletnú ponuku Warhammer 40,000, Age of Sigmar a Citadel farieb. Rýchle doručenie 1-2 pracovné dni po celom Slovensku.">
+    <meta property="og:url" id="og-url" content="https://xenova-shop.vercel.app/category.html?cat=warhammer-40k">
+    <meta property="og:image" content="https://placehold.co/1200x630/030303/99241d?text=Warhammer+E-Shop+Slovensko">
 
-    <!-- Schema.org CollectionPage + BreadcrumbList + ItemList -->
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" id="twitter-title"
+        content="Warhammer 40K | Miniatúry & Armády | Warhammer E-Shop Slovensko">
+    <meta name="twitter:description" id="twitter-description"
+        content="Preskúmajte kompletnú ponuku Warhammer 40,000, Age of Sigmar a Citadel farieb. Rýchle doručenie 1-2 pracovné dni po celom Slovensku.">
+    <meta name="twitter:image" content="https://placehold.co/1200x630/030303/99241d?text=Warhammer+E-Shop+Slovensko">
+
+    <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+    <script type="module" src="/src/js/main.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Schema.org CollectionPage + BreadcrumbList для SEO -->
     <script id="category-schema" type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@graph": [
             {
                 "@type": "CollectionPage",
-                "@id": "https://xenova-shop.vercel.app/category.html#webpage",
-                "url": "https://xenova-shop.vercel.app/category.html",
-                "name": "Katalóg produktov Warhammer | Warhammer E-Shop Slovensko",
-                "description": "Kompletný katalóg originálnych produktov Games Workshop na Slovensku.",
+                "@id": "https://xenova-shop.vercel.app/category.html?cat=warhammer-40k#webpage",
+                "url": "https://xenova-shop.vercel.app/category.html?cat=warhammer-40k",
+                "name": "Warhammer 40,000 – Miniatúry a armády",
+                "description": "Preskúmajte kompletnú ponuku Warhammer 40,000, Age of Sigmar a Citadel farieb. Rýchle doručenie 1-2 pracovné dni po celom Slovensku.",
                 "inLanguage": "sk"
             },
             {
                 "@type": "BreadcrumbList",
-                "@id": "https://xenova-shop.vercel.app/category.html#breadcrumb",
+                "@id": "https://xenova-shop.vercel.app/category.html?cat=warhammer-40k#breadcrumb",
                 "itemListElement": [
                     {
                         "@type": "ListItem",
                         "position": 1,
                         "name": "Domov",
-                        "item": "https://xenova-shop.vercel.app/"
+                        "item": "https://xenova-shop.vercel.app/index.html"
                     },
                     {
                         "@type": "ListItem",
                         "position": 2,
-                        "name": "Katalóg produktov",
-                        "item": "https://xenova-shop.vercel.app/category.html"
+                        "name": "Warhammer 40,000",
+                        "item": "https://xenova-shop.vercel.app/category.html?cat=warhammer-40k"
                     }
                 ]
-            },
-            {
-                "@type": "ItemList",
-                "@id": "https://xenova-shop.vercel.app/category.html#itemlist",
-                "name": "Produkty v kategórii",
-                "itemListElement": []
             }
         ]
     }
     </script>
-
-    <!-- SEO & Metadata Resolver (працює синхронно при завантаженні сторінки) -->
-    <script>
-        window.XENOVA_CATEGORY_SEO = {
-            categories: {
-                'all': {
-                    name: 'Všetky produkty',
-                    title: 'Katalóg produktov Warhammer | Warhammer 40,000, Age of Sigmar & Citadel',
-                    description: 'Preskúmajte kompletný katalóg Games Workshop na Slovensku. Miniatúry Warhammer 40,000, Age of Sigmar, Kill Team a farby Citadel skladom. Doprava zdarma nad 70 €.',
-                    subtitle: 'Kompletná ponuka originálnych miniatúr, štartovacích sád a modelárskych potrieb Games Workshop.',
-                    seoHeading: 'Kompletný sortiment Warhammer a Citadel na Slovensku',
-                    seoText1: 'V našom katalógu nájdete oficiálne stolové wargamingové hry a miniatúry od britského štúdia Games Workshop. Či už staviate svoju prvú armádu do sci-fi sveta Warhammer 40,000, alebo zbierate hrdinov ríš Mortal Realms v Age of Sigmar, všetky skladové položky odosielame do 24 hodín.',
-                    seoText2: 'Okrem samotných stavebníc ponúkame aj ucelený rad akrylových farieb Citadel Colour (Base, Layer, Shade, Contrast, Technical), presné modelárske štetce, lepidlá na plast a herné príslušenstvo pre turnajové aj domáce hranie.'
-                },
-                'warhammer-40k': {
-                    name: 'Warhammer 40,000',
-                    title: 'Warhammer 40,000 Miniatúry a Armády | Warhammer E-Shop Slovensko',
-                    description: 'Originálne miniatúry Warhammer 40,000 skladom. Space Marines, Astra Militarum, Necrons, Chaos, Xenos a Starter Sety s doručením 1–2 pracovné dni.',
-                    subtitle: 'V temnote ďalekej budúcnosti existuje iba vojna. Vyberte si svoju frakciu do 41. milénia.',
-                    seoHeading: 'Warhammer 40,000 – Miniatúry, Kódexy a Combat Patrol sady',
-                    seoText1: 'Warhammer 40,000 je najpopulárnejšia sci-fi miniatúrna wargamingová hra na svete. V ponuke držíme kľúčové jednotky pre Impérium ľudstva (Space Marines, Astra Militarum, Adepta Sororitas), prastaré légie Necrons, sily Chaosu aj mimozemské rasy Xenos.',
-                    seoText2: 'Pre nových hráčov odporúčame cenovo výhodné štartovacie sady (Starter Sets) a boxy Combat Patrol, ktoré obsahujú vyváženú armádu pripravenú na okamžitú hru. Nezabudnite si vybrať aj správne farby Citadel pre vašu kapitulu.'
-                },
-                'age-of-sigmar': {
-                    name: 'Age of Sigmar',
-                    title: 'Warhammer Age of Sigmar Miniatúry a Spearhead | Warhammer E-Shop Slovensko',
-                    description: 'Fantasy miniatúry Warhammer Age of Sigmar skladom. Stormcast Eternals, Slaves to Darkness, Soulblight Gravelords a Spearhead boxy na Slovensku.',
-                    subtitle: 'Epické fantasy bitky o nadvládu nad ôsmimi ríšami Mortal Realms.',
-                    seoHeading: 'Warhammer Age of Sigmar – Fantasy armády a Spearhead boxy',
-                    seoText1: 'Warhammer Age of Sigmar prináša dynamické fantasy súboje plné mágie, monštier a legendárnych hrdinov zo štyroch veľkých aliancií: Order, Chaos, Death a Destruction.',
-                    seoText2: 'V našom e-shope nájdete detailne prepracované plastové stavebnice, Spearhead sady ideálne na rýchly štart aj pravidlá a doplnky pre najnovšiu edíciu hry.'
-                },
-                'farby-a-nastroje': {
-                    name: 'Farby & Nástroje',
-                    title: 'Farby Citadel, Štetce a Modelárske Nástroje | Warhammer E-Shop Slovensko',
-                    description: 'Originálne farby Citadel Colour (Base, Layer, Shade, Contrast), štetce Citadel, lepidlá a klieštiky na miniatúry skladom. Rýchle dodanie po SR.',
-                    subtitle: 'Všetko potrebné na zostavenie, základovanie a maľovanie vašich miniatúr.',
-                    seoHeading: 'Citadel Colour – Akrylové farby a modelárske náradie pre miniatúry',
-                    seoText1: 'Kvalitné farby a presné náradie sú základom každého modelárskeho projektu. Systém farieb Citadel Colour je navrhnutý tak, aby začiatočníkom aj pokročilým maliarom uľahčil tieňovanie a rozjasňovanie detailov.',
-                    seoText2: 'Vyberte si zo širokej palety odtieňov Base s vysokou krycou schopnosťou, jemných farieb Layer, tieňovacích Washov Shade či revolučných farieb Contrast pre rýchle maľovanie celých jednotiek.'
-                },
-                'kill-team': {
-                    name: 'Kill Team',
-                    title: 'Warhammer 40,000: Kill Team Sady a Tímy | Warhammer E-Shop Slovensko',
-                    description: 'Taktické šarvátky vo svete Warhammer 40,000. Kompletné tímy Kill Team, terény a pravidlá skladom na Slovensku s doručením do 48 hodín.',
-                    subtitle: 'Rýchle taktické misie špeciálnych jednotiek v smrtiacom teréne 41. milénia.',
-                    seoHeading: 'Warhammer 40,000: Kill Team – Rýchla taktická hra s malým počtom modelov',
-                    seoText1: 'Kill Team je svižná taktická hra zasadená do univerza Warhammer 40,000, v ktorej velíte elitnému komandu zloženému z 5 až 14 špecialistov. Každý bojovník má unikátne schopnosti a výzbroj.',
-                    seoText2: 'Vďaka menšiemu počtu miniatúr je Kill Team ideálnym vstupným bodom do sveta Warhammeru alebo skvelým spôsobom, ako si vyskúšať novú frakciu bez nutnosti stavať celú armádu.'
-                },
-                'akcie': {
-                    name: 'Akcie a Zľavy',
-                    title: 'Akcie a Zľavy na Warhammer Produkty | Warhammer E-Shop Slovensko',
-                    description: 'Výhodné zľavy až do 20 % na vybrané stavebnice Warhammer 40,000, Age of Sigmar, štartovacie boxy a príslušenstvo skladom.',
-                    subtitle: 'Získajte svoje obľúbené jednotky a boxy za zvýhodnené akciové ceny.',
-                    seoHeading: 'Aktuálne akcie a zvýhodnené balenia Warhammer',
-                    seoText1: 'V kategórii Akcie pravidelne prinášame zľavnené stavebnice, výhodné armádne sety a vybrané príslušenstvo zo sveta Warhammer 40,000 aj Age of Sigmar.',
-                    seoText2: 'Počet kusov v akciovej ponuke je obmedzený skladovými zásobami. Pri objednávke nad 70 € navyše získavate dopravu po celom Slovensku úplne zdarma.'
-                },
-                'prislusenstvo': {
-                    name: 'Príslušenstvo',
-                    title: 'Herné Príslušenstvo, Kocky a Kódexy Warhammer | Warhammer E-Shop Slovensko',
-                    description: 'Oficiálne kocky, metre, herné podložky, kódexy a dátové karty pre Warhammer 40,000 a Age of Sigmar skladom.',
-                    subtitle: 'Herné pomôcky, kocky, prepravné kufre a oficiálne príručky.',
-                    seoHeading: 'Herné príslušenstvo a doplnky pre wargaming',
-                    seoText1: 'Doplňte svoju hernú výbavu o tematické frakčné kocky, dátové karty jednotiek (Datasheet Cards), meracie pásma a magnetické prepravné riešenia pre bezpečný transport armády na turnaje.',
-                    seoText2: 'Všetko príslušenstvo pochádza z oficiálnej distribúcie Games Workshop a plne zodpovedá aktuálnym turnajovým pravidlám.'
-                },
-                'merch': {
-                    name: 'Merch a Zberateľské Predmety',
-                    title: 'Warhammer Merch, Tričká a Zberateľské Figúrky | Warhammer E-Shop Slovensko',
-                    description: 'Oficiálny Warhammer merch, akčné figúrky JoyToy, hrnčeky a darčeky pre fanúšikov Warhammer 40,000 na Slovensku.',
-                    subtitle: 'Ukážte vernosť svojej frakcii aj mimo herného stola.',
-                    seoHeading: 'Oficiálny Warhammer Merch a darčekové predmety',
-                    seoText1: 'Hľadáte darček pre fanúšika Warhammeru alebo si chcete rozšíriť zbierku o detailné akčné figúrky, odznaky a tematické doplnky? V sekcii Merch nájdete licencované produkty s motívmi Impéria aj Chaosu.',
-                    seoText2: 'Produkty sú balené v zberateľských boxoch a pripravené na okamžité odoslanie zo slovenského skladu.'
-                }
-            },
-            factions: {
-                'space-marines': 'Space Marines',
-                'astra-militarum': 'Astra Militarum',
-                'necrons': 'Necrons',
-                'chaos': 'Chaos',
-                'xenos': 'Xenos',
-                'imperium': 'Imperium',
-                'starter-sets': 'Starter Sets'
-            },
-            getContext() {
-                const params = new URLSearchParams(window.location.search);
-                const cat = params.get('cat') || 'all';
-                const faction = params.get('faction') || '';
-                const query = (params.get('q') || '').trim();
-                const catMeta = this.categories[cat] || this.categories['all'];
-                const factionName = this.factions[faction] || '';
-
-                const baseUrl = 'https://xenova-shop.vercel.app/category.html';
-                let canonicalUrl = baseUrl;
-                if (cat !== 'all') {
-                    canonicalUrl += '?cat=' + encodeURIComponent(cat);
-                    if (faction && this.factions[faction]) {
-                        canonicalUrl += '&faction=' + encodeURIComponent(faction);
-                    }
-                }
-
-                let pageTitle = catMeta.title;
-                let pageDesc = catMeta.description;
-                let h1Title = catMeta.name;
-
-                if (query) {
-                    h1Title = `Výsledky vyhľadávania: „${query}“`;
-                    pageTitle = `Vyhľadávanie: ${query} | Warhammer E-Shop Slovensko`;
-                } else if (factionName) {
-                    h1Title = `${factionName} – ${catMeta.name}`;
-                    pageTitle = `${factionName} (${catMeta.name}) Miniatúry | Warhammer E-Shop Slovensko`;
-                    pageDesc = `Originálne miniatúry a jednotky ${factionName} pre ${catMeta.name} skladom na Slovensku. Rýchle doručenie 1–2 pracovné dni.`;
-                }
-
-                return { cat, faction, query, catMeta, factionName, canonicalUrl, pageTitle, pageDesc, h1Title };
-            },
-            applyHeadMeta() {
-                const ctx = this.getContext();
-                document.title = ctx.pageTitle;
-
-                const descEl = document.getElementById('meta-description');
-                if (descEl) descEl.setAttribute('content', ctx.pageDesc);
-
-                const robotsEl = document.getElementById('meta-robots');
-                if (robotsEl) {
-                    robotsEl.setAttribute('content', ctx.query ? 'noindex, follow' : 'index, follow');
-                }
-
-                const canonEl = document.getElementById('meta-canonical');
-                if (canonEl) canonEl.setAttribute('href', ctx.canonicalUrl);
-
-                const ogTitle = document.getElementById('og-title');
-                if (ogTitle) ogTitle.setAttribute('content', ctx.pageTitle);
-
-                const ogDesc = document.getElementById('og-description');
-                if (ogDesc) ogDesc.setAttribute('content', ctx.pageDesc);
-
-                const ogUrl = document.getElementById('og-url');
-                if (ogUrl) ogUrl.setAttribute('content', ctx.canonicalUrl);
-
-                this.updateSchema([]);
-            },
-            updateSchema(products) {
-                const ctx = this.getContext();
-                const schemaEl = document.getElementById('category-schema');
-                if (!schemaEl) return;
-
-                const breadcrumbs = [
-                    {
-                        '@type': 'ListItem',
-                        'position': 1,
-                        'name': 'Domov',
-                        'item': 'https://xenova-shop.vercel.app/'
-                    },
-                    {
-                        '@type': 'ListItem',
-                        'position': 2,
-                        'name': 'Katalóg produktov',
-                        'item': 'https://xenova-shop.vercel.app/category.html'
-                    }
-                ];
-
-                if (ctx.cat !== 'all') {
-                    breadcrumbs.push({
-                        '@type': 'ListItem',
-                        'position': 3,
-                        'name': ctx.catMeta.name,
-                        'item': `https://xenova-shop.vercel.app/category.html?cat=${encodeURIComponent(ctx.cat)}`
-                    });
-                }
-
-                if (ctx.factionName) {
-                    breadcrumbs.push({
-                        '@type': 'ListItem',
-                        'position': breadcrumbs.length + 1,
-                        'name': ctx.factionName,
-                        'item': ctx.canonicalUrl
-                    });
-                }
-
-                const itemListElements = (products || []).slice(0, 24).map((p, index) => ({
-                    '@type': 'ListItem',
-                    'position': index + 1,
-                    'url': `https://xenova-shop.vercel.app/product.html?id=${p.id}`,
-                    'name': p.title
-                }));
-
-                const graph = {
-                    '@context': 'https://schema.org',
-                    '@graph': [
-                        {
-                            '@type': 'CollectionPage',
-                            '@id': `${ctx.canonicalUrl}#webpage`,
-                            'url': ctx.canonicalUrl,
-                            'name': ctx.pageTitle,
-                            'description': ctx.pageDesc,
-                            'inLanguage': 'sk'
-                        },
-                        {
-                            '@type': 'BreadcrumbList',
-                            '@id': `${ctx.canonicalUrl}#breadcrumb`,
-                            'itemListElement': breadcrumbs
-                        },
-                        {
-                            '@type': 'ItemList',
-                            '@id': `${ctx.canonicalUrl}#itemlist`,
-                            'name': ctx.h1Title,
-                            'numberOfItems': itemListElements.length,
-                            'itemListElement': itemListElements
-                        }
-                    ]
-                };
-
-                schemaEl.textContent = JSON.stringify(graph);
-            }
-        };
-
-        window.XENOVA_CATEGORY_SEO.applyHeadMeta();
-    </script>
-
-    <script type="module" src="/src/js/main.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
 </head>
 
 <body x-data="categoryApp()"
@@ -333,7 +113,7 @@
 
         <div
             class="flex items-center space-x-3 sm:space-x-4 px-2 sm:px-4 text-xs text-[#f5f4f5] ml-auto shrink-0 whitespace-nowrap">
-            <a href="#footer-info" class="hover:text-[#99241d] transition flex items-center gap-1.5" title="Kontakt">
+            <a href="#" class="hover:text-[#99241d] transition flex items-center gap-1.5" title="Kontakt">
                 <svg class="w-3.5 h-3.5 text-[#f5f4f5] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
                         d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z">
@@ -342,7 +122,7 @@
                 <span class="hidden sm:inline">Kontakt</span>
             </a>
             <span class="text-[#1e1e24]">|</span>
-            <a href="#footer-support" class="hover:text-[#99241d] transition" title="Sledovať objednávku">
+            <a href="#" class="hover:text-[#99241d] transition" title="Sledovať objednávku">
                 <span>Sledovať objednávku</span>
             </a>
             <span class="text-[#1e1e24]">|</span>
@@ -353,6 +133,9 @@
                     </path>
                 </svg>
                 <span>SK</span>
+                <svg class="w-2.5 h-2.5 text-[#888894]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
             </div>
         </div>
     </div>
@@ -361,8 +144,8 @@
     <header class="bg-[#030303] sticky top-0 z-40 border-b border-[#1e1e24]">
         <div class="w-full px-6 py-3.5 flex items-center justify-between gap-6">
 
-            <!-- Кнопка мобільного меню -->
-            <button @click="mobileNavOpen = true" aria-label="Otvoriť navigáciu"
+            <!-- Кнопка відкриття мобільного меню -->
+            <button @click="mobileNavOpen = true" aria-label="Otvoriť menu"
                 class="burger-btn text-[#f5f4f5] hover:text-[#99241d] p-2">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
@@ -371,7 +154,8 @@
             </button>
 
             <!-- Логотип -->
-            <a href="index.html" class="flex items-center gap-3 group shrink-0 brand-logo-text">
+            <a href="index.html" class="flex items-center gap-3 group shrink-0 brand-logo-text"
+                aria-label="Warhammer E-Shop Slovensko – Domov">
                 <div
                     class="w-10 h-10 rounded-[4px] bg-white/10 border border-white/20 flex items-center justify-center p-1.5 group-hover:border-white transition">
                     <svg viewBox="0 0 24 24" class="w-full h-full fill-current text-white"
@@ -386,23 +170,23 @@
                 </div>
             </a>
 
-            <!-- Пошук по каталогу -->
-            <form action="category.html" method="get" class="header-search flex-1 max-w-xl mx-4 relative">
-                <input type="text" name="q" x-model="searchQuery" placeholder="Hľadať produkty, frakcie, farby..."
-                    aria-label="Hľadať produkty"
+            <!-- Пошук (жива фільтрація по каталогу) -->
+            <div class="header-search flex-1 max-w-xl mx-4 relative" role="search">
+                <input type="search" x-model="searchQuery" @input="currentPage = 1"
+                    aria-label="Hľadať produkty, frakcie, farby" placeholder="Hľadať produkty, frakcie, farby..."
                     class="w-full bg-[#0f0f0f] border border-[#1e1e24] rounded-[4px] py-2.5 px-5 text-sm text-[#f5f4f5] placeholder-gray-500 focus:outline-none focus:border-[#99241d] transition">
-                <button type="submit" aria-label="Vyhľadať"
+                <button type="button" aria-label="Hľadať"
                     class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white transition">
                     <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                     </svg>
                 </button>
-            </form>
+            </div>
 
             <!-- Користувач та Кошик -->
             <div class="flex items-center space-x-6 shrink-0">
-                <a href="index.html#newsletter-section"
+                <a href="#"
                     class="hidden sm:flex items-center space-x-2 text-sm text-[#f5f4f5] hover:text-[#99241d] transition">
                     <svg class="w-5 h-5 text-[#f5f4f5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
@@ -411,18 +195,22 @@
                     <span>Prihlásiť sa</span>
                 </a>
 
-                <a href="category.html"
-                    class="hidden sm:flex items-center space-x-2 text-sm text-[#f5f4f5] hover:text-[#99241d] transition">
-                    <svg class="w-5 h-5 text-[#f5f4f5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
-                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z">
-                        </path>
-                    </svg>
+                <a href="#"
+                    class="hidden sm:flex items-center space-x-2 text-sm text-[#f5f4f5] hover:text-[#99241d] transition relative">
+                    <div class="relative flex items-center justify-center">
+                        <svg class="w-5 h-5 text-[#f5f4f5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z">
+                            </path>
+                        </svg>
+                        <span x-show="wishlist.length > 0" x-text="wishlist.length"
+                            class="absolute -top-1.5 -right-2 bg-[#99241d] text-white text-[10px] font-bold rounded-full w-4 h-4 flex items-center justify-center"></span>
+                    </div>
                     <span>Obľúbené</span>
                 </a>
 
                 <!-- Кнопка відкриття кошика -->
-                <button @click="cartDrawerOpen = true"
+                <button @click="cartDrawerOpen = true" aria-label="Otvoriť nákupný košík"
                     class="flex items-center space-x-2 text-sm text-white hover:text-[#99241d] transition relative cursor-pointer">
                     <div class="relative flex items-center justify-center">
                         <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -438,34 +226,419 @@
         </div>
 
         <!-- 3. PRIMARY NAVIGATION BAR -->
-        <nav aria-label="Hlavná navigácia" class="main-nav relative">
+        <nav @click.outside="megaMenuOpen = false" aria-label="Hlavná navigácia" class="main-nav relative">
             <div class="nav-container py-1">
                 <div class="nav-row">
-                    <a href="category.html?cat=warhammer-40k"
-                        :class="selectedCategory === 'warhammer-40k' ? 'active text-[#99241d]' : ''"
-                        class="nav-link"><span class="nav-link-text">WARHAMMER 40,000</span></a>
-                    <a href="category.html?cat=age-of-sigmar"
-                        :class="selectedCategory === 'age-of-sigmar' ? 'active text-[#99241d]' : ''"
-                        class="nav-link"><span class="nav-link-text">AGE OF SIGMAR</span></a>
-                    <a href="category.html?cat=farby-a-nastroje"
-                        :class="selectedCategory === 'farby-a-nastroje' ? 'active text-[#99241d]' : ''"
-                        class="nav-link"><span class="nav-link-text">FARBY & NÁSTROJE</span></a>
-                    <a href="category.html?cat=kill-team"
-                        :class="selectedCategory === 'kill-team' ? 'active text-[#99241d]' : ''" class="nav-link"><span
-                            class="nav-link-text">KILL TEAM</span></a>
-                    <a href="category.html?cat=akcie" :class="selectedCategory === 'akcie' ? 'active' : ''"
+                    <button @click.stop="toggleMegaMenu('wh40k')"
+                        :class="{ 'active': (megaMenuOpen && activeCategory === 'wh40k') || (!megaMenuOpen && currentCategorySlug === 'warhammer-40k') }"
+                        class="nav-link cursor-pointer bg-transparent border-0">
+                        <span class="nav-link-text">WARHAMMER 40,000</span>
+                        <svg class="w-2.5 h-2.5 text-[#888894] nav-arrow"
+                            :class="{ 'rotate-180': megaMenuOpen && activeCategory === 'wh40k' }" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+
+                    <button @click.stop="toggleMegaMenu('aos')"
+                        :class="{ 'active': (megaMenuOpen && activeCategory === 'aos') || (!megaMenuOpen && currentCategorySlug === 'age-of-sigmar') }"
+                        class="nav-link cursor-pointer bg-transparent border-0">
+                        <span class="nav-link-text">AGE OF SIGMAR</span>
+                        <svg class="w-2.5 h-2.5 text-[#888894] nav-arrow"
+                            :class="{ 'rotate-180': megaMenuOpen && activeCategory === 'aos' }" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+
+                    <button @click.stop="toggleMegaMenu('paints')"
+                        :class="{ 'active': (megaMenuOpen && activeCategory === 'paints') || (!megaMenuOpen && currentCategorySlug === 'farby-a-nastroje') }"
+                        class="nav-link cursor-pointer bg-transparent border-0">
+                        <span class="nav-link-text">FARBY & NÁSTROJE</span>
+                        <svg class="w-2.5 h-2.5 text-[#888894] nav-arrow"
+                            :class="{ 'rotate-180': megaMenuOpen && activeCategory === 'paints' }" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+
+                    <a href="category.html?cat=kill-team" :class="{ 'active': currentCategorySlug === 'kill-team' }"
+                        class="nav-link"><span class="nav-link-text">KILL TEAM</span></a>
+                    <a href="category.html?cat=akcie" :class="{ 'active': currentCategorySlug === 'akcie' }"
                         class="nav-link text-[#99241d] font-bold"><span
                             class="nav-link-text text-[#99241d]">AKCIE</span></a>
                     <a href="category.html?cat=prislusenstvo"
-                        :class="selectedCategory === 'prislusenstvo' ? 'active text-[#99241d]' : ''"
-                        class="nav-link"><span class="nav-link-text">PRÍSLUŠENSTVO</span></a>
-                    <a href="category.html?cat=merch"
-                        :class="selectedCategory === 'merch' ? 'active text-[#99241d]' : ''" class="nav-link"><span
-                            class="nav-link-text">MERCH</span></a>
-                    <a href="index.html#komunita-novinky" class="nav-link"><span class="nav-link-text">BLOG</span></a>
+                        :class="{ 'active': currentCategorySlug === 'prislusenstvo' }" class="nav-link"><span
+                            class="nav-link-text">PRÍSLUŠENSTVO</span></a>
+                    <a href="category.html?cat=merch" :class="{ 'active': currentCategorySlug === 'merch' }"
+                        class="nav-link"><span class="nav-link-text">MERCH</span></a>
+                    <a href="#" class="nav-link"><span class="nav-link-text">BLOG</span></a>
 
                     <a href="category.html?cat=warhammer-40k&faction=starter-sets" class="btn-accent">PRE
                         ZAČIATOČNÍKOV</a>
+                </div>
+            </div>
+
+            <!-- 5-КОЛОНКОВЕ МЕГА-МЕНЮ -->
+            <div x-show="megaMenuOpen" x-transition:enter="transition ease-out duration-200"
+                x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0"
+                x-transition:leave="transition ease-in duration-150"
+                x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2"
+                @click.stop
+                class="absolute top-full left-0 w-full bg-[#0f0f0f] border-b border-[#1e1e24] shadow-2xl z-50 text-left font-sans"
+                style="display: none;">
+
+                <div class="max-w-[1536px] mx-auto px-6 py-8">
+                    <div class="mega-menu-grid">
+
+                        <!-- КОЛОНКА 1: ГОЛОВНІ ФРАКЦІЇ -->
+                        <div class="border-r border-[#1e1e24] pr-5 flex flex-col justify-between space-y-4">
+                            <div>
+                                <div class="text-[#99241d] font-semibold text-xs uppercase tracking-wider px-3 mb-3"
+                                    x-text="activeCategory === 'aos' ? 'AGE OF SIGMAR' : (activeCategory === 'paints' ? 'FARBY & NÁSTROJE' : 'WARHAMMER 40,000')">
+                                </div>
+
+                                <div class="space-y-1">
+                                    <a href="category.html?cat=warhammer-40k&faction=space-marines"
+                                        @mouseenter="activeFaction = 'space-marines'"
+                                        :class="activeFaction === 'space-marines' ? 'bg-[#18181c] text-white font-semibold' : 'text-gray-400 hover:text-white hover:bg-[#121216]'"
+                                        class="w-full flex items-center justify-between px-3 py-2.5 rounded-[4px] text-xs transition text-left group">
+                                        <div class="flex items-center gap-3">
+                                            <svg class="w-4 h-4 text-[#99241d] shrink-0" fill="none"
+                                                stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                                                </path>
+                                            </svg>
+                                            <span>Space Marines</span>
+                                        </div>
+                                        <svg class="w-3 h-3 text-gray-500 group-hover:text-white" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M9 5l7 7-7 7"></path>
+                                        </svg>
+                                    </a>
+
+                                    <a href="category.html?cat=warhammer-40k&faction=astra-militarum"
+                                        @mouseenter="activeFaction = 'astra-militarum'"
+                                        :class="activeFaction === 'astra-militarum' ? 'bg-[#18181c] text-white font-semibold' : 'text-gray-400 hover:text-white hover:bg-[#121216]'"
+                                        class="w-full flex items-center justify-between px-3 py-2.5 rounded-[4px] text-xs transition text-left group">
+                                        <div class="flex items-center gap-3">
+                                            <svg class="w-4 h-4 text-gray-400 group-hover:text-white shrink-0"
+                                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                                    d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10">
+                                                </path>
+                                            </svg>
+                                            <span>Astra Militarum</span>
+                                        </div>
+                                    </a>
+
+                                    <a href="category.html?cat=warhammer-40k&faction=necrons"
+                                        @mouseenter="activeFaction = 'necrons'"
+                                        :class="activeFaction === 'necrons' ? 'bg-[#18181c] text-white font-semibold' : 'text-gray-400 hover:text-white hover:bg-[#121216]'"
+                                        class="w-full flex items-center justify-between px-3 py-2.5 rounded-[4px] text-xs transition text-left group">
+                                        <div class="flex items-center gap-3">
+                                            <svg class="w-4 h-4 text-gray-400 group-hover:text-white shrink-0"
+                                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                                    d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                            </svg>
+                                            <span>Necrons</span>
+                                        </div>
+                                    </a>
+
+                                    <a href="category.html?cat=warhammer-40k&faction=chaos"
+                                        @mouseenter="activeFaction = 'chaos'"
+                                        :class="activeFaction === 'chaos' ? 'bg-[#18181c] text-white font-semibold' : 'text-gray-400 hover:text-white hover:bg-[#121216]'"
+                                        class="w-full flex items-center justify-between px-3 py-2.5 rounded-[4px] text-xs transition text-left group">
+                                        <div class="flex items-center gap-3">
+                                            <svg class="w-4 h-4 text-gray-400 group-hover:text-white shrink-0"
+                                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                                    d="M12 3v18m9-9H3m15.364-6.364l-12.728 12.728m0-12.728l12.728 12.728">
+                                                </path>
+                                            </svg>
+                                            <span>Chaos</span>
+                                        </div>
+                                        <svg class="w-3 h-3 text-gray-500 group-hover:text-white" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M9 5l7 7-7 7"></path>
+                                        </svg>
+                                    </a>
+
+                                    <a href="category.html?cat=warhammer-40k&faction=xenos"
+                                        @mouseenter="activeFaction = 'xenos'"
+                                        :class="activeFaction === 'xenos' ? 'bg-[#18181c] text-white font-semibold' : 'text-gray-400 hover:text-white hover:bg-[#121216]'"
+                                        class="w-full flex items-center justify-between px-3 py-2.5 rounded-[4px] text-xs transition text-left group">
+                                        <div class="flex items-center gap-3">
+                                            <svg class="w-4 h-4 text-gray-400 group-hover:text-white shrink-0"
+                                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                                    d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z">
+                                                </path>
+                                            </svg>
+                                            <span>Xenos</span>
+                                        </div>
+                                        <svg class="w-3 h-3 text-gray-500 group-hover:text-white" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M9 5l7 7-7 7"></path>
+                                        </svg>
+                                    </a>
+
+                                    <a href="category.html?cat=warhammer-40k&faction=imperium"
+                                        @mouseenter="activeFaction = 'imperium'"
+                                        :class="activeFaction === 'imperium' ? 'bg-[#18181c] text-white font-semibold' : 'text-gray-400 hover:text-white hover:bg-[#121216]'"
+                                        class="w-full flex items-center justify-between px-3 py-2.5 rounded-[4px] text-xs transition text-left group">
+                                        <div class="flex items-center gap-3">
+                                            <svg class="w-4 h-4 text-gray-400 group-hover:text-white shrink-0"
+                                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                                    d="M3 21h18M3 10h18M3 7l9-4 9 4M4 10v11M20 10v11M8 10v11M12 10v11M16 10v11">
+                                                </path>
+                                            </svg>
+                                            <span>Imperium</span>
+                                        </div>
+                                        <svg class="w-3 h-3 text-gray-500 group-hover:text-white" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M9 5l7 7-7 7"></path>
+                                        </svg>
+                                    </a>
+
+                                    <a href="category.html?cat=warhammer-40k&faction=starter-sets"
+                                        @mouseenter="activeFaction = 'starter-sets'"
+                                        :class="activeFaction === 'starter-sets' ? 'bg-[#18181c] text-white font-semibold' : 'text-gray-400 hover:text-white hover:bg-[#121216]'"
+                                        class="w-full flex items-center justify-between px-3 py-2.5 rounded-[4px] text-xs transition text-left group">
+                                        <div class="flex items-center gap-3">
+                                            <svg class="w-4 h-4 text-gray-400 group-hover:text-white shrink-0"
+                                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                                    d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4">
+                                                </path>
+                                            </svg>
+                                            <span>Starter Sets</span>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="pt-2 px-3">
+                                    <a href="category.html?cat=warhammer-40k"
+                                        class="text-[#99241d] hover:text-red-400 text-xs font-bold flex items-center gap-1.5 transition">
+                                        <span>Zobraziť všetky 40K</span>
+                                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="pt-3 border-t border-[#1e1e24] px-1">
+                                <div class="flex items-start gap-3">
+                                    <img src="https://placehold.co/120x120/121212/dc2626?text=40K"
+                                        alt="Začnite s Warhammer 40K"
+                                        class="w-16 h-16 object-cover rounded-[4px] shrink-0 border border-[#1e1e24]">
+                                    <div class="space-y-2">
+                                        <div>
+                                            <div
+                                                class="text-[11px] font-bold text-white uppercase tracking-wider leading-tight">
+                                                ZAČNITE S WARHAMMER 40K</div>
+                                            <div class="text-[10px] text-gray-400 leading-snug mt-0.5">Všetko, čo
+                                                potrebujete na svoj prvý krok</div>
+                                        </div>
+                                        <div>
+                                            <a href="category.html?cat=warhammer-40k&faction=starter-sets"
+                                                class="inline-block px-3 py-1.5 border border-white/40 hover:border-white text-white text-[10px] font-bold uppercase rounded-[3px] transition">
+                                                ZISTIŤ VIAC
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- КОЛОНКА 2: СПИСОК ПІДКАТЕГОРІЙ -->
+                        <div class="border-r border-[#1e1e24] pr-4 space-y-4">
+                            <div class="text-white font-semibold text-xs uppercase tracking-wider"
+                                x-text="activeFaction.replace('-', ' ')"></div>
+
+                            <ul class="space-y-2.5 text-xs text-gray-400">
+                                <li><a :href="'category.html?cat=warhammer-40k&faction=' + activeFaction"
+                                        class="hover:text-white transition block py-0.5">Všetky produkty</a></li>
+                                <li><a href="category.html?cat=warhammer-40k&faction=space-marines"
+                                        class="hover:text-white transition block py-0.5">Primaris Marines</a></li>
+                                <li><a href="category.html?cat=warhammer-40k&faction=space-marines"
+                                        class="hover:text-white transition block py-0.5">Ultramarines</a></li>
+                                <li><a href="category.html?cat=warhammer-40k&faction=space-marines"
+                                        class="hover:text-white transition block py-0.5">Dark Angels</a></li>
+                                <li><a href="category.html?cat=warhammer-40k&faction=space-marines"
+                                        class="hover:text-white transition block py-0.5">Blood Angels</a></li>
+                                <li><a href="category.html?cat=warhammer-40k&faction=space-marines"
+                                        class="hover:text-white transition block py-0.5">Space Wolves</a></li>
+                                <li><a href="category.html?cat=warhammer-40k&faction=space-marines"
+                                        class="hover:text-white transition block py-0.5">Black Templars</a></li>
+                                <li><a href="category.html?cat=warhammer-40k&faction=space-marines"
+                                        class="hover:text-white transition block py-0.5">Salamanders</a></li>
+                                <li><a href="category.html?cat=warhammer-40k&faction=space-marines"
+                                        class="hover:text-white transition block py-0.5">Raven Guard</a></li>
+                                <li><a href="category.html?cat=warhammer-40k&faction=space-marines"
+                                        class="hover:text-white transition block py-0.5">Successor Chapters</a></li>
+                                <li><a href="category.html?cat=warhammer-40k&faction=space-marines"
+                                        class="hover:text-white transition block py-0.5">Upgrade Sets</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- КОЛОНКА 3: POPULÁRNE PRODUKTY -->
+                        <div class="border-r border-[#1e1e24] pr-5 flex flex-col justify-between space-y-4">
+                            <div class="space-y-4">
+                                <div class="text-white font-semibold text-xs uppercase tracking-wider">POPULÁRNE
+                                    PRODUKTY
+                                </div>
+
+                                <div class="space-y-4">
+                                    <a href="product.html" class="flex items-center gap-3.5 py-1.5 group">
+                                        <img src="https://placehold.co/100x100/121212/dc2626?text=Intercessors"
+                                            alt="Primaris Intercessors"
+                                            class="w-14 h-14 object-cover rounded-[4px] bg-black border border-[#1e1e24] group-hover:border-[#99241d] transition shrink-0">
+                                        <div class="text-xs space-y-1">
+                                            <div
+                                                class="text-gray-300 group-hover:text-white transition font-medium leading-snug">
+                                                Primaris Intercessors</div>
+                                            <div class="text-white font-bold text-sm">€45,00</div>
+                                        </div>
+                                    </a>
+
+                                    <a href="product.html" class="flex items-center gap-3.5 py-1.5 group">
+                                        <img src="https://placehold.co/100x100/121212/dc2626?text=Infernus"
+                                            alt="Primaris Infernus Squad"
+                                            class="w-14 h-14 object-cover rounded-[4px] bg-black border border-[#1e1e24] group-hover:border-[#99241d] transition shrink-0">
+                                        <div class="text-xs space-y-1">
+                                            <div
+                                                class="text-gray-300 group-hover:text-white transition font-medium leading-snug">
+                                                Primaris Infernus Squad</div>
+                                            <div class="text-white font-bold text-sm">€50,00</div>
+                                        </div>
+                                    </a>
+
+                                    <a href="product.html" class="flex items-center gap-3.5 py-1.5 group">
+                                        <img src="https://placehold.co/100x100/121212/dc2626?text=Dreadnought"
+                                            alt="Redemptor Dreadnought"
+                                            class="w-14 h-14 object-cover rounded-[4px] bg-black border border-[#1e1e24] group-hover:border-[#99241d] transition shrink-0">
+                                        <div class="text-xs space-y-1">
+                                            <div
+                                                class="text-gray-300 group-hover:text-white transition font-medium leading-snug">
+                                                Redemptor Dreadnought</div>
+                                            <div class="text-white font-bold text-sm">€85,00</div>
+                                        </div>
+                                    </a>
+
+                                    <a href="product.html" class="flex items-center gap-3.5 py-1.5 group">
+                                        <img src="https://placehold.co/100x100/121212/dc2626?text=Bladeguard"
+                                            alt="Bladeguard Veterans"
+                                            class="w-14 h-14 object-cover rounded-[4px] bg-black border border-[#1e1e24] group-hover:border-[#99241d] transition shrink-0">
+                                        <div class="text-xs space-y-1">
+                                            <div
+                                                class="text-gray-300 group-hover:text-white transition font-medium leading-snug">
+                                                Bladeguard Veterans</div>
+                                            <div class="text-white font-bold text-sm">€55,00</div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="pt-3 border-t border-[#1e1e24] flex items-center justify-start h-10">
+                                <a href="category.html?cat=warhammer-40k"
+                                    class="text-gray-300 hover:text-white text-xs font-extrabold uppercase tracking-wider flex items-center gap-2 transition">
+                                    <span>ZOBRAZIŤ VŠETKO</span>
+                                    <svg class="w-3.5 h-3.5 text-gray-400" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                            d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- КОЛОНКА 4: SÚVISIACE KATEGÓRIE -->
+                        <div class="border-r border-[#1e1e24] pr-4 space-y-4">
+                            <div class="text-white font-semibold text-xs uppercase tracking-wider">SÚVISIACE KATEGÓRIE
+                            </div>
+
+                            <div class="space-y-4 text-xs text-gray-300 pt-1">
+                                <a href="category.html?cat=kill-team"
+                                    class="flex items-center gap-3 hover:text-[#99241d] transition py-1">
+                                    <svg class="w-4 h-4 text-gray-400 shrink-0" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                            d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                    </svg>
+                                    <span class="font-medium">KILL TEAM</span>
+                                </a>
+                                <a href="category.html?cat=farby-a-nastroje"
+                                    class="flex items-center gap-3 hover:text-[#99241d] transition py-1">
+                                    <svg class="w-4 h-4 text-gray-400 shrink-0" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                            d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01">
+                                        </path>
+                                    </svg>
+                                    <span class="font-medium">FARBY & NÁSTROJE</span>
+                                </a>
+                                <a href="category.html?cat=prislusenstvo"
+                                    class="flex items-center gap-3 hover:text-[#99241d] transition py-1">
+                                    <svg class="w-4 h-4 text-gray-400 shrink-0" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                            d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4">
+                                        </path>
+                                    </svg>
+                                    <span class="font-medium">AKSESÓRY</span>
+                                </a>
+                                <a href="category.html?cat=merch"
+                                    class="flex items-center gap-3 hover:text-[#99241d] transition py-1">
+                                    <svg class="w-4 h-4 text-gray-400 shrink-0" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                            d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+                                    </svg>
+                                    <span class="font-medium">MERCH</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- КОЛОНКА 5: ВЕЛИКИЙ ПРОМО-БАНЕР -->
+                        <div class="relative min-h-[380px] rounded-[4px] overflow-hidden group">
+                            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
+                                style="background-image: url('https://placehold.co/800x1000/0f0f12/99241d?text=GLORY+TO+THE+IMPERIUM');">
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
+
+                            <div class="absolute inset-0 p-7 flex flex-col justify-end space-y-4 z-10 text-left">
+                                <div class="space-y-2">
+                                    <div
+                                        class="text-3xl sm:text-4xl font-extrabold text-white uppercase leading-none font-sans tracking-wide">
+                                        GLORY TO THE<br><span class="text-[#99241d]">IMPERIUM</span>
+                                    </div>
+                                    <p class="text-xs sm:text-sm text-gray-300 leading-snug">
+                                        Preskúmajte galaxiu a bojujte za ľudstvo.
+                                    </p>
+                                </div>
+                                <div>
+                                    <a href="category.html?cat=warhammer-40k"
+                                        class="inline-block px-6 py-3 bg-black/40 border-2 border-white hover:bg-white hover:text-black text-white text-xs font-extrabold uppercase tracking-widest rounded-[3px] transition backdrop-blur-sm">
+                                        OBJAVIŤ 40K
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </nav>
@@ -473,244 +646,443 @@
 
     <!-- MAIN CATEGORY CONTENT -->
     <main class="flex-grow pb-16">
-        <div class="max-w-[1536px] mx-auto px-4 sm:px-6 pt-6">
 
-            <!-- BREADCRUMBS (Синхронізовані зі Schema.org BreadcrumbList) -->
-            <nav aria-label="Breadcrumb" class="flex flex-wrap items-center gap-2 text-xs text-gray-400 mb-5">
-                <a href="index.html" class="hover:text-white transition">Domov</a>
-                <span class="text-gray-600">/</span>
-                <a href="category.html"
-                    :class="selectedCategory === 'all' && !selectedFaction ? 'text-white font-semibold' : 'hover:text-white transition'">
-                    Katalóg produktov
-                </a>
-                <template x-if="selectedCategory && selectedCategory !== 'all'">
-                    <span class="flex items-center gap-2">
-                        <span class="text-gray-600">/</span>
-                        <a :href="'category.html?cat=' + selectedCategory"
-                            :class="!selectedFaction ? 'text-white font-semibold' : 'hover:text-white transition'"
-                            x-text="activeCategoryMeta.name"></a>
-                    </span>
-                </template>
-                <template x-if="selectedFaction">
-                    <span class="flex items-center gap-2">
-                        <span class="text-gray-600">/</span>
-                        <span class="text-white font-semibold" x-text="activeFactionName"></span>
-                    </span>
-                </template>
-            </nav>
+        <!-- 1. CATEGORY HERO BANNER + BREADCRUMBS + 5-COLUMN BENEFITS BAR -->
+        <section class="category-hero-banner border-b border-[#1e1e24]/60 pb-8">
+            <div class="category-hero-bg" :style="'background-image: url(' + currentCategory.bannerImage + ')'"></div>
+            <div class="category-hero-gradient"></div>
 
-            <!-- CATEGORY HEADER BANNER (Єдиний головний H1 на сторінці) -->
-            <section
-                class="bg-[#08080a] border border-[#1e1e24] rounded-[6px] p-6 sm:p-8 mb-6 relative overflow-hidden">
-                <div class="relative z-10 flex flex-col lg:flex-row lg:items-end justify-between gap-4">
-                    <div class="space-y-2 max-w-3xl">
-                        <div class="text-[11px] font-bold text-[#99241d] uppercase tracking-widest">
-                            OFICIÁLNY KATALÓG GAMES WORKSHOP
+            <div class="max-w-[1536px] mx-auto px-4 sm:px-6 relative z-10 pt-5 sm:pt-7">
+                <!-- Хлібні крихти (Breadcrumbs) -->
+                <nav aria-label="Breadcrumb" class="flex items-center gap-2 text-xs text-gray-400 mb-6 sm:mb-8">
+                    <a href="index.html" class="hover:text-white transition">Domov</a>
+                    <svg class="w-3 h-3 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                    <span class="text-gray-200 font-medium" x-text="currentCategory.breadcrumb"></span>
+                </nav>
+
+                <!-- Заголовок H1 та опис категорії -->
+                <div class="max-w-2xl space-y-3 sm:space-y-4 mb-8 sm:mb-10">
+                    <h1 class="text-3xl sm:text-5xl md:text-6xl font-extrabold text-white uppercase tracking-wide leading-none font-sans"
+                        x-text="currentCategory.h1">
+                    </h1>
+                    <p class="text-gray-300 text-sm sm:text-base leading-relaxed font-normal"
+                        x-text="currentCategory.description">
+                    </p>
+                </div>
+
+                <!-- 5-КОЛОНКОВА ПАНЕЛЬ ПЕРЕВАГ -->
+                <div
+                    class="bg-[#08080a]/95 border border-[#1e1e24] rounded-[6px] p-4 sm:p-5 shadow-xl backdrop-blur-sm">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
+
+                        <!-- 1. Oficiálne produkty -->
+                        <div class="flex items-center gap-3.5">
+                            <svg class="w-7 h-7 text-gray-200 shrink-0" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"
+                                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                                </path>
+                            </svg>
+                            <div class="space-y-0.5">
+                                <div class="text-xs font-bold text-white leading-snug">Oficiálne produkty</div>
+                                <div class="text-[11px] text-gray-400">Games Workshop</div>
+                            </div>
                         </div>
-                        <h1 id="category-h1"
-                            class="text-2xl sm:text-4xl font-extrabold text-white uppercase tracking-wider font-sans"
-                            x-text="pageHeading">
-                            Katalóg produktov Warhammer
-                        </h1>
-                        <p class="text-xs sm:text-sm text-gray-400 leading-relaxed"
-                            x-text="activeCategoryMeta.subtitle">
-                            Kompletná ponuka originálnych miniatúr, štartovacích sád a modelárskych potrieb Games
-                            Workshop.
-                        </p>
-                    </div>
-                    <div class="text-xs text-gray-400 font-medium shrink-0">
-                        Nájdených produktov: <strong class="text-white" x-text="filteredProducts.length"></strong>
+
+                        <!-- 2. Široký výber -->
+                        <div class="flex items-center gap-3.5">
+                            <svg class="w-7 h-7 text-gray-200 shrink-0" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"
+                                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <div class="space-y-0.5">
+                                <div class="text-xs font-bold text-white leading-snug">Široký výber</div>
+                                <div class="text-[11px] text-gray-400">40K frakcií</div>
+                            </div>
+                        </div>
+
+                        <!-- 3. Rýchle doručenie -->
+                        <div class="flex items-center gap-3.5">
+                            <svg class="w-7 h-7 text-gray-200 shrink-0" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"
+                                    d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"
+                                    d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8h4l3 3v5h-2m-4 0h2">
+                                </path>
+                            </svg>
+                            <div class="space-y-0.5">
+                                <div class="text-xs font-bold text-white leading-snug">Rýchle doručenie</div>
+                                <div class="text-[11px] text-gray-400">1–2 pracovné dni</div>
+                            </div>
+                        </div>
+
+                        <!-- 4. Doprava zdarma -->
+                        <div class="flex items-center gap-3.5">
+                            <svg class="w-7 h-7 text-gray-200 shrink-0" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"
+                                    d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+                            </svg>
+                            <div class="space-y-0.5">
+                                <div class="text-xs font-bold text-white leading-snug">Doprava zdarma</div>
+                                <div class="text-[11px] text-gray-400">nad 70 €</div>
+                            </div>
+                        </div>
+
+                        <!-- 5. Vernostný program -->
+                        <div class="flex items-center gap-3.5">
+                            <svg class="w-7 h-7 text-gray-200 shrink-0" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"
+                                    d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z">
+                                </path>
+                            </svg>
+                            <div class="space-y-0.5">
+                                <div class="text-xs font-bold text-white leading-snug">Vernostný program</div>
+                                <div class="text-[11px] text-gray-400">Zbieraj body a šetri</div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <!-- Швидкі посилання на фракції для Warhammer 40,000 (посилює внутрішню перелінковку) -->
-                <div x-show="selectedCategory === 'warhammer-40k' || selectedCategory === 'all'"
-                    class="relative z-10 flex flex-wrap items-center gap-2 pt-5 mt-5 border-t border-[#1e1e24]">
-                    <span class="text-[11px] uppercase tracking-wider text-gray-500 font-bold mr-1">Frakcie 40K:</span>
-                    <a href="category.html?cat=warhammer-40k&faction=space-marines"
-                        :class="selectedFaction === 'space-marines' ? 'bg-[#99241d] border-[#99241d] text-white' : 'bg-[#0f0f12] border-[#1e1e24] text-gray-300 hover:border-[#99241d] hover:text-white'"
-                        class="px-3 py-1.5 rounded-[4px] border text-xs font-semibold transition">Space Marines</a>
-                    <a href="category.html?cat=warhammer-40k&faction=astra-militarum"
-                        :class="selectedFaction === 'astra-militarum' ? 'bg-[#99241d] border-[#99241d] text-white' : 'bg-[#0f0f12] border-[#1e1e24] text-gray-300 hover:border-[#99241d] hover:text-white'"
-                        class="px-3 py-1.5 rounded-[4px] border text-xs font-semibold transition">Astra Militarum</a>
-                    <a href="category.html?cat=warhammer-40k&faction=necrons"
-                        :class="selectedFaction === 'necrons' ? 'bg-[#99241d] border-[#99241d] text-white' : 'bg-[#0f0f12] border-[#1e1e24] text-gray-300 hover:border-[#99241d] hover:text-white'"
-                        class="px-3 py-1.5 rounded-[4px] border text-xs font-semibold transition">Necrons</a>
-                    <a href="category.html?cat=warhammer-40k&faction=chaos"
-                        :class="selectedFaction === 'chaos' ? 'bg-[#99241d] border-[#99241d] text-white' : 'bg-[#0f0f12] border-[#1e1e24] text-gray-300 hover:border-[#99241d] hover:text-white'"
-                        class="px-3 py-1.5 rounded-[4px] border text-xs font-semibold transition">Chaos</a>
-                    <a href="category.html?cat=warhammer-40k&faction=xenos"
-                        :class="selectedFaction === 'xenos' ? 'bg-[#99241d] border-[#99241d] text-white' : 'bg-[#0f0f12] border-[#1e1e24] text-gray-300 hover:border-[#99241d] hover:text-white'"
-                        class="px-3 py-1.5 rounded-[4px] border text-xs font-semibold transition">Xenos</a>
-                    <a href="category.html?cat=warhammer-40k&faction=imperium"
-                        :class="selectedFaction === 'imperium' ? 'bg-[#99241d] border-[#99241d] text-white' : 'bg-[#0f0f12] border-[#1e1e24] text-gray-300 hover:border-[#99241d] hover:text-white'"
-                        class="px-3 py-1.5 rounded-[4px] border text-xs font-semibold transition">Imperium</a>
-                    <a href="category.html?cat=warhammer-40k&faction=starter-sets"
-                        :class="selectedFaction === 'starter-sets' ? 'bg-[#99241d] border-[#99241d] text-white' : 'bg-[#0f0f12] border-[#1e1e24] text-gray-300 hover:border-[#99241d] hover:text-white'"
-                        class="px-3 py-1.5 rounded-[4px] border text-xs font-semibold transition">Starter Sets</a>
-                </div>
-            </section>
+        <!-- 2. HORIZONTAL SUBCATEGORY / FACTION CARDS (8 КАРТОК ПІДКАТЕГОРІЙ) -->
+        <section aria-label="Podkategórie a frakcie" class="max-w-[1536px] mx-auto px-4 sm:px-6 mt-6">
+            <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3">
+                <template x-for="sub in currentCategory.subcategories" :key="sub.slug">
+                    <button type="button" @click="selectSubcategory(sub.slug)"
+                        :class="(sub.slug === 'all' ? filterFactions.length === 0 : filterFactions.includes(sub.slug)) ? 'faction-pill-card active' : 'faction-pill-card'">
+                        <div class="faction-pill-card-img">
+                            <img :src="sub.image" :alt="sub.name + ' – Warhammer'" loading="lazy">
+                        </div>
+                        <div class="p-2.5 flex-1 flex flex-col justify-center">
+                            <div class="text-[11px] font-extrabold text-white uppercase tracking-wider leading-tight"
+                                x-text="sub.name"></div>
+                            <div class="text-[10px] text-gray-400 mt-1"
+                                x-text="getSubcategoryCount(sub.slug) + ' ' + (getSubcategoryCount(sub.slug) === 1 ? 'produkt' : (getSubcategoryCount(sub.slug) >= 2 && getSubcategoryCount(sub.slug) <= 4 ? 'produkty' : 'produktov'))">
+                            </div>
+                        </div>
+                    </button>
+                </template>
+            </div>
+        </section>
 
-            <!-- CATALOG LAYOUT: SIDEBAR + PRODUCTS -->
-            <div class="grid grid-cols-1 lg:grid-cols-[270px_1fr] gap-6 items-start">
+        <!-- 3. MAIN CATALOG LAYOUT (LEFT SIDEBAR FILTERS + RIGHT PRODUCTS GRID) -->
+        <section id="catalog-products-top" class="max-w-[1536px] mx-auto px-4 sm:px-6 mt-8">
 
-                <!-- LEFT SIDEBAR (Індексовані посилання категорій + клієнтські фільтри) -->
-                <aside :class="mobileFiltersOpen ? 'block' : 'hidden lg:block'"
-                    class="bg-[#08080a] border border-[#1e1e24] rounded-[6px] p-5 space-y-6">
+            <!-- Кнопка відкриття фільтрів на мобільних/планшетах -->
+            <div class="lg:hidden mb-4">
+                <button @click="mobileFiltersOpen = !mobileFiltersOpen"
+                    class="w-full py-3 px-4 bg-[#0d0d10] border border-[#1e1e24] hover:border-[#99241d] rounded-[6px] text-xs font-bold uppercase tracking-wider text-white flex items-center justify-between transition">
+                    <span class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-[#99241d]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z">
+                            </path>
+                        </svg>
+                        <span>Kategórie a filtre</span>
+                    </span>
+                    <svg class="w-4 h-4 transition-transform duration-200" :class="{ 'rotate-180': mobileFiltersOpen }"
+                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+            </div>
 
-                    <!-- Kategórie (прямі crawlable посилання <a>) -->
-                    <div class="space-y-3">
-                        <h2 class="text-xs font-extrabold text-white uppercase tracking-wider">Kategórie</h2>
-                        <ul class="space-y-1.5 text-xs">
-                            <li>
-                                <a href="category.html"
-                                    :class="selectedCategory === 'all' ? 'bg-[#18181c] text-white font-bold border-l-2 border-[#99241d]' : 'text-gray-400 hover:text-white hover:bg-[#121216]'"
-                                    class="block px-3 py-2 rounded-[4px] transition">
-                                    Všetky produkty
-                                </a>
-                            </li>
-                            <li>
-                                <a href="category.html?cat=warhammer-40k"
-                                    :class="selectedCategory === 'warhammer-40k' ? 'bg-[#18181c] text-white font-bold border-l-2 border-[#99241d]' : 'text-gray-400 hover:text-white hover:bg-[#121216]'"
-                                    class="block px-3 py-2 rounded-[4px] transition">
-                                    Warhammer 40,000
-                                </a>
-                            </li>
-                            <li>
-                                <a href="category.html?cat=age-of-sigmar"
-                                    :class="selectedCategory === 'age-of-sigmar' ? 'bg-[#18181c] text-white font-bold border-l-2 border-[#99241d]' : 'text-gray-400 hover:text-white hover:bg-[#121216]'"
-                                    class="block px-3 py-2 rounded-[4px] transition">
-                                    Age of Sigmar
-                                </a>
-                            </li>
-                            <li>
-                                <a href="category.html?cat=farby-a-nastroje"
-                                    :class="selectedCategory === 'farby-a-nastroje' ? 'bg-[#18181c] text-white font-bold border-l-2 border-[#99241d]' : 'text-gray-400 hover:text-white hover:bg-[#121216]'"
-                                    class="block px-3 py-2 rounded-[4px] transition">
-                                    Farby & Nástroje
-                                </a>
-                            </li>
-                            <li>
-                                <a href="category.html?cat=kill-team"
-                                    :class="selectedCategory === 'kill-team' ? 'bg-[#18181c] text-white font-bold border-l-2 border-[#99241d]' : 'text-gray-400 hover:text-white hover:bg-[#121216]'"
-                                    class="block px-3 py-2 rounded-[4px] transition">
-                                    Kill Team
-                                </a>
-                            </li>
-                            <li>
-                                <a href="category.html?cat=akcie"
-                                    :class="selectedCategory === 'akcie' ? 'bg-[#18181c] text-[#dc2626] font-bold border-l-2 border-[#99241d]' : 'text-[#dc2626] hover:bg-[#121216]'"
-                                    class="block px-3 py-2 rounded-[4px] transition">
-                                    Akcie a zľavy
-                                </a>
-                            </li>
-                            <li>
-                                <a href="category.html?cat=prislusenstvo"
-                                    :class="selectedCategory === 'prislusenstvo' ? 'bg-[#18181c] text-white font-bold border-l-2 border-[#99241d]' : 'text-gray-400 hover:text-white hover:bg-[#121216]'"
-                                    class="block px-3 py-2 rounded-[4px] transition">
-                                    Príslušenstvo
-                                </a>
-                            </li>
-                            <li>
-                                <a href="category.html?cat=merch"
-                                    :class="selectedCategory === 'merch' ? 'bg-[#18181c] text-white font-bold border-l-2 border-[#99241d]' : 'text-gray-400 hover:text-white hover:bg-[#121216]'"
-                                    class="block px-3 py-2 rounded-[4px] transition">
-                                    Merch
-                                </a>
-                            </li>
+            <div class="grid grid-cols-1 lg:grid-cols-[270px_1fr] xl:grid-cols-[290px_1fr] gap-6 items-start">
+
+                <!-- ЛІВИЙ САЙДБАР: KATEGÓRIE + FILTERE -->
+                <aside aria-label="Filtre produktov" :class="mobileFiltersOpen ? 'block' : 'hidden lg:block'"
+                    x-data="{ openCat: true, openAvail: true, openPrice: true, openType: true, openFaction: true }"
+                    class="bg-[#08080a] border border-[#1e1e24] rounded-[6px] p-5 space-y-5">
+
+                    <!-- БЛОК 1: KATEGÓRIE -->
+                    <div class="border-b border-[#1e1e24] pb-5">
+                        <button type="button" @click="openCat = !openCat"
+                            class="w-full flex items-center justify-between text-xs font-extrabold text-white uppercase tracking-wider mb-3 cursor-pointer">
+                            <span>KATEGÓRIE</span>
+                            <svg class="w-3.5 h-3.5 text-gray-400 transition-transform duration-200"
+                                :class="{ 'rotate-180': !openCat }" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7">
+                                </path>
+                            </svg>
+                        </button>
+
+                        <ul x-show="openCat" class="space-y-2 text-xs">
+                            <template x-for="sub in currentCategory.subcategories" :key="sub.slug">
+                                <li>
+                                    <button type="button" @click="selectSubcategory(sub.slug)"
+                                        :class="(sub.slug === 'all' ? filterFactions.length === 0 : filterFactions.includes(sub.slug)) ? 'text-[#c12824] font-bold' : 'text-gray-300 hover:text-white'"
+                                        class="w-full flex items-center justify-between py-0.5 transition text-left cursor-pointer">
+                                        <span x-text="sub.name"></span>
+                                        <span class="text-gray-500 text-[11px]"
+                                            x-text="getSubcategoryCount(sub.slug)"></span>
+                                    </button>
+                                </li>
+                            </template>
                         </ul>
                     </div>
 
-                    <!-- Dostupnosť -->
-                    <div class="pt-4 border-t border-[#1e1e24] space-y-3">
-                        <h3 class="text-xs font-extrabold text-white uppercase tracking-wider">Dostupnosť</h3>
-                        <label class="flex items-center gap-2.5 text-xs text-gray-300 cursor-pointer select-none">
-                            <input type="checkbox" x-model="onlyInStock"
-                                class="rounded bg-[#0f0f12] border-[#1e1e24] text-[#99241d] focus:ring-0">
-                            <span>Len skladom (ihneď k odoslaniu)</span>
-                        </label>
+                    <!-- ЗАГОЛОВОК FILTERE + ZRUŠIŤ VŠETKO -->
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-extrabold text-white uppercase tracking-wider">FILTERE</span>
+                        <button type="button" @click="resetFilters()"
+                            class="text-[11px] text-gray-400 hover:text-[#99241d] underline transition cursor-pointer">
+                            Zrušiť všetko
+                        </button>
                     </div>
 
-                    <!-- Cenové rozpätie -->
-                    <div class="pt-4 border-t border-[#1e1e24] space-y-3">
-                        <h3 class="text-xs font-extrabold text-white uppercase tracking-wider">Cena (€)</h3>
-                        <div class="grid grid-cols-2 gap-2">
-                            <input type="number" min="0" x-model.number="minPrice" placeholder="Od €"
-                                aria-label="Minimálna cena"
-                                class="w-full bg-[#0f0f12] border border-[#1e1e24] rounded-[4px] px-3 py-2 text-xs text-white placeholder-gray-500 focus:outline-none focus:border-[#99241d]">
-                            <input type="number" min="0" x-model.number="maxPrice" placeholder="Do €"
-                                aria-label="Maximálna cena"
-                                class="w-full bg-[#0f0f12] border border-[#1e1e24] rounded-[4px] px-3 py-2 text-xs text-white placeholder-gray-500 focus:outline-none focus:border-[#99241d]">
+                    <!-- БЛОК 2: DOSTUPNOSŤ -->
+                    <div class="border-b border-[#1e1e24] pb-5 space-y-2.5">
+                        <button type="button" @click="openAvail = !openAvail"
+                            class="w-full flex items-center justify-between text-[11px] font-bold text-gray-300 uppercase tracking-wider cursor-pointer">
+                            <span>DOSTUPNOSŤ</span>
+                        </button>
+
+                        <div x-show="openAvail" class="space-y-2 pt-1 text-xs">
+                            <label class="flex items-center justify-between cursor-pointer group">
+                                <span class="flex items-center gap-2.5 text-gray-300 group-hover:text-white transition">
+                                    <input type="checkbox" value="in-stock" x-model="filterAvailability"
+                                        @change="currentPage = 1" class="wh-checkbox">
+                                    <span>Skladom</span>
+                                </span>
+                                <span class="text-gray-500 text-[11px]"
+                                    x-text="baseCategoryProducts.filter(p => p.inStock).length"></span>
+                            </label>
+
+                            <label class="flex items-center justify-between cursor-pointer group">
+                                <span class="flex items-center gap-2.5 text-gray-300 group-hover:text-white transition">
+                                    <input type="checkbox" value="on-order" x-model="filterAvailability"
+                                        @change="currentPage = 1" class="wh-checkbox">
+                                    <span>Na objednávku</span>
+                                </span>
+                                <span class="text-gray-500 text-[11px]"
+                                    x-text="baseCategoryProducts.filter(p => !p.inStock).length"></span>
+                            </label>
                         </div>
                     </div>
 
-                    <!-- Reset filtrov -->
-                    <div class="pt-2">
-                        <button @click="resetFilters()"
-                            class="w-full py-2 px-3 bg-[#121216] hover:bg-[#1e1e24] border border-[#1e1e24] rounded-[4px] text-xs text-gray-300 hover:text-white font-semibold transition">
-                            Vymazať filtre
+                    <!-- БЛОК 3: CENA (RANGE SLIDER + INPUTS) -->
+                    <div class="border-b border-[#1e1e24] pb-5 space-y-3">
+                        <button type="button" @click="openPrice = !openPrice"
+                            class="w-full flex items-center justify-between text-[11px] font-bold text-gray-300 uppercase tracking-wider cursor-pointer">
+                            <span>CENA</span>
+                            <svg class="w-3.5 h-3.5 text-gray-400 transition-transform duration-200"
+                                :class="{ 'rotate-180': openPrice }" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
                         </button>
+
+                        <div x-show="openPrice" class="space-y-3 pt-1">
+                            <!-- Подвійний повзунок ціни -->
+                            <div class="price-range-slider">
+                                <div class="price-range-track"></div>
+                                <div class="price-range-fill"
+                                    :style="'left: ' + ((priceMin - 15) / (250 - 15) * 100) + '%; right: ' + (100 - ((priceMax - 15) / (250 - 15) * 100)) + '%'">
+                                </div>
+                                <input type="range" min="15" max="250" step="5" x-model.number="priceMin"
+                                    aria-label="Minimálna cena"
+                                    @input="if (priceMin > priceMax) priceMin = priceMax; currentPage = 1"
+                                    class="price-range-input">
+                                <input type="range" min="15" max="250" step="5" x-model.number="priceMax"
+                                    aria-label="Maximálna cena"
+                                    @input="if (priceMax < priceMin) priceMax = priceMin; currentPage = 1"
+                                    class="price-range-input">
+                            </div>
+
+                            <div class="flex items-center justify-between text-[11px] text-gray-400">
+                                <span x-text="'€' + priceMin"></span>
+                                <span x-text="'€' + priceMax"></span>
+                            </div>
+
+                            <!-- Два числових інпути -->
+                            <div class="flex items-center gap-2">
+                                <div
+                                    class="flex-1 flex items-center bg-[#0f0f12] border border-[#1e1e24] rounded-[4px] px-2.5 py-1.5 text-xs">
+                                    <span class="text-gray-500 mr-1.5">€</span>
+                                    <input type="number" min="15" max="250" x-model.number="priceMin"
+                                        aria-label="Cena od" @change="currentPage = 1"
+                                        class="w-full bg-transparent text-white text-center focus:outline-none">
+                                </div>
+                                <span class="text-gray-600">-</span>
+                                <div
+                                    class="flex-1 flex items-center bg-[#0f0f12] border border-[#1e1e24] rounded-[4px] px-2.5 py-1.5 text-xs">
+                                    <span class="text-gray-500 mr-1.5">€</span>
+                                    <input type="number" min="15" max="250" x-model.number="priceMax"
+                                        aria-label="Cena do" @change="currentPage = 1"
+                                        class="w-full bg-transparent text-white text-center focus:outline-none">
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
+                    <!-- БЛОК 4: PRODUKTOVÝ TYP -->
+                    <div class="border-b border-[#1e1e24] pb-5 space-y-2.5">
+                        <button type="button" @click="openType = !openType"
+                            class="w-full flex items-center justify-between text-[11px] font-bold text-gray-300 uppercase tracking-wider cursor-pointer">
+                            <span>PRODUKTOVÝ TYP</span>
+                        </button>
+
+                        <div x-show="openType" class="space-y-2 pt-1 text-xs">
+                            <template x-for="typeItem in availableProductTypes" :key="typeItem.name">
+                                <label class="flex items-center justify-between cursor-pointer group">
+                                    <span
+                                        class="flex items-center gap-2.5 text-gray-300 group-hover:text-white transition">
+                                        <input type="checkbox" :value="typeItem.name" x-model="filterTypes"
+                                            @change="currentPage = 1" class="wh-checkbox">
+                                        <span x-text="typeItem.name"></span>
+                                    </span>
+                                    <span class="text-gray-500 text-[11px]" x-text="typeItem.count"></span>
+                                </label>
+                            </template>
+                        </div>
+                    </div>
+
+                    <!-- БЛОК 5: FAKCIA -->
+                    <div class="space-y-2.5">
+                        <button type="button" @click="openFaction = !openFaction"
+                            class="w-full flex items-center justify-between text-[11px] font-bold text-gray-300 uppercase tracking-wider cursor-pointer">
+                            <span>FAKCIA</span>
+                        </button>
+
+                        <div x-show="openFaction" class="space-y-2 pt-1 text-xs">
+                            <template x-for="sub in currentCategory.subcategories.filter(s => s.slug !== 'all')"
+                                :key="sub.slug">
+                                <label class="flex items-center justify-between cursor-pointer group">
+                                    <span
+                                        class="flex items-center gap-2.5 text-gray-300 group-hover:text-white transition">
+                                        <input type="checkbox" :value="sub.slug" x-model="filterFactions"
+                                            @change="currentPage = 1; syncUrl()" class="wh-checkbox">
+                                        <span x-text="sub.name"></span>
+                                    </span>
+                                    <span class="text-gray-500 text-[11px]"
+                                        x-text="getSubcategoryCount(sub.slug)"></span>
+                                </label>
+                            </template>
+                        </div>
+                    </div>
+
                 </aside>
 
-                <!-- RIGHT PRODUCT LISTING -->
-                <div class="space-y-5">
-
-                    <!-- Sorting & Mobile Filter Toolbar -->
-                    <div
-                        class="bg-[#08080a] border border-[#1e1e24] rounded-[6px] px-4 py-3 flex flex-wrap items-center justify-between gap-3">
-                        <button @click="mobileFiltersOpen = !mobileFiltersOpen"
-                            class="lg:hidden flex items-center gap-2 px-3 py-1.5 bg-[#121216] border border-[#1e1e24] rounded-[4px] text-xs font-bold text-white">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z">
-                                </path>
-                            </svg>
-                            <span>Filtre a kategórie</span>
-                        </button>
-
-                        <div class="flex items-center gap-2 text-xs text-gray-400">
-                            <span x-show="searchQuery">Hľadaný výraz: <strong class="text-white"
-                                    x-text="searchQuery"></strong></span>
-                            <a x-show="searchQuery" href="category.html"
-                                class="text-[#99241d] hover:underline ml-1">(zrušiť)</a>
+                <!-- ПРАВА ЧАСТИНА: TOOLBAR + СІТКА ТОВАРІВ + ПАГІНАЦІЯ -->
+                <div>
+                    <!-- Верхня панель сортування та вигляду -->
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-5">
+                        <div class="flex items-baseline gap-2">
+                            <h2 class="text-lg sm:text-xl font-extrabold text-white uppercase tracking-wider font-sans"
+                                x-text="activeSectionTitle">
+                            </h2>
+                            <span class="text-sm font-semibold text-gray-400"
+                                x-text="'(' + filteredProducts.length + ')'"></span>
                         </div>
 
-                        <div class="flex items-center gap-2.5 ml-auto">
-                            <label for="sort-select" class="text-xs text-gray-400 hidden sm:inline">Zoradiť
-                                podľa:</label>
-                            <select id="sort-select" x-model="sortBy"
-                                class="bg-[#0f0f12] border border-[#1e1e24] rounded-[4px] px-3 py-1.5 text-xs text-white focus:outline-none focus:border-[#99241d]">
-                                <option value="featured">Odporúčané</option>
-                                <option value="price-asc">Cena: od najnižšej</option>
-                                <option value="price-desc">Cena: od najvyššej</option>
-                                <option value="name-asc">Názov: A–Z</option>
-                            </select>
+                        <div class="flex flex-wrap items-center gap-4">
+                            <!-- Сортування -->
+                            <div class="flex items-center gap-2">
+                                <label for="catalog-sort"
+                                    class="text-[11px] font-bold text-gray-400 uppercase tracking-wider whitespace-nowrap">ZORADIŤ
+                                    PODĽA</label>
+                                <select id="catalog-sort" x-model="sortBy" @change="currentPage = 1"
+                                    class="bg-[#0d0d10] border border-[#1e1e24] rounded-[4px] py-2 px-3 text-xs text-white focus:outline-none focus:border-[#99241d] transition cursor-pointer">
+                                    <option value="popular" class="bg-[#0d0d10] text-white">Najpopulárnejšie</option>
+                                    <option value="price-asc" class="bg-[#0d0d10] text-white">Najlacnejšie</option>
+                                    <option value="price-desc" class="bg-[#0d0d10] text-white">Najdrahšie</option>
+                                    <option value="name-asc" class="bg-[#0d0d10] text-white">Podľa názvu A–Z</option>
+                                </select>
+                            </div>
+
+                            <!-- Перемикач вигляду Grid / List -->
+                            <div class="flex items-center gap-1.5">
+                                <span
+                                    class="text-[11px] font-bold text-gray-400 uppercase tracking-wider mr-1 hidden sm:inline">ZOBRAZIŤ</span>
+                                <button type="button" @click="viewMode = 'grid'" aria-label="Zobraziť ako mriežku"
+                                    :class="viewMode === 'grid' ? 'border-[#99241d] bg-[#99241d]/15 text-white' : 'border-[#1e1e24] bg-[#0d0d10] text-gray-400 hover:text-white'"
+                                    class="w-8 h-8 rounded-[4px] border flex items-center justify-center transition cursor-pointer"
+                                    title="Mriežka">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z">
+                                        </path>
+                                    </svg>
+                                </button>
+                                <button type="button" @click="viewMode = 'list'" aria-label="Zobraziť ako zoznam"
+                                    :class="viewMode === 'list' ? 'border-[#99241d] bg-[#99241d]/15 text-white' : 'border-[#1e1e24] bg-[#0d0d10] text-gray-400 hover:text-white'"
+                                    class="w-8 h-8 rounded-[4px] border flex items-center justify-center transition cursor-pointer"
+                                    title="Zoznam">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M4 6h16M4 12h16M4 18h16"></path>
+                                    </svg>
+                                </button>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- PRODUCT GRID -->
+                    <!-- Порожній стан, якщо за фільтрами нічого не знайдено -->
+                    <div x-show="filteredProducts.length === 0"
+                        class="bg-[#0d0d10] border border-[#1e1e24] rounded-[6px] p-12 text-center space-y-4">
+                        <p class="text-sm text-gray-300 font-medium">Pre zvolené filtre sa nenašli žiadne produkty.</p>
+                        <button type="button" @click="resetFilters()"
+                            class="inline-block bg-[#99241d] hover:bg-[#b71c1c] text-white px-5 py-2.5 rounded-[4px] text-xs font-bold uppercase tracking-wider transition cursor-pointer">
+                            Zrušiť všetky filtre
+                        </button>
+                    </div>
+
+                    <!-- СІТКА ТЕМНИХ КАРТОК ТОВАРІВ -->
                     <div x-show="filteredProducts.length > 0"
-                        class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4 sm:gap-5">
-                        <template x-for="product in filteredProducts" :key="product.id">
-                            <article class="product-card">
-                                <div>
+                        :class="viewMode === 'grid' ? 'grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 sm:gap-5' : 'flex flex-col gap-4'">
+
+                        <template x-for="product in paginatedProducts" :key="product.id">
+                            <article :class="viewMode === 'list' ? 'product-card product-card--list' : 'product-card'">
+                                <div class="product-card-top">
+                                    <!-- Лейбл (NOVINKA / -10% / TOP) -->
                                     <span x-show="product.badge" x-text="product.badge"
                                         class="product-card-badge"></span>
 
-                                    <a :href="'product.html?id=' + product.id" class="product-card-img-wrapper">
-                                        <img :src="product.image" :alt="product.title" loading="lazy">
+                                    <!-- Кнопка «Обране» (сердечко) -->
+                                    <button type="button" @click="toggleWishlist(product)"
+                                        :aria-label="'Pridať ' + product.title + ' do obľúbených'"
+                                        :class="isInWishlist(product.id) ? 'product-card-wishlist active' : 'product-card-wishlist'"
+                                        title="Pridať do obľúbených">
+                                        <svg class="w-4 h-4" :fill="isInWishlist(product.id) ? 'currentColor' : 'none'"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.9"
+                                                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z">
+                                            </path>
+                                        </svg>
+                                    </button>
+
+                                    <!-- Зображення -->
+                                    <a href="product.html" class="product-card-img-wrapper">
+                                        <img :src="product.image" :alt="product.title + ' – ' + product.category"
+                                            loading="lazy">
                                     </a>
 
-                                    <div class="product-card-category" x-text="product.category"></div>
-                                    <h2 class="product-card-title">
-                                        <a :href="'product.html?id=' + product.id"
-                                            class="hover:text-[#c12824] transition" x-text="product.title"></a>
-                                    </h2>
+                                    <!-- Категорія, Назва та Короткий опис (у List View) -->
+                                    <div>
+                                        <div class="product-card-category" x-text="product.category"></div>
+                                        <h3 class="product-card-title">
+                                            <a href="product.html" class="hover:text-[#c12824] transition"
+                                                x-text="product.title"></a>
+                                        </h3>
+                                        <p x-show="viewMode === 'list'" x-text="product.description"
+                                            class="text-xs text-gray-400 mt-1.5 leading-relaxed max-w-xl"></p>
+                                    </div>
                                 </div>
 
+                                <!-- Нижній блок з ціною, статусом та кнопкою кошика -->
                                 <div class="product-card-footer">
                                     <div>
+                                        <!-- Ціни -->
                                         <div class="flex items-center gap-2">
                                             <span
                                                 :class="product.oldPrice ? 'product-card-price-sale' : 'product-card-price'"
@@ -719,17 +1091,19 @@
                                                 x-text="'€' + (product.oldPrice ? product.oldPrice.toFixed(2).replace('.', ',') : '')"></span>
                                         </div>
 
-                                        <div class="product-card-status-in" x-show="product.inStock">
+                                        <!-- Статус наявності -->
+                                        <div x-show="product.inStock" class="product-card-status-in">
                                             Skladom
                                         </div>
-                                        <div class="product-card-status-out" x-show="!product.inStock">
-                                            Vypredané
+                                        <div x-show="!product.inStock" class="product-card-status-order">
+                                            Na objednávku
                                         </div>
                                     </div>
 
-                                    <button @click="addToCart(product)" :disabled="!product.inStock"
-                                        class="product-card-btn"
-                                        :title="product.inStock ? 'Pridať do košíka' : 'Vypredané'">
+                                    <!-- Кнопка додавання у кошик -->
+                                    <button type="button" @click="addToCart(product)" :disabled="!product.inStock"
+                                        :aria-label="'Pridať ' + product.title + ' do košíka'" class="product-card-btn"
+                                        :title="product.inStock ? 'Pridať do košíka' : 'Na objednávku'">
                                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                 d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
@@ -738,63 +1112,204 @@
                                 </div>
                             </article>
                         </template>
+
                     </div>
 
-                    <!-- EMPTY STATE -->
-                    <div x-show="filteredProducts.length === 0"
-                        class="bg-[#08080a] border border-[#1e1e24] rounded-[6px] p-12 text-center space-y-4">
-                        <p class="text-white font-bold text-base">Pre zvolené filtre sme nenašli žiadne produkty.</p>
-                        <p class="text-xs text-gray-400">Skúste upraviť cenové rozpätie alebo zobraziť všetky produkty v
-                            kategórii.</p>
-                        <button @click="resetFilters()"
-                            class="inline-block bg-[#99241d] hover:bg-[#b71c1c] text-white px-5 py-2.5 rounded-[4px] text-xs font-bold uppercase tracking-wider transition">
-                            Zobraziť všetky produkty
+                    <!-- ПАГІНАЦІЯ -->
+                    <nav aria-label="Stránkovanie katalógu" x-show="filteredProducts.length > 0"
+                        class="flex items-center justify-center gap-2 mt-8 pt-2">
+                        <button type="button" @click="goToPage(currentPage - 1)" :disabled="currentPage === 1"
+                            aria-label="Predchádzajúca strana" class="wh-page-btn" title="Predchádzajúca strana">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 19l-7-7 7-7"></path>
+                            </svg>
                         </button>
+
+                        <template x-for="page in totalPages" :key="page">
+                            <button type="button" @click="goToPage(page)"
+                                :aria-current="currentPage === page ? 'page' : false"
+                                :class="currentPage === page ? 'wh-page-btn active' : 'wh-page-btn'"
+                                x-text="page"></button>
+                        </template>
+
+                        <button type="button" @click="goToPage(currentPage + 1)" :disabled="currentPage === totalPages"
+                            aria-label="Ďalšia strana" class="wh-page-btn" title="Ďalšia strana">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                                </path>
+                            </svg>
+                        </button>
+                    </nav>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 4. НИЖНЯ ПАНЕЛЬ ДОВІРИ (5 ПЕРЕВАГ ПЕРЕД РОЗСИЛКОЮ) -->
+        <section aria-label="Výhody nákupu" class="w-full max-w-[1536px] mx-auto px-4 sm:px-6 mt-14">
+            <div class="bg-[#08080a] border border-[#1e1e24] rounded-[6px] p-5 sm:p-6 shadow-xl">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+
+                    <div class="flex items-center gap-4">
+                        <svg class="w-8 h-8 text-gray-200 shrink-0" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"
+                                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                            </path>
+                        </svg>
+                        <div class="space-y-0.5">
+                            <div class="text-xs font-bold text-white uppercase tracking-wider leading-snug">100%
+                                ORIGINÁL</div>
+                            <div class="text-[11px] text-gray-400 font-medium">Oficiálne produkty Games Workshop</div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                        <svg class="w-8 h-8 text-gray-200 shrink-0" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"
+                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <div class="space-y-0.5">
+                            <div class="text-xs font-bold text-white uppercase tracking-wider leading-snug">RÝCHLE
+                                DORUČENIE</div>
+                            <div class="text-[11px] text-gray-400 font-medium">1–2 pracovné dni po celom Slovensku</div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                        <svg class="w-8 h-8 text-gray-200 shrink-0" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"
+                                d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"
+                                d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8h4l3 3v5h-2m-4 0h2">
+                            </path>
+                        </svg>
+                        <div class="space-y-0.5">
+                            <div class="text-xs font-bold text-white uppercase tracking-wider leading-snug">DOPRAVA
+                                ZDARMA</div>
+                            <div class="text-[11px] text-gray-400 font-medium">nad 70 €</div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                        <svg class="w-8 h-8 text-gray-200 shrink-0" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"
+                                d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z">
+                            </path>
+                        </svg>
+                        <div class="space-y-0.5">
+                            <div class="text-xs font-bold text-white uppercase tracking-wider leading-snug">BEZPEČNÉ
+                                PLATBY</div>
+                            <div class="text-[11px] text-gray-400 font-medium">Platby kartou, Apple Pay, Google Pay
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                        <svg class="w-8 h-8 text-gray-200 shrink-0" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"
+                                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                            </path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"
+                                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                        <div class="space-y-0.5">
+                            <div class="text-xs font-bold text-white uppercase tracking-wider leading-snug">ZÁKAZNÍCKA
+                                PODPORA</div>
+                            <div class="text-[11px] text-gray-400 font-medium">Sme tu pre vás každý deň</div>
+                        </div>
                     </div>
 
                 </div>
             </div>
+        </section>
 
-            <!-- ІНДЕКСОВАНИЙ SEO-ТЕКСТ КАТЕГОРІЇ (Унікальний опис під кожен розділ) -->
-            <section
-                class="mt-12 bg-[#08080a] border border-[#1e1e24] rounded-[6px] p-6 sm:p-8 space-y-3 text-gray-400">
-                <h2 class="text-sm sm:text-base font-extrabold text-white uppercase tracking-wider font-sans"
-                    x-text="activeCategoryMeta.seoHeading">
-                    Kompletný sortiment Warhammer a Citadel na Slovensku
-                </h2>
-                <p class="text-xs sm:text-sm leading-relaxed" x-text="activeCategoryMeta.seoText1">
-                    V našom katalógu nájdete oficiálne stolové wargamingové hry a miniatúry od britského štúdia Games
-                    Workshop. Či už staviate svoju prvú armádu do sci-fi sveta Warhammer 40,000, alebo zbierate hrdinov
-                    ríš Mortal Realms v Age of Sigmar, všetky skladové položky odosielame do 24 hodín.
-                </p>
-                <p class="text-xs sm:text-sm leading-relaxed" x-text="activeCategoryMeta.seoText2">
-                    Okrem samotných stavebníc ponúkame aj ucelený rad akrylových farieb Citadel Colour (Base, Layer,
-                    Shade, Contrast, Technical), presné modelárske štetce, lepidlá na plast a herné príslušenstvo pre
-                    turnajové aj domáce hranie.
-                </p>
-                <div class="pt-2 flex flex-wrap gap-4 text-xs">
-                    <a href="category.html?cat=warhammer-40k"
-                        class="text-gray-300 hover:text-[#99241d] underline">Warhammer 40,000</a>
-                    <a href="category.html?cat=age-of-sigmar" class="text-gray-300 hover:text-[#99241d] underline">Age
-                        of Sigmar</a>
-                    <a href="category.html?cat=farby-a-nastroje"
-                        class="text-gray-300 hover:text-[#99241d] underline">Farby Citadel</a>
-                    <a href="category.html?cat=kill-team" class="text-gray-300 hover:text-[#99241d] underline">Kill
-                        Team</a>
-                    <a href="category.html?cat=warhammer-40k&faction=starter-sets"
-                        class="text-gray-300 hover:text-[#99241d] underline">Štartovacie sady pre začiatočníkov</a>
+        <!-- 5. ФОРМА ПІДПИСКИ НА НОВИНКИ -->
+        <section aria-label="Odber noviniek" class="w-full max-w-[1536px] mx-auto px-4 sm:px-6 mt-10 sm:mt-12">
+            <div
+                class="relative rounded-[6px] border border-[#1e1e24] bg-[#08080a] py-6 px-6 sm:px-8 overflow-hidden flex flex-col lg:flex-row items-center justify-between gap-6">
+
+                <div class="absolute right-0 bottom-0 top-0 w-1/3 bg-no-repeat bg-right-bottom opacity-10 pointer-events-none"
+                    style="background-image: url('https://placehold.co/600x300/030303/ffffff?text=Marine+Outline');">
                 </div>
-            </section>
 
-        </div>
+                <div class="flex items-center gap-4 relative z-10 text-left">
+                    <div
+                        class="w-12 h-12 rounded-[4px] bg-white/10 border border-white/20 flex items-center justify-center p-2 shrink-0">
+                        <svg viewBox="0 0 24 24" class="w-full h-full fill-current text-white"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3
+                            class="text-white font-black text-base sm:text-lg uppercase tracking-wider leading-snug font-sans">
+                            NEZMEŠKAJ NOVINKY A EXKLUZÍVNE <span class="text-[#99241d]">PONUKY</span>
+                        </h3>
+                        <p class="text-gray-400 text-xs sm:text-sm mt-0.5">
+                            Prihlás sa na odber noviniek a buď vždy o krok vpred.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="w-full lg:w-auto relative z-10">
+                    <form @submit.prevent="showToast('Úspešne prihlásené na odber noviniek!')"
+                        class="flex flex-col sm:flex-row items-center gap-2.5">
+                        <div class="relative w-full sm:w-72">
+                            <input type="email" required aria-label="Zadaj svoj e-mail" placeholder="Zadaj svoj e-mail"
+                                class="w-full bg-[#030303] border border-[#1e1e24] rounded-[4px] py-3 pl-4 pr-12 text-xs text-white placeholder-gray-500 focus:outline-none focus:border-[#99241d] transition">
+                            <button type="submit" aria-label="Odoslať e-mail"
+                                class="absolute right-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-[#18181c] hover:bg-[#99241d] border border-[#1e1e24] text-gray-300 hover:text-white flex items-center justify-center transition"
+                                title="Odoslať">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                        d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <button type="submit"
+                            class="w-full sm:w-auto bg-[#c12824] hover:bg-[#99241d] text-white px-6 py-3 rounded-[4px] font-extrabold text-xs uppercase tracking-wider transition shadow-lg shrink-0 cursor-pointer">
+                            PRIHLÁSIŤ SA
+                        </button>
+                    </form>
+                    <div class="text-[10px] text-gray-500 mt-1.5 text-center sm:text-left">
+                        Prihlásením súhlasíš so spracovaním osobných údajov.
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SEO Fallback pre vyhľadávače bez JS -->
+        <noscript>
+            <section class="max-w-[1536px] mx-auto px-4 sm:px-6 mt-8 text-xs text-gray-400">
+                <h2>Katalóg Warhammer E-Shop Slovensko</h2>
+                <p>Oficiálne miniatúry Games Workshop, štartovacie sady, farby Citadel a herné príslušenstvo s rýchlym
+                    doručením po celom Slovensku.</p>
+                <ul>
+                    <li><a href="category.html?cat=warhammer-40k">Warhammer 40,000</a></li>
+                    <li><a href="category.html?cat=age-of-sigmar">Age of Sigmar</a></li>
+                    <li><a href="category.html?cat=farby-a-nastroje">Farby &amp; nástroje</a></li>
+                    <li><a href="category.html?cat=kill-team">Kill Team</a></li>
+                    <li><a href="category.html?cat=prislusenstvo">Príslušenstvo</a></li>
+                    <li><a href="category.html?cat=merch">Merch</a></li>
+                </ul>
+            </section>
+        </noscript>
+
     </main>
 
     <!-- 6. ФУТЕР САЙТУ -->
-    <footer class="bg-black border-t border-[#1e1e24] text-xs text-[#888894] pt-16 pb-10 px-4 sm:px-6 mt-12">
+    <footer class="bg-black border-t border-[#1e1e24] text-xs text-[#888894] pt-16 pb-10 px-4 sm:px-6 mt-16">
         <div
             class="w-full max-w-[1536px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 pb-12 border-b border-[#1e1e24]">
 
-            <!-- КОЛОНКА 1: Бренд -->
+            <!-- КОЛОНКА 1: Бренд та соцмережі -->
             <div class="space-y-4 pr-0 lg:pr-6">
                 <a href="index.html" class="flex items-center gap-3">
                     <div
@@ -814,28 +1329,58 @@
                 <p class="text-[11px] text-gray-400 leading-relaxed">
                     Oficiálny e-shop zameraný na produkty Games Workshop. Tvoj svet. Tvoja pravda. Tvoja armáda.
                 </p>
+                <div class="flex items-center gap-3 pt-2">
+                    <a href="#" aria-label="Discord"
+                        class="w-8 h-8 rounded-[4px] bg-[#0d0d10] border border-[#1e1e24] flex items-center justify-center text-gray-400 hover:text-white hover:border-[#99241d] transition">
+                        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                            <path
+                                d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-6.17-1.25.077.077 0 0 0-.079.037A19.736 19.736 0 0 0 3.677 20.3a.07.07 0 0 0 .032.027c1.933.918 3.8 1.48 5.657 1.792.038.006.072-.01.087-.035.405-.544.768-1.12 1.085-1.723a.068.068 0 0 0-.037-.094 13.067 13.067 0 0 1-1.854-.886.067.067 0 0 1-.007-.111c.125-.096.251-.196.372-.295a.065.065 0 0 1 .069-.011c3.844 1.756 8.004 1.756 11.802 0a.065.065 0 0 1 .07.011c.12.099.247.2.373.295a.067.067 0 0 1-.006.111 12.186 12.186 0 0 1-1.856.886.067.067 0 0 0-.037.094c.32.602.684 1.178 1.09 1.723.015.025.05.041.088.035 1.86-.312 3.725-.874 5.658-1.792a.07.07 0 0 0 .033-.027c2.253-6.425-.56-11.756-1.571-13.882zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z" />
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Facebook"
+                        class="w-8 h-8 rounded-[4px] bg-[#0d0d10] border border-[#1e1e24] flex items-center justify-center text-gray-400 hover:text-white hover:border-[#99241d] transition">
+                        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                            <path
+                                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Instagram"
+                        class="w-8 h-8 rounded-[4px] bg-[#0d0d10] border border-[#1e1e24] flex items-center justify-center text-gray-400 hover:text-white hover:border-[#99241d] transition">
+                        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="YouTube"
+                        class="w-8 h-8 rounded-[4px] bg-[#0d0d10] border border-[#1e1e24] flex items-center justify-center text-gray-400 hover:text-white hover:border-[#99241d] transition">
+                        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                            <path
+                                d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                        </svg>
+                    </a>
+                </div>
             </div>
 
             <!-- КОЛОНКА 2: INFORMÁCIE -->
-            <div id="footer-info" class="space-y-3 lg:border-l lg:border-[#1e1e24] lg:pl-6">
+            <div class="space-y-3 lg:border-l lg:border-[#1e1e24] lg:pl-6">
                 <h4 class="text-white font-bold text-xs uppercase tracking-wider font-sans">Informácie</h4>
                 <ul class="space-y-2 text-xs text-gray-400">
-                    <li><a href="index.html" class="hover:text-white transition">O nás</a></li>
-                    <li><a href="category.html" class="hover:text-white transition">Doprava a platba</a></li>
-                    <li><a href="category.html" class="hover:text-white transition">Obchodné podmienky</a></li>
-                    <li><a href="category.html" class="hover:text-white transition">Reklamácie a vrátenie</a></li>
-                    <li><a href="category.html" class="hover:text-white transition">Ochrana osobných údajov</a></li>
+                    <li><a href="#" class="hover:text-white transition">O nás</a></li>
+                    <li><a href="#" class="hover:text-white transition">Doprava a platba</a></li>
+                    <li><a href="#" class="hover:text-white transition">Obchodné podmienky</a></li>
+                    <li><a href="#" class="hover:text-white transition">Reklamácie a vrátenie</a></li>
+                    <li><a href="#" class="hover:text-white transition">Ochrana osobných údajov</a></li>
                 </ul>
             </div>
 
             <!-- КОЛОНКА 3: ZÁKAZNÍCKA PODPORA -->
-            <div id="footer-support" class="space-y-3 lg:border-l lg:border-[#1e1e24] lg:pl-6">
+            <div class="space-y-3 lg:border-l lg:border-[#1e1e24] lg:pl-6">
                 <h4 class="text-white font-bold text-xs uppercase tracking-wider font-sans">Zákaznícka podpora</h4>
                 <ul class="space-y-2 text-xs text-gray-400">
-                    <li><a href="index.html#newsletter-section" class="hover:text-white transition">Kontakt</a></li>
-                    <li><a href="category.html" class="hover:text-white transition">FAQ</a></li>
-                    <li><a href="cart.html" class="hover:text-white transition">Sledovať objednávku</a></li>
-                    <li><a href="category.html" class="hover:text-white transition">Vernostný program</a></li>
+                    <li><a href="#" class="hover:text-white transition">Kontakt</a></li>
+                    <li><a href="#" class="hover:text-white transition">FAQ</a></li>
+                    <li><a href="#" class="hover:text-white transition">Sledovať objednávku</a></li>
+                    <li><a href="#" class="hover:text-white transition">Vernostný program</a></li>
                 </ul>
             </div>
 
@@ -864,27 +1409,24 @@
                 <div class="grid grid-cols-3 gap-2 pt-1">
                     <div
                         class="bg-[#0d0d10] border border-[#1e1e24] rounded-[4px] h-9 flex items-center justify-center p-1.5">
-                        <img src="/src/img/Visa.svg" alt="Visa" loading="lazy"
+                        <img src="/src/img/Visa.svg" alt="Visa" class="max-h-full max-w-full object-contain">
+                    </div>
+                    <div
+                        class="bg-[#0d0d10] border border-[#1e1e24] rounded-[4px] h-9 flex items-center justify-center p-1.5">
+                        <img src="/src/img/Mastercard.svg" alt="Mastercard"
                             class="max-h-full max-w-full object-contain">
                     </div>
                     <div
                         class="bg-[#0d0d10] border border-[#1e1e24] rounded-[4px] h-9 flex items-center justify-center p-1.5">
-                        <img src="/src/img/Mastercard.svg" alt="Mastercard" loading="lazy"
-                            class="max-h-full max-w-full object-contain">
+                        <img src="/src/img/paypal.svg" alt="PayPal" class="max-h-full max-w-full object-contain">
                     </div>
                     <div
                         class="bg-[#0d0d10] border border-[#1e1e24] rounded-[4px] h-9 flex items-center justify-center p-1.5">
-                        <img src="/src/img/paypal.svg" alt="PayPal" loading="lazy"
-                            class="max-h-full max-w-full object-contain">
+                        <img src="/src/img/apple-pay.svg" alt="Apple Pay" class="max-h-full max-w-full object-contain">
                     </div>
                     <div
                         class="bg-[#0d0d10] border border-[#1e1e24] rounded-[4px] h-9 flex items-center justify-center p-1.5">
-                        <img src="/src/img/apple-pay.svg" alt="Apple Pay" loading="lazy"
-                            class="max-h-full max-w-full object-contain">
-                    </div>
-                    <div
-                        class="bg-[#0d0d10] border border-[#1e1e24] rounded-[4px] h-9 flex items-center justify-center p-1.5">
-                        <img src="/src/img/google-pay.svg" alt="Google Pay" loading="lazy"
+                        <img src="/src/img/google-pay.svg" alt="Google Pay"
                             class="max-h-full max-w-full object-contain">
                     </div>
                     <div
@@ -907,7 +1449,7 @@
         </div>
     </footer>
 
-    <!-- CART DRAWER -->
+    <!-- CART DRAWER (МОДАЛЬНЕ ВІКНО КОШИКА) -->
     <div x-show="cartDrawerOpen" x-transition:enter="transition ease-out duration-300"
         x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
         x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100"
@@ -921,8 +1463,16 @@
                 class="w-screen max-w-md bg-[#030303] border-l border-[#1e1e24] p-6 flex flex-col justify-between shadow-2xl">
                 <div class="space-y-4">
                     <div class="flex justify-between items-center border-b border-[#1e1e24] pb-4">
-                        <h3 class="text-white uppercase tracking-wider text-sm font-sans font-bold">Nákupný Košík</h3>
-                        <button @click="cartDrawerOpen = false" class="text-gray-400 hover:text-white p-1 transition">
+                        <div class="flex items-center gap-2.5">
+                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                                    d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+                            </svg>
+                            <h3 class="text-white uppercase tracking-wider text-sm font-sans font-bold">Nákupný Košík
+                            </h3>
+                        </div>
+                        <button @click="cartDrawerOpen = false" aria-label="Zavrieť košík"
+                            class="text-gray-400 hover:text-white p-1 transition">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M6 18L18 6M6 6l12 12"></path>
@@ -932,14 +1482,19 @@
 
                     <div class="space-y-3 max-h-[65vh] overflow-y-auto pr-1">
                         <template x-if="cart.length === 0">
-                            <div class="text-center py-12 text-gray-500 text-sm">
-                                Váš košík je momentálne prázdny
+                            <div class="text-center py-12 text-gray-500 space-y-2">
+                                <svg class="w-12 h-12 mx-auto text-gray-700" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                        d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+                                </svg>
+                                <p class="text-sm">Váš košík je momentálne prázdny</p>
                             </div>
                         </template>
 
                         <template x-for="item in cart" :key="item.id">
                             <div
-                                class="bg-[#0f0f12] border border-[#1e1e24] rounded-[4px] p-3 flex items-center justify-between gap-3">
+                                class="bg-[#0f0f12] border border-[#1e1e24] rounded-[4px] p-3 flex items-center justify-between gap-3 group">
                                 <img :src="item.image" :alt="item.title"
                                     class="w-12 h-12 object-contain rounded-[4px] bg-black">
                                 <div class="flex-1 text-xs space-y-0.5">
@@ -950,6 +1505,7 @@
                                 <div class="flex items-center space-x-3">
                                     <span class="text-xs text-gray-400 font-mono" x-text="'x' + item.qty"></span>
                                     <button @click="removeFromCart(item.id)" title="Odstrániť položku"
+                                        aria-label="Odstrániť položku"
                                         class="text-gray-500 hover:text-[#99241d] p-1.5 rounded hover:bg-black/50 transition">
                                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
@@ -969,10 +1525,10 @@
                         <span class="text-[#c12824] text-base font-bold"
                             x-text="cartTotal.toFixed(2).replace('.', ',') + ' €'"></span>
                     </div>
-                    <a href="cart.html"
-                        class="block text-center w-full bg-[#99241d] hover:bg-[#b71c1c] text-white py-3 rounded-[4px] text-xs uppercase tracking-wider font-bold transition">
+                    <button @click="checkout()"
+                        class="w-full bg-[#99241d] hover:bg-[#b71c1c] text-white py-3 rounded-[4px] text-xs uppercase tracking-wider font-bold transition">
                         Pokračovať k objednávke
-                    </a>
+                    </button>
                 </div>
             </div>
         </div>
@@ -983,17 +1539,21 @@
         x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
         x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100"
         x-transition:leave-end="opacity-0" class="fixed inset-0 z-[100] overflow-hidden" style="display: none;">
+
         <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" @click="mobileNavOpen = false"></div>
+
         <div class="fixed inset-y-0 left-0 max-w-full flex pr-10" x-show="mobileNavOpen"
             x-transition:enter="transition ease-out duration-300 transform" x-transition:enter-start="-translate-x-full"
             x-transition:enter-end="translate-x-0" x-transition:leave="transition ease-in duration-200 transform"
             x-transition:leave-start="translate-x-0" x-transition:leave-end="-translate-x-full">
+
             <div
                 class="w-screen max-w-xs sm:max-w-sm bg-[#030303] border-r border-[#1e1e24] p-5 flex flex-col justify-between shadow-2xl overflow-y-auto">
                 <div class="space-y-5">
                     <div class="flex justify-between items-center border-b border-[#1e1e24] pb-4">
                         <span class="font-sans text-base text-white font-bold">NAVIGÁCIA</span>
-                        <button @click="mobileNavOpen = false" class="text-gray-400 hover:text-white p-1">
+                        <button @click="mobileNavOpen = false" aria-label="Zavrieť navigáciu"
+                            class="text-gray-400 hover:text-white p-1">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M6 18L18 6M6 6l12 12"></path>
@@ -1001,34 +1561,90 @@
                         </button>
                     </div>
 
-                    <div class="space-y-1 text-xs uppercase tracking-wider text-gray-200">
-                        <a href="category.html"
-                            class="block border-b border-[#1e1e24] py-2.5 hover:text-[#99241d] transition">VŠETKY
-                            PRODUKTY</a>
-                        <a href="category.html?cat=warhammer-40k"
-                            class="block border-b border-[#1e1e24] py-2.5 hover:text-[#99241d] transition">WARHAMMER
-                            40,000</a>
-                        <a href="category.html?cat=age-of-sigmar"
-                            class="block border-b border-[#1e1e24] py-2.5 hover:text-[#99241d] transition">AGE OF
-                            SIGMAR</a>
-                        <a href="category.html?cat=farby-a-nastroje"
-                            class="block border-b border-[#1e1e24] py-2.5 hover:text-[#99241d] transition">FARBY &
-                            NÁSTROJE</a>
-                        <a href="category.html?cat=kill-team"
-                            class="block border-b border-[#1e1e24] py-2.5 hover:text-[#99241d] transition">KILL TEAM</a>
-                        <a href="category.html?cat=akcie"
-                            class="block border-b border-[#1e1e24] py-2.5 text-[#99241d] font-bold">AKCIE</a>
-                        <a href="category.html?cat=prislusenstvo"
-                            class="block border-b border-[#1e1e24] py-2.5 hover:text-[#99241d] transition">PRÍSLUŠENSTVO</a>
-                        <a href="category.html?cat=merch"
-                            class="block border-b border-[#1e1e24] py-2.5 hover:text-[#99241d] transition">MERCH</a>
+                    <div class="relative">
+                        <input type="search" x-model="searchQuery" @input="currentPage = 1"
+                            aria-label="Hľadať produkty, farby" placeholder="Hľadať produkty, farby..."
+                            class="w-full bg-[#0f0f0f] border border-[#1e1e24] rounded-[4px] py-2 px-3 text-xs text-[#f5f4f5] placeholder-gray-500 focus:outline-none focus:border-[#99241d] transition">
+                    </div>
+
+                    <div class="space-y-1 text-xs uppercase tracking-wider text-gray-200"
+                        x-data="{ openSubmenu: null }">
+
+                        <div class="border-b border-[#1e1e24] py-2">
+                            <button @click="openSubmenu = openSubmenu === 'wh40k' ? null : 'wh40k'"
+                                class="w-full flex items-center justify-between py-1 text-left hover:text-[#99241d] transition">
+                                <span>WARHAMMER 40,000</span>
+                                <svg class="w-3 h-3 transition-transform duration-200"
+                                    :class="{ 'rotate-180': openSubmenu === 'wh40k' }" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div x-show="openSubmenu === 'wh40k'" x-transition
+                                class="pl-3 pt-2 space-y-2 text-[11px] text-gray-400">
+                                <a href="category.html?cat=warhammer-40k"
+                                    class="block hover:text-white transition">Všetky
+                                    produkty</a>
+                                <a href="category.html?cat=warhammer-40k&faction=space-marines"
+                                    class="block hover:text-white transition">Space Marines</a>
+                                <a href="category.html?cat=warhammer-40k&faction=astra-militarum"
+                                    class="block hover:text-white transition">Astra Militarum</a>
+                                <a href="category.html?cat=warhammer-40k&faction=necrons"
+                                    class="block hover:text-white transition">Necrons</a>
+                                <a href="category.html?cat=warhammer-40k&faction=chaos"
+                                    class="block hover:text-white transition">Chaos</a>
+                                <a href="category.html?cat=warhammer-40k&faction=xenos"
+                                    class="block hover:text-white transition">Xenos</a>
+                                <a href="category.html?cat=warhammer-40k&faction=imperium"
+                                    class="block hover:text-white transition">Imperium</a>
+                                <a href="category.html?cat=warhammer-40k&faction=starter-sets"
+                                    class="block text-[#99241d] hover:text-white transition pt-1 border-t border-[#1e1e24]">Štartovacie
+                                    sady</a>
+                            </div>
+                        </div>
+
+                        <div class="border-b border-[#1e1e24] py-2.5">
+                            <a href="category.html?cat=age-of-sigmar" class="block hover:text-[#99241d] transition">AGE
+                                OF SIGMAR</a>
+                        </div>
+
+                        <div class="border-b border-[#1e1e24] py-2.5">
+                            <a href="category.html?cat=farby-a-nastroje"
+                                class="block hover:text-[#99241d] transition">FARBY & NÁSTROJE</a>
+                        </div>
+
+                        <div class="border-b border-[#1e1e24] py-2.5">
+                            <a href="category.html?cat=kill-team" class="block hover:text-[#99241d] transition">KILL
+                                TEAM</a>
+                        </div>
+
+                        <div class="border-b border-[#1e1e24] py-2.5">
+                            <a href="category.html?cat=prislusenstvo"
+                                class="block hover:text-[#99241d] transition">PRÍSLUŠENSTVO</a>
+                        </div>
+
+                        <div class="border-b border-[#1e1e24] py-2.5">
+                            <a href="category.html?cat=merch" class="block hover:text-[#99241d] transition">MERCH</a>
+                        </div>
+
+                        <div class="border-b border-[#1e1e24] py-2.5">
+                            <a href="#" class="block hover:text-[#99241d] transition">BLOG</a>
+                        </div>
+
+                        <div class="pt-3">
+                            <a href="category.html?cat=warhammer-40k&faction=starter-sets"
+                                class="w-full py-2.5 px-3 bg-[#99241d] hover:bg-[#b71c1c] text-white transition rounded-[6px] font-sans text-xs tracking-widest flex items-center justify-center font-bold">
+                                PRE ZAČIATOČNÍKOV
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- TOAST -->
+    <!-- ВЛАСНЕ СПОВІЩЕННЯ (TOAST) -->
     <div x-show="toastVisible" x-transition:enter="transition ease-out duration-300"
         x-transition:enter-start="opacity-0 translate-y-4" x-transition:enter-end="opacity-100 translate-y-0"
         x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0"
@@ -1036,7 +1652,8 @@
         class="fixed bottom-6 left-1/2 -translate-x-1/2 z-[200] pointer-events-auto" style="display: none;">
         <div class="custom-toast flex items-center gap-4 py-3 px-4 rounded-[6px] text-xs font-semibold">
             <span x-text="toastMessage"></span>
-            <button @click="hideToast()" class="text-gray-400 hover:text-white p-1 transition" title="Zavrieť">
+            <button @click="hideToast()" aria-label="Zavrieť upozornenie"
+                class="text-gray-400 hover:text-white p-1 transition" title="Zavrieť">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
                     </path>
@@ -1044,7 +1661,6 @@
             </button>
         </div>
     </div>
-
 </body>
 
 </html>
