@@ -1,0 +1,228 @@
+/* ==========================================================================
+   КАРТКА ТОВАРУ (СПІЛЬНА ДЛЯ СЛАЙДЕРА ТА КАТАЛОГУ)
+   ========================================================================== */
+.product-card {
+    background-color: #0d0d10;
+    border: 1px solid #1e1e24;
+    border-radius: 6px;
+    padding: 1rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.product-card:hover {
+    border-color: #99241d;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px -5px rgba(153, 36, 29, 0.2);
+    z-index: 20;
+}
+
+/* Обгортка зображення товару */
+.product-card-img-wrapper {
+    background-color: #141418;
+    border-radius: 4px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 190px;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.product-card-img-wrapper img {
+    max-height: 10rem;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-card-img-wrapper img {
+    transform: scale(1.04);
+}
+
+/* Лейбл */
+.product-card-badge {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    z-index: 10;
+    background-color: #99241d;
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+    padding: 2px 8px;
+    border-radius: 2px;
+    letter-spacing: 0.05em;
+}
+
+/* Кнопка «Обране» (сердечко справа зверху) */
+.product-card-wishlist {
+    position: absolute;
+    top: 1.45rem;
+    right: 1.45rem;
+    z-index: 10;
+    width: 1.85rem;
+    height: 1.85rem;
+    border-radius: 4px;
+    background-color: rgba(13, 13, 16, 0.75);
+    border: 1px solid #1e1e24;
+    color: #888894;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.product-card-wishlist:hover,
+.product-card-wishlist.active {
+    color: #c12824;
+    border-color: #99241d;
+    background-color: rgba(153, 36, 29, 0.15);
+}
+
+.product-card-category {
+    font-size: 11px;
+    font-weight: 700;
+    color: #888894;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.25rem;
+}
+
+.product-card-title {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.3;
+    min-height: 2.3rem;
+    display: -webkit-box;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Блок ціни та статусу */
+.product-card-footer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-top: 0.85rem;
+    padding-top: 0.5rem;
+}
+
+.product-card-price {
+    font-size: 1rem;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.product-card-price-sale {
+    font-size: 1rem;
+    font-weight: 800;
+    color: #99241d;
+}
+
+.product-card-price-old {
+    font-size: 0.75rem;
+    color: #6b7280;
+    text-decoration: line-through;
+}
+
+.product-card-status-in {
+    font-size: 11px;
+    font-weight: 600;
+    color: #34d399;
+    margin-top: 2px;
+}
+
+.product-card-status-order {
+    font-size: 11px;
+    font-weight: 600;
+    color: #f59e0b;
+    margin-top: 2px;
+}
+
+.product-card-status-out {
+    font-size: 11px;
+    font-weight: 600;
+    color: #ef4444;
+    margin-top: 2px;
+}
+
+/* Кнопка додавання в кошик */
+.product-card-btn {
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 4px;
+    background-color: #18181c;
+    border: 1px solid #1e1e24;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.product-card-btn:hover:not(:disabled) {
+    background-color: #99241d;
+    border-color: #99241d;
+}
+
+.product-card-btn:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+/* Горизонтальний вигляд картки (List View у каталозі) */
+@media (min-width: 640px) {
+    .product-card.product-card--list {
+        flex-direction: row;
+        align-items: center;
+        gap: 1.25rem;
+    }
+
+    .product-card.product-card--list .product-card-top {
+        display: flex;
+        align-items: center;
+        gap: 1.25rem;
+        flex: 1;
+    }
+
+    .product-card.product-card--list .product-card-img-wrapper {
+        width: 140px;
+        min-height: 120px;
+        margin-bottom: 0;
+        shrink: 0;
+    }
+
+    .product-card.product-card--list .product-card-img-wrapper img {
+        max-height: 6.5rem;
+    }
+
+    .product-card.product-card--list .product-card-title {
+        min-height: auto;
+        font-size: 1rem;
+    }
+
+    .product-card.product-card--list .product-card-footer {
+        margin-top: 0;
+        padding-top: 0;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 0.75rem;
+        min-width: 130px;
+    }
+
+    .product-card.product-card--list .product-card-wishlist {
+        top: 0.75rem;
+        right: 0.75rem;
+    }
+}

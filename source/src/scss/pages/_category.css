@@ -1,0 +1,84 @@
+/* ==========================================================================
+   СТИЛІ СТОРІНКИ КАТЕГОРІЇ (category.html)
+   ========================================================================== */
+.category-hero-banner {
+    position: relative;
+    overflow: hidden;
+    background-color: #030303;
+}
+
+.category-hero-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background-size: cover;
+    background-position: right center;
+    opacity: 0.45;
+    pointer-events: none;
+}
+
+@media (min-width: 1024px) {
+    .category-hero-bg {
+        width: 65%;
+        opacity: 0.65;
+    }
+}
+
+.category-hero-gradient {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(90deg, #030303 25%, rgba(3, 3, 3, 0.82) 55%, rgba(3, 3, 3, 0.25) 100%),
+        linear-gradient(180deg, rgba(3, 3, 3, 0.3) 0%, rgba(3, 3, 3, 0.85) 85%, #030303 100%);
+    pointer-events: none;
+}
+
+/* Горизонтальні картки фракцій / підкатегорій під банером */
+.faction-pill-card {
+    background-color: #0d0d10;
+    border: 1px solid #1e1e24;
+    border-radius: 6px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.faction-pill-card:hover {
+    border-color: rgba(153, 36, 29, 0.7);
+    transform: translateY(-3px);
+}
+
+.faction-pill-card.active {
+    border-color: #99241d;
+    box-shadow: 0 0 0 1px #99241d, 0 8px 20px -6px rgba(153, 36, 29, 0.45);
+}
+
+.faction-pill-card-img {
+    position: relative;
+    height: 82px;
+    background-color: #141418;
+    overflow: hidden;
+}
+
+.faction-pill-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.35s ease;
+}
+
+.faction-pill-card:hover .faction-pill-card-img img {
+    transform: scale(1.06);
+}
+
+.faction-pill-card-img::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(13, 13, 16, 0.05) 35%, #0d0d10 100%);
+}

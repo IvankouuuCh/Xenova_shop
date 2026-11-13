@@ -1,0 +1,22 @@
+@theme {
+    --color-whDark: #030303;
+    --color-whSearchBg: #0f0f0f;
+    --color-whText: #f5f4f5;
+    --color-whRed: #99241d;
+    --color-whBadge: #c12824;
+    --color-whBorder: #1e1e24;
+    --color-whCard: #0f0f12;
+    --color-whMuted: #888894;
+
+    --font-sans: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* ==========================================================================
+   ГЛОБАЛЬНІ БАЗОВІ СТИЛІ
+   ========================================================================== */
+html,
+body {
+    background-color: #030303;
+    color: #f5f4f5;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}

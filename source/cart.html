@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="sk" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nákupný košík a pokladňa | Warhammer E-Shop Slovensko</title>
+    <meta name="description"
+        content="Dokončite svoju objednávku v oficiálnom slovenskom e-shope Warhammer. Rýchle doručenie 1–2 pracovné dni a doprava zdarma nad 70 €.">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+
+    <script type="module" src="/src/js/main.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body x-data="cartApp()"
+    class="min-h-screen flex flex-col justify-between antialiased bg-[#030303] text-gray-200 font-sans overflow-x-hidden">
+
+    <!-- 1. TOP ANNOUNCEMENT BAR -->
+    <div
+        class="bg-[#030303] border-b border-[#1e1e24] text-[11px] text-[#f5f4f5] h-9 flex justify-between items-center z-50 overflow-hidden px-3 sm:px-6">
+        <div class="flex items-center h-full overflow-hidden whitespace-nowrap">
+            <div class="announcement-item-1 items-center space-x-2 px-3 h-full border-r border-[#1e1e24]">
+                <svg class="w-3.5 h-3.5 text-[#f5f4f5] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                        d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                        d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8h4l3 3v5h-2m-4 0h2">
+                    </path>
+                </svg>
+                <span>Doprava <strong>ZDARMA</strong> nad 70 €</span>
+            </div>
+            <div class="announcement-item-2 items-center space-x-2 px-3 h-full border-r border-[#1e1e24]">
+                <svg class="w-3.5 h-3.5 text-[#f5f4f5] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <span>Rýchle doručenie 1-2 pracovné dni</span>
+            </div>
+            <div class="announcement-item-3 items-center space-x-2 px-3 h-full border-r border-[#1e1e24]">
+                <svg class="w-3.5 h-3.5 text-[#f5f4f5] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                    </path>
+                </svg>
+                <span>Oficiálne produkty <strong>Games Workshop</strong></span>
+            </div>
+            <div class="announcement-item-4 items-center space-x-2 px-3 h-full border-r border-[#1e1e24]">
+                <svg class="w-3.5 h-3.5 text-[#f5f4f5] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                        d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z">
+                    </path>
+                </svg>
+                <span>Bezpečné platby <strong>100% ochrana</strong></span>
+            </div>
+        </div>
+
+        <div
+            class="flex items-center space-x-3 sm:space-x-4 px-2 sm:px-4 text-xs text-[#f5f4f5] ml-auto shrink-0 whitespace-nowrap">
+            <a href="category.html" class="hover:text-[#99241d] transition flex items-center gap-1.5">
+                <span>Pokračovať v nákupe</span>
+            </a>
+            <span class="text-[#1e1e24]">|</span>
+            <div class="flex items-center space-x-1">
+                <span>SK</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. MAIN HEADER -->
+    <header class="bg-[#030303] sticky top-0 z-40 border-b border-[#1e1e24]">
+        <div class="max-w-[1536px] mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-6">
+            <a href="index.html" class="flex items-center gap-3 group shrink-0 brand-logo-text">
+                <div
+                    class="w-10 h-10 rounded-[4px] bg-white/10 border border-white/20 flex items-center justify-center p-1.5 group-hover:border-white transition">
+                    <svg viewBox="0 0 24 24" class="w-full h-full fill-current text-white"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                    </svg>
+                </div>
+                <div>
+                    <span class="text-xl tracking-widest text-white block leading-none font-sans">WARHAMMER</span>
+                    <span class="text-[11px] tracking-widest uppercase text-white block mt-1 font-sans">ESHOP
+                        SLOVENSKO</span>
+                </div>
+            </a>
+
+            <div class="flex items-center gap-4 text-xs text-gray-400">
+                <div class="hidden sm:flex items-center gap-2">
+                    <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z">
+                        </path>
+                    </svg>
+                    <span>Šifrovaná pokladňa SSL</span>
+                </div>
+                <a href="category.html"
+                    class="px-3.5 py-2 bg-[#0f0f12] hover:bg-[#18181c] border border-[#1e1e24] rounded-[4px] text-white font-semibold transition">
+                    &larr; Späť do obchodu
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CART & CHECKOUT CONTENT -->
+    <main class="flex-grow pb-16">
+        <div class="max-w-[1536px] mx-auto px-4 sm:px-6 pt-6">
+
+            <!-- BREADCRUMBS -->
+            <nav aria-label="Breadcrumb" class="flex items-center gap-2 text-xs text-gray-400 mb-5">
+                <a href="index.html" class="hover:text-white transition">Domov</a>
+                <span class="text-gray-600">/</span>
+                <a href="category.html" class="hover:text-white transition">Katalóg produktov</a>
+                <span class="text-gray-600">/</span>
+                <span class="text-white font-semibold">Nákupný košík</span>
+            </nav>
+
+            <!-- PAGE TITLE (Єдиний H1) -->
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+                <h1 class="text-2xl sm:text-3xl font-extrabold text-white uppercase tracking-wider font-sans">
+                    Nákupný košík a pokladňa
+                </h1>
+                <button x-show="cart.length > 0 && !orderSubmitted" @click="clearAllCart()"
+                    class="text-xs text-gray-400 hover:text-[#dc2626] transition self-start sm:self-auto underline">
+                    Vyprázdniť košík
+                </button>
+            </div>
+
+            <!-- ORDER SUCCESS STATE -->
+            <template x-if="orderSubmitted">
+                <section
+                    class="bg-[#08080a] border border-emerald-500/40 rounded-[6px] p-8 sm:p-12 text-center space-y-5 max-w-2xl mx-auto my-8">
+                    <div
+                        class="w-14 h-14 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center mx-auto">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="text-xs font-bold text-emerald-400 uppercase tracking-widest">
+                        OBJEDNÁVKA ÚSPEŠNE ODOSLANÁ
+                    </div>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-white uppercase tracking-wide">
+                        Ďakujeme za váš nákup!
+                    </h2>
+                    <p class="text-xs sm:text-sm text-gray-300 leading-relaxed">
+                        Vaša objednávka číslo <strong class="text-white font-mono" x-text="lastOrderNumber"></strong>
+                        bola prijatá na spracovanie. Potvrdenie sme odoslali na e-mail
+                        <strong class="text-white" x-text="form.email"></strong>.
+                    </p>
+                    <div
+                        class="bg-[#0f0f12] border border-[#1e1e24] rounded-[4px] p-4 text-xs text-gray-400 space-y-1 max-w-md mx-auto">
+                        <div>Spôsob doručenia: <strong class="text-white" x-text="selectedShippingLabel"></strong></div>
+                        <div>Spôsob platby: <strong class="text-white" x-text="selectedPaymentLabel"></strong></div>
+                        <div>Celková suma s DPH: <strong class="text-[#c12824]"
+                                x-text="formatPrice(lastOrderTotal)"></strong></div>
+                    </div>
+                    <div class="pt-3">
+                        <a href="category.html"
+                            class="inline-block bg-[#99241d] hover:bg-[#b71c1c] text-white px-7 py-3.5 rounded-[4px] text-xs font-extrabold uppercase tracking-widest transition">
+                            Pokračovať v nákupe
+                        </a>
+                    </div>
+                </section>
+            </template>
+
+            <!-- EMPTY CART STATE -->
+            <template x-if="cart.length === 0 && !orderSubmitted">
+                <section class="bg-[#08080a] border border-[#1e1e24] rounded-[6px] p-12 text-center space-y-5 my-6">
+                    <svg class="w-14 h-14 mx-auto text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                            d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+                    </svg>
+                    <h2 class="text-xl font-extrabold text-white uppercase tracking-wider">
+                        Váš nákupný košík je momentálne prázdny
+                    </h2>
+                    <p class="text-xs sm:text-sm text-gray-400 max-w-md mx-auto">
+                        Vyberte si z našej ponuky miniatúr Warhammer 40,000, Age of Sigmar, Kill Team alebo farieb
+                        Citadel.
+                    </p>
+                    <div class="flex flex-wrap items-center justify-center gap-3 pt-2">
+                        <a href="category.html?cat=warhammer-40k"
+                            class="bg-[#99241d] hover:bg-[#b71c1c] text-white px-6 py-3 rounded-[4px] text-xs font-extrabold uppercase tracking-widest transition">
+                            Warhammer 40,000
+                        </a>
+                        <a href="category.html?cat=age-of-sigmar"
+                            class="bg-[#121216] hover:bg-[#1e1e24] border border-[#1e1e24] text-white px-6 py-3 rounded-[4px] text-xs font-extrabold uppercase tracking-widest transition">
+                            Age of Sigmar
+                        </a>
+                        <a href="category.html?cat=farby-a-nastroje"
+                            class="bg-[#121216] hover:bg-[#1e1e24] border border-[#1e1e24] text-white px-6 py-3 rounded-[4px] text-xs font-extrabold uppercase tracking-widest transition">
+                            Farby Citadel
+                        </a>
+                    </div>
+                </section>
+            </template>
+
+            <!-- ACTIVE CART & CHECKOUT GRID -->
+            <template x-if="cart.length > 0 && !orderSubmitted">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
+                    <!-- LEFT COLUMN: CART ITEMS + SHIPPING + FORM (8 cols) -->
+                    <div class="lg:col-span-8 space-y-6">
+
+                        <!-- FREE SHIPPING PROGRESS BAR -->
+                        <div class="bg-[#08080a] border border-[#1e1e24] rounded-[6px] p-4 sm:p-5 space-y-2.5">
+                            <div class="flex items-center justify-between text-xs">
+                                <span x-show="amountToFreeShipping > 0" class="text-gray-300">
+                                    Pridajte tovar ešte za <strong class="text-white"
+                                        x-text="formatPrice(amountToFreeShipping)"></strong> a získate
+                                    <strong class="text-emerald-400">DOPRAVU ZDARMA</strong>!
+                                </span>
+                                <span x-show="amountToFreeShipping === 0"
+                                    class="text-emerald-400 font-bold flex items-center gap-1.5">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                    Gratulujeme! Získali ste dopravu ZDARMA po celom Slovensku.
+                                </span>
+                                <span class="text-gray-400 font-mono text-[11px]"
+                                    x-text="freeShippingPercent + '%'"></span>
+                            </div>
+                            <div class="w-full h-2 bg-[#121216] rounded-full overflow-hidden">
+                                <div class="h-full bg-gradient-to-r from-[#99241d] to-emerald-500 transition-all duration-300"
+                                    :style="'width: ' + freeShippingPercent + '%'"></div>
+                            </div>
+                        </div>
+
+                        <!-- 1. ZOZNAM PRODUKTOV V KOŠÍKU -->
+                        <section class="bg-[#08080a] border border-[#1e1e24] rounded-[6px] p-5 sm:p-6 space-y-4">
+                            <h2
+                                class="text-sm font-extrabold text-white uppercase tracking-wider border-b border-[#1e1e24] pb-3">
+                                1. Položky v košíku (<span x-text="cartCount"></span>)
+                            </h2>
+
+                            <div class="divide-y divide-[#1e1e24]">
+                                <template x-for="item in cart" :key="item.id">
+                                    <div
+                                        class="py-4 first:pt-1 last:pb-1 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                                        <div class="flex items-center gap-4">
+                                            <a :href="'product.html?id=' + item.id"
+                                                class="w-16 h-16 sm:w-20 sm:h-20 rounded-[4px] bg-black border border-[#1e1e24] p-1.5 flex items-center justify-center shrink-0">
+                                                <img :src="item.image" :alt="item.title"
+                                                    class="max-h-full max-w-full object-contain">
+                                            </a>
+                                            <div class="space-y-1">
+                                                <a :href="'product.html?id=' + item.id"
+                                                    class="text-sm font-bold text-white hover:text-[#c12824] transition block"
+                                                    x-text="item.title"></a>
+                                                <div class="text-[11px] text-gray-400"
+                                                    x-text="item.category || 'Games Workshop'"></div>
+                                                <div class="text-xs text-emerald-400 font-medium">Skladom – expedujeme
+                                                    do 24h</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="flex items-center justify-between sm:justify-end gap-4 sm:gap-6">
+                                            <!-- Ovládanie množstva -->
+                                            <div
+                                                class="flex items-center bg-[#0f0f12] border border-[#1e1e24] rounded-[4px] px-2 py-1">
+                                                <button type="button" @click="decreaseItemQty(item.id)"
+                                                    aria-label="Znížiť počet"
+                                                    class="text-gray-400 hover:text-white px-2 py-0.5 font-bold transition">-</button>
+                                                <span class="text-xs font-bold text-white px-2.5 font-mono"
+                                                    x-text="item.qty"></span>
+                                                <button type="button" @click="increaseItemQty(item.id)"
+                                                    aria-label="Zvýšiť počet"
+                                                    class="text-gray-400 hover:text-white px-2 py-0.5 font-bold transition">+</button>
+                                            </div>
+
+                                            <!-- Cena položky -->
+                                            <div class="text-right min-w-[85px]">
+                                                <div class="text-sm font-extrabold text-white"
+                                                    x-text="formatPrice(item.price * item.qty)"></div>
+                                                <div x-show="item.qty > 1" class="text-[10px] text-gray-500"
+                                                    x-text="formatPrice(item.price) + ' / ks'"></div>
+                                            </div>
+
+                                            <!-- Odstrániť -->
+                                            <button type="button" @click="removeFromCart(item.id)"
+                                                title="Odstrániť z košíka"
+                                                class="text-gray-500 hover:text-[#dc2626] p-1.5 transition">
+                                                <svg class="w-4 h-4" fill="none" stroke="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="1.8"
+                                                        d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16">
+                                                    </path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </template>
+                            </div>
+                        </section>
+
+                        <!-- 2. SPÔSOB DOPRAVY A PLATBY -->
+                        <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <!-- Doprava -->
+                            <div class="bg-[#08080a] border border-[#1e1e24] rounded-[6px] p-5 sm:p-6 space-y-3">
+                                <h2
+                                    class="text-sm font-extrabold text-white uppercase tracking-wider border-b border-[#1e1e24] pb-3">
+                                    2. Spôsob dopravy
+                                </h2>
+
+                                <label
+                                    :class="shippingMethod === 'packeta' ? 'border-[#99241d] bg-[#121216]' : 'border-[#1e1e24] bg-[#0f0f12]'"
+                                    class="flex items-center justify-between p-3.5 border rounded-[4px] cursor-pointer transition">
+                                    <div class="flex items-center gap-3">
+                                        <input type="radio" name="shipping" value="packeta" x-model="shippingMethod"
+                                            class="text-[#99241d] focus:ring-0 bg-black border-gray-600">
+                                        <div>
+                                            <div class="text-xs font-bold text-white">Packeta (Z-BOX / Výdajné miesto)
+                                            </div>
+                                            <div class="text-[11px] text-gray-400">Doručenie do 1–2 pracovných dní</div>
+                                        </div>
+                                    </div>
+                                    <span class="text-xs font-extrabold"
+                                        :class="cartTotal >= 70 ? 'text-emerald-400' : 'text-white'"
+                                        x-text="cartTotal >= 70 ? 'ZDARMA' : '3,20 €'"></span>
+                                </label>
+
+                                <label
+                                    :class="shippingMethod === 'courier' ? 'border-[#99241d] bg-[#121216]' : 'border-[#1e1e24] bg-[#0f0f12]'"
+                                    class="flex items-center justify-between p-3.5 border rounded-[4px] cursor-pointer transition">
+                                    <div class="flex items-center gap-3">
+                                        <input type="radio" name="shipping" value="courier" x-model="shippingMethod"
+                                            class="text-[#99241d] focus:ring-0 bg-black border-gray-600">
+                                        <div>
+                                            <div class="text-xs font-bold text-white">Kuriér GLS / DPD na adresu</div>
+                                            <div class="text-[11px] text-gray-400">Doručenie priamo k dverám</div>
+                                        </div>
+                                    </div>
+                                    <span class="text-xs font-extrabold"
+                                        :class="cartTotal >= 70 ? 'text-emerald-400' : 'text-white'"
+                                        x-text="cartTotal >= 70 ? 'ZDARMA' : '4,50 €'"></span>
+                                </label>
+
+                                <label
+                                    :class="shippingMethod === 'pickup' ? 'border-[#99241d] bg-[#121216]' : 'border-[#1e1e24] bg-[#0f0f12]'"
+                                    class="flex items-center justify-between p-3.5 border rounded-[4px] cursor-pointer transition">
+                                    <div class="flex items-center gap-3">
+                                        <input type="radio" name="shipping" value="pickup" x-model="shippingMethod"
+                                            class="text-[#99241d] focus:ring-0 bg-black border-gray-600">
+                                        <div>
+                                            <div class="text-xs font-bold text-white">Osobný odber – Bratislava</div>
+                                            <div class="text-[11px] text-gray-400">Pripravené do 2 hodín</div>
+                                        </div>
+                                    </div>
+                                    <span class="text-xs font-extrabold text-emerald-400">ZDARMA</span>
+                                </label>
+                            </div>
+
+                            <!-- Platba -->
+                            <div class="bg-[#08080a] border border-[#1e1e24] rounded-[6px] p-5 sm:p-6 space-y-3">
+                                <h2
+                                    class="text-sm font-extrabold text-white uppercase tracking-wider border-b border-[#1e1e24] pb-3">
+                                    3. Spôsob platby
+                                </h2>
+
+                                <label
+                                    :class="paymentMethod === 'card' ? 'border-[#99241d] bg-[#121216]' : 'border-[#1e1e24] bg-[#0f0f12]'"
+                                    class="flex items-center justify-between p-3.5 border rounded-[4px] cursor-pointer transition">
+                                    <div class="flex items-center gap-3">
+                                        <input type="radio" name="payment" value="card" x-model="paymentMethod"
+                                            class="text-[#99241d] focus:ring-0 bg-black border-gray-600">
+                                        <div>
+                                            <div class="text-xs font-bold text-white">Platba kartou online / Apple Pay
+                                            </div>
+                                            <div class="text-[11px] text-gray-400">Visa, Mastercard, Google Pay</div>
+                                        </div>
+                                    </div>
+                                    <span class="text-xs font-bold text-emerald-400">Zdarma</span>
+                                </label>
+
+                                <label
+                                    :class="paymentMethod === 'cod' ? 'border-[#99241d] bg-[#121216]' : 'border-[#1e1e24] bg-[#0f0f12]'"
+                                    class="flex items-center justify-between p-3.5 border rounded-[4px] cursor-pointer transition">
+                                    <div class="flex items-center gap-3">
+                                        <input type="radio" name="payment" value="cod" x-model="paymentMethod"
+                                            class="text-[#99241d] focus:ring-0 bg-black border-gray-600">
+                                        <div>
+                                            <div class="text-xs font-bold text-white">Dobierka pri prevzatí</div>
+                                            <div class="text-[11px] text-gray-400">Platba v hotovosti alebo kartou</div>
+                                        </div>
+                                    </div>
+                                    <span class="text-xs font-bold text-white">+1,50 €</span>
+                                </label>
+
+                                <label
+                                    :class="paymentMethod === 'bank' ? 'border-[#99241d] bg-[#121216]' : 'border-[#1e1e24] bg-[#0f0f12]'"
+                                    class="flex items-center justify-between p-3.5 border rounded-[4px] cursor-pointer transition">
+                                    <div class="flex items-center gap-3">
+                                        <input type="radio" name="payment" value="bank" x-model="paymentMethod"
+                                            class="text-[#99241d] focus:ring-0 bg-black border-gray-600">
+                                        <div>
+                                            <div class="text-xs font-bold text-white">Bankový prevod (SEPA)</div>
+                                            <div class="text-[11px] text-gray-400">Odoslanie po pripísaní platby</div>
+                                        </div>
+                                    </div>
+                                    <span class="text-xs font-bold text-emerald-400">Zdarma</span>
+                                </label>
+                            </div>
+                        </section>
+
+                        <!-- 4. DODACIE ÚDAJE -->
+                        <section class="bg-[#08080a] border border-[#1e1e24] rounded-[6px] p-5 sm:p-6 space-y-4">
+                            <h2
+                                class="text-sm font-extrabold text-white uppercase tracking-wider border-b border-[#1e1e24] pb-3">
+                                4. Dodacie a fakturačné údaje
+                            </h2>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+                                <div>
+                                    <label for="checkout-name" class="block text-gray-400 mb-1.5 font-semibold">Meno a
+                                        priezvisko *</label>
+                                    <input id="checkout-name" type="text" x-model="form.fullName" required
+                                        placeholder="Napr. Martin Kováč"
+                                        class="w-full bg-[#0f0f12] border border-[#1e1e24] rounded-[4px] px-3.5 py-2.5 text-white placeholder-gray-600 focus:outline-none focus:border-[#99241d]">
+                                </div>
+
+                                <div>
+                                    <label for="checkout-email"
+                                        class="block text-gray-400 mb-1.5 font-semibold">E-mailová
+                                        adresa *</label>
+                                    <input id="checkout-email" type="email" x-model="form.email" required
+                                        placeholder="martin.kovac@email.sk"
+                                        class="w-full bg-[#0f0f12] border border-[#1e1e24] rounded-[4px] px-3.5 py-2.5 text-white placeholder-gray-600 focus:outline-none focus:border-[#99241d]">
+                                </div>
+
+                                <div>
+                                    <label for="checkout-phone"
+                                        class="block text-gray-400 mb-1.5 font-semibold">Telefónne
+                                        číslo *</label>
+                                    <input id="checkout-phone" type="tel" x-model="form.phone" required
+                                        placeholder="+421 900 123 456"
+                                        class="w-full bg-[#0f0f12] border border-[#1e1e24] rounded-[4px] px-3.5 py-2.5 text-white placeholder-gray-600 focus:outline-none focus:border-[#99241d]">
+                                </div>
+
+                                <div>
+                                    <label for="checkout-street" class="block text-gray-400 mb-1.5 font-semibold">Ulica
+                                        a
+                                        číslo domu *</label>
+                                    <input id="checkout-street" type="text" x-model="form.street" required
+                                        placeholder="Hlavná 14"
+                                        class="w-full bg-[#0f0f12] border border-[#1e1e24] rounded-[4px] px-3.5 py-2.5 text-white placeholder-gray-600 focus:outline-none focus:border-[#99241d]">
+                                </div>
+
+                                <div>
+                                    <label for="checkout-city" class="block text-gray-400 mb-1.5 font-semibold">Mesto /
+                                        Obec *</label>
+                                    <input id="checkout-city" type="text" x-model="form.city" required
+                                        placeholder="Bratislava"
+                                        class="w-full bg-[#0f0f12] border border-[#1e1e24] rounded-[4px] px-3.5 py-2.5 text-white placeholder-gray-600 focus:outline-none focus:border-[#99241d]">
+                                </div>
+
+                                <div>
+                                    <label for="checkout-zip" class="block text-gray-400 mb-1.5 font-semibold">PSČ
+                                        *</label>
+                                    <input id="checkout-zip" type="text" x-model="form.zip" required
+                                        placeholder="811 01"
+                                        class="w-full bg-[#0f0f12] border border-[#1e1e24] rounded-[4px] px-3.5 py-2.5 text-white placeholder-gray-600 focus:outline-none focus:border-[#99241d]">
+                                </div>
+                            </div>
+
+                            <div class="pt-2">
+                                <label
+                                    class="flex items-start gap-2.5 text-xs text-gray-300 cursor-pointer select-none">
+                                    <input type="checkbox" x-model="form.agreeTerms"
+                                        class="mt-0.5 rounded bg-[#0f0f12] border-[#1e1e24] text-[#99241d] focus:ring-0">
+                                    <span>Súhlasím s obchodnými podmienkami a spracovaním osobných údajov na účely
+                                        vybavenia objednávky. *</span>
+                                </label>
+                            </div>
+
+                            <div x-show="formError"
+                                class="p-3 rounded-[4px] bg-red-500/10 border border-red-500/40 text-red-400 text-xs font-semibold"
+                                x-text="formError"></div>
+                        </section>
+                    </div>
+
+                    <!-- RIGHT COLUMN: ORDER SUMMARY STICKY BOX (4 cols) -->
+                    <aside
+                        class="lg:col-span-4 bg-[#08080a] border border-[#1e1e24] rounded-[6px] p-6 space-y-5 lg:sticky lg:top-24">
+                        <h2
+                            class="text-sm font-extrabold text-white uppercase tracking-wider border-b border-[#1e1e24] pb-3">
+                            Zhrnutie objednávky
+                        </h2>
+
+                        <div class="space-y-2.5 text-xs">
+                            <div class="flex justify-between text-gray-400">
+                                <span>Medzisúčet (produkty s DPH):</span>
+                                <span class="text-white font-semibold" x-text="formatPrice(cartTotal)"></span>
+                            </div>
+
+                            <div class="flex justify-between text-gray-400">
+                                <span x-text="'Doprava (' + selectedShippingLabel + '):'"></span>
+                                <span
+                                    :class="shippingCost === 0 ? 'text-emerald-400 font-bold' : 'text-white font-semibold'"
+                                    x-text="shippingCost === 0 ? 'ZDARMA' : formatPrice(shippingCost)"></span>
+                            </div>
+
+                            <div class="flex justify-between text-gray-400">
+                                <span x-text="'Platba (' + selectedPaymentLabel + '):'"></span>
+                                <span
+                                    :class="paymentCost === 0 ? 'text-emerald-400 font-bold' : 'text-white font-semibold'"
+                                    x-text="paymentCost === 0 ? 'Zdarma' : formatPrice(paymentCost)"></span>
+                            </div>
+                        </div>
+
+                        <div class="pt-4 border-t border-[#1e1e24] flex items-baseline justify-between">
+                            <div>
+                                <div class="text-xs font-bold text-white uppercase">Celkom na úhradu</div>
+                                <div class="text-[10px] text-gray-500">Vrátane 20 % DPH</div>
+                            </div>
+                            <div class="text-2xl font-black text-[#c12824]" x-text="formatPrice(grandTotal)"></div>
+                        </div>
+
+                        <button type="button" @click="submitOrder()"
+                            class="w-full bg-[#c12824] hover:bg-[#99241d] text-white py-3.5 px-6 rounded-[4px] font-extrabold text-xs sm:text-sm uppercase tracking-widest transition shadow-lg cursor-pointer">
+                            OBJEDNAŤ S POVINNOSŤOU PLATBY
+                        </button>
+
+                        <div class="pt-2 space-y-2 text-[11px] text-gray-400 border-t border-[#1e1e24]">
+                            <div class="flex items-center gap-2">
+                                <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>Garancia vrátenia tovaru do 14 dní</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>Oficiálny tovar Games Workshop skladom</span>
+                            </div>
+                        </div>
+                    </aside>
+
+                </div>
+            </template>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-black border-t border-[#1e1e24] text-xs text-[#888894] py-8 px-4 sm:px-6 mt-12">
+        <div
+            class="w-full max-w-[1536px] mx-auto flex flex-col sm:flex-row items-center justify-between text-gray-500 text-[11px] gap-4">
+            <div>&copy; 2026 Warhammer E-Shop Slovensko. Všetky práva vyhradené.</div>
+            <div class="flex items-center gap-4">
+                <a href="index.html" class="hover:text-white transition">Domov</a>
+                <a href="category.html" class="hover:text-white transition">Katalóg</a>
+                <a href="category.html?cat=akcie" class="hover:text-white transition">Akcie</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- TOAST -->
+    <div x-show="toastVisible" x-transition:enter="transition ease-out duration-300"
+        x-transition:enter-start="opacity-0 translate-y-4" x-transition:enter-end="opacity-100 translate-y-0"
+        x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0"
+        x-transition:leave-end="opacity-0 translate-y-4"
+        class="fixed bottom-6 left-1/2 -translate-x-1/2 z-[200] pointer-events-auto" style="display: none;">
+        <div class="custom-toast flex items-center gap-4 py-3 px-4 rounded-[6px] text-xs font-semibold">
+            <span x-text="toastMessage"></span>
+            <button @click="hideToast()" class="text-gray-400 hover:text-white p-1 transition" title="Zavrieť">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+</body>
+
+</html>

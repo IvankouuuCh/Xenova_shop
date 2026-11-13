@@ -1,0 +1,148 @@
+/* ==========================================================================
+   КАСТОМНІ СПОВІЩЕННЯ (TOAST) ТА UI-ЕЛЕМЕНТИ
+   ========================================================================== */
+.custom-toast {
+    background-color: #0d0d10;
+    border: 1px solid #1e1e24;
+    border-left: 3px solid #99241d;
+    color: #f5f4f5;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.8);
+    transition: all 0.3s ease;
+}
+
+/* ==========================================================================
+   КАСТОМНІ ЧЕКБОКСИ ФІЛЬТРІВ
+   ========================================================================== */
+.wh-checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #2e2e38;
+    border-radius: 3px;
+    background-color: #0f0f12;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s ease;
+    shrink: 0;
+}
+
+.wh-checkbox:hover {
+    border-color: #99241d;
+}
+
+.wh-checkbox:checked {
+    background-color: #99241d;
+    border-color: #99241d;
+}
+
+.wh-checkbox:checked::after {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 1px;
+    width: 5px;
+    height: 9px;
+    border: solid #ffffff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/* ==========================================================================
+   ПОДВІЙНИЙ ПОВЗУНОК ЦІНИ (RANGE SLIDER)
+   ========================================================================== */
+.price-range-slider {
+    position: relative;
+    height: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.price-range-track {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: #1e1e24;
+    border-radius: 9999px;
+}
+
+.price-range-fill {
+    position: absolute;
+    height: 4px;
+    background-color: #99241d;
+    border-radius: 9999px;
+}
+
+.price-range-input {
+    position: absolute;
+    width: 100%;
+    appearance: none;
+    -webkit-appearance: none;
+    background: transparent;
+    pointer-events: none;
+    margin: 0;
+}
+
+.price-range-input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    pointer-events: auto;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 2px solid #99241d;
+    cursor: pointer;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+    transition: transform 0.15s ease;
+}
+
+.price-range-input::-webkit-slider-thumb:hover {
+    transform: scale(1.15);
+}
+
+.price-range-input::-moz-range-thumb {
+    pointer-events: auto;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 2px solid #99241d;
+    cursor: pointer;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+}
+
+/* ==========================================================================
+   ПАГІНАЦІЯ КАТАЛОГУ
+   ========================================================================== */
+.wh-page-btn {
+    min-width: 2.25rem;
+    height: 2.25rem;
+    padding: 0 0.65rem;
+    border-radius: 4px;
+    background-color: #0d0d10;
+    border: 1px solid #1e1e24;
+    color: #d1d5db;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.wh-page-btn:hover:not(:disabled):not(.active) {
+    border-color: #99241d;
+    color: #ffffff;
+}
+
+.wh-page-btn.active {
+    background-color: #99241d;
+    border-color: #99241d;
+    color: #ffffff;
+}
+
+.wh-page-btn:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}

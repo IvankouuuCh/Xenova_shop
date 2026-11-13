@@ -1,0 +1,87 @@
+/* ==========================================================================
+   HERO SLIDER (ГОЛОВНА СТОРІНКА)
+   ========================================================================== */
+.hero-title,
+.hero-title * {
+    font-weight: 800;
+}
+
+.swiper.hero-swiper .swiper-pagination-bullet {
+    background-color: #55555e;
+    opacity: 0.8;
+    width: 8px;
+    height: 8px;
+    border-radius: 9999px;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    margin: 0 4px;
+}
+
+.swiper.hero-swiper .swiper-pagination-bullet-active {
+    background-color: #99241d;
+    width: 26px;
+    border-radius: 6px;
+    opacity: 1;
+}
+
+.hero-swiper .swiper-slide {
+    min-height: 450px;
+}
+
+@media (min-width: 640px) {
+    .hero-swiper .swiper-slide {
+        min-height: 520px;
+    }
+}
+
+/* ==========================================================================
+   НАКЛАДЕНІ КАРТКИ КАТЕГОРІЙ
+   ========================================================================== */
+.category-card {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 6px;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-card:hover {
+    border-color: #99241d;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px -5px rgba(153, 36, 29, 0.3);
+}
+
+.category-card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.75) 60%, rgba(3, 3, 3, 0.95) 100%);
+    transition: opacity 0.3s ease;
+}
+
+.category-card:hover .category-card-overlay {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(153, 36, 29, 0.3) 50%, rgba(3, 3, 3, 0.98) 100%);
+}
+
+/* ==========================================================================
+   ОБГОРТКА ТА СТРІЛКИ СЛАЙДЕРА ТОВАРІВ НА ГОЛОВНІЙ
+   ========================================================================== */
+.swiper.products-swiper {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: -10px;
+    margin-bottom: -10px;
+}
+
+.products-prev,
+.products-next {
+    background-color: rgba(13, 13, 16, 0.9);
+    border: 1px solid #1e1e24;
+    color: #f5f4f5;
+    transition: all 0.25s ease;
+}
+
+.products-prev:hover,
+.products-next:hover {
+    background-color: #99241d;
+    border-color: #99241d;
+    color: #ffffff;
+}
