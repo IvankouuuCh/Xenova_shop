@@ -2,12 +2,88 @@
    КАСТОМНІ СПОВІЩЕННЯ (TOAST) ТА UI-ЕЛЕМЕНТИ
    ========================================================================== */
 .custom-toast {
-    background-color: #0d0d10;
-    border: 1px solid #1e1e24;
-    border-left: 3px solid #99241d;
-    color: #f5f4f5;
+    background-color: var(--color-xenova-card);
+    border: 1px solid var(--color-xenova-border);
+    border-left: 3px solid var(--color-xenova-green);
+    color: var(--color-xenova-text);
     box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.8);
     transition: all 0.3s ease;
+}
+
+/* ==========================================================================
+   BENTO-ПЕРЕВАГИ МАГАЗИНУ (ЄДИНЕ СИНЄ ПІДСВІЧУВАННЯ ДЛЯ ВСІХ СТОРІНОК)
+   ========================================================================== */
+.benefits-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+}
+
+@media (min-width: 640px) {
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.875rem;
+    }
+
+    .benefits-grid>.benefit-card:last-child:nth-child(odd) {
+        grid-column: span 2 / span 2;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 1024px) {
+    .benefits-grid {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 1rem;
+    }
+
+    .benefits-grid>.benefit-card:last-child:nth-child(odd) {
+        grid-column: auto;
+        justify-content: flex-start;
+    }
+}
+
+.benefit-card,
+.benefit-card--blue {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.875rem;
+    padding: 0.95rem 1.1rem;
+    border-radius: 6px;
+    background: linear-gradient(180deg, #0d0d11 0%, #08080a 100%);
+    border: 1px solid var(--color-xenova-border);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.benefit-card:hover,
+.benefit-card--blue:hover {
+    transform: translateY(-2px);
+    border-color: rgba(56, 182, 255, 0.6) !important;
+    box-shadow: 0 8px 22px -6px rgba(20, 92, 255, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.06) !important;
+}
+
+.benefit-icon-box,
+.benefit-icon-box--blue,
+.benefit-icon-box--green {
+    width: 2.65rem;
+    height: 2.65rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    background-color: rgba(20, 92, 255, 0.12) !important;
+    border: 1px solid rgba(56, 182, 255, 0.28) !important;
+    color: var(--color-xenova-cyan) !important;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.benefit-card:hover .benefit-icon-box {
+    transform: scale(1.05);
+    border-color: rgba(56, 182, 255, 0.65) !important;
+    box-shadow: 0 0 14px rgba(20, 92, 255, 0.28);
 }
 
 /* ==========================================================================
@@ -18,9 +94,9 @@
     -webkit-appearance: none;
     width: 15px;
     height: 15px;
-    border: 1px solid #2e2e38;
+    border: 1px solid var(--color-xenova-border);
     border-radius: 3px;
-    background-color: #0f0f12;
+    background-color: var(--color-xenova-surface);
     cursor: pointer;
     position: relative;
     transition: all 0.2s ease;
@@ -28,12 +104,12 @@
 }
 
 .wh-checkbox:hover {
-    border-color: #99241d;
+    border-color: var(--color-xenova-cyan);
 }
 
 .wh-checkbox:checked {
-    background-color: #99241d;
-    border-color: #99241d;
+    background-color: var(--color-xenova-blue);
+    border-color: var(--color-xenova-blue);
 }
 
 .wh-checkbox:checked::after {
@@ -62,14 +138,14 @@
     position: absolute;
     width: 100%;
     height: 4px;
-    background-color: #1e1e24;
+    background-color: var(--color-xenova-border);
     border-radius: 9999px;
 }
 
 .price-range-fill {
     position: absolute;
     height: 4px;
-    background-color: #99241d;
+    background-color: var(--color-xenova-blue);
     border-radius: 9999px;
 }
 
@@ -90,7 +166,7 @@
     height: 14px;
     border-radius: 50%;
     background-color: #ffffff;
-    border: 2px solid #99241d;
+    border: 2px solid var(--color-xenova-green);
     cursor: pointer;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
     transition: transform 0.15s ease;
@@ -106,7 +182,7 @@
     height: 14px;
     border-radius: 50%;
     background-color: #ffffff;
-    border: 2px solid #99241d;
+    border: 2px solid var(--color-xenova-green);
     cursor: pointer;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
 }
@@ -119,9 +195,9 @@
     height: 2.25rem;
     padding: 0 0.65rem;
     border-radius: 4px;
-    background-color: #0d0d10;
-    border: 1px solid #1e1e24;
-    color: #d1d5db;
+    background-color: var(--color-xenova-card);
+    border: 1px solid var(--color-xenova-border);
+    color: var(--color-xenova-muted);
     font-size: 0.8125rem;
     font-weight: 700;
     display: inline-flex;
@@ -132,13 +208,13 @@
 }
 
 .wh-page-btn:hover:not(:disabled):not(.active) {
-    border-color: #99241d;
-    color: #ffffff;
+    border-color: var(--color-xenova-cyan);
+    color: var(--color-xenova-text);
 }
 
 .wh-page-btn.active {
-    background-color: #99241d;
-    border-color: #99241d;
+    background-color: var(--color-xenova-blue);
+    border-color: var(--color-xenova-blue);
     color: #ffffff;
 }
 

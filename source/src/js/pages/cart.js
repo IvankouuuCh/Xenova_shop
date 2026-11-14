@@ -2,141 +2,243 @@ import { extendShopApp } from '../core/store.js';
 
 export function cartApp() {
     return extendShopApp({
-        shippingMethod: 'packeta', // 'packeta' | 'courier' | 'pickup'
-        paymentMethod: 'card',     // 'card' | 'cod' | 'bank'
-        freeShippingThreshold: 70,
+        // Промокод
+        promoCode: '',
+        appliedPromo: null, // { code: 'XENOVA10', percent: 10, label: '-10%' }
+        promoError: '',
 
+        // Спосіб доставки та оплати
+        deliveryMethod: 'packeta', // 'packeta' | 'courier' | 'pickup'
+        paymentMethod: 'card',     // 'card' | 'apple-google' | 'cod'
+
+        // Дані покупця
         form: {
-            fullName: '',
+            firstName: '',
+            lastName: '',
             email: '',
             phone: '',
-            street: '',
             city: '',
             zip: '',
-            agreeTerms: false
+            warehouse: '',
+            address: '',
+            comment: '',
+            agreeTerms: true
         },
-        formError: '',
+        errors: {},
+
+        // Стан оформлення замовлення
+        isSubmitting: false,
         orderSubmitted: false,
-        lastOrderNumber: '',
-        lastOrderTotal: 0,
+        orderNumber: '',
+        submittedOrderSummary: null,
+
+        // Позиції кошика зі спільного стану extendShopApp
+        get items() {
+            return this.cart;
+        },
+
+        get totalItemsCount() {
+            return this.cartCount;
+        },
+
+        get subtotal() {
+            return this.cartTotal;
+        },
+
+        // Розмір знижки за промокодом
+        get discountAmount() {
+            if (!this.appliedPromo) return 0;
+            return +(this.subtotal * (this.appliedPromo.percent / 100)).toFixed(2);
+        },
+
+        // Поріг безкоштовної доставки (€70 — як у верхньому банері сайту)
+        get freeShippingThreshold() {
+            return 70;
+        },
 
         get amountToFreeShipping() {
-            const diff = this.freeShippingThreshold - this.cartTotal;
-            return diff > 0 ? diff : 0;
+            const afterDiscount = Math.max(0, this.subtotal - this.discountAmount);
+            return Math.max(0, +(this.freeShippingThreshold - afterDiscount).toFixed(2));
         },
 
-        get freeShippingPercent() {
-            if (this.cartTotal <= 0) return 0;
-            const pct = Math.round((this.cartTotal / this.freeShippingThreshold) * 100);
-            return Math.min(100, pct);
+        get freeShippingProgress() {
+            const afterDiscount = Math.max(0, this.subtotal - this.discountAmount);
+            return Math.min(100, Math.round((afterDiscount / this.freeShippingThreshold) * 100));
         },
 
+        // Вартість доставки
         get shippingCost() {
-            if (this.shippingMethod === 'pickup') return 0;
-            if (this.cartTotal >= this.freeShippingThreshold) return 0;
-            return this.shippingMethod === 'courier' ? 4.5 : 3.2;
+            if (this.items.length === 0) return 0;
+            if (this.deliveryMethod === 'pickup') return 0;
+            if (this.amountToFreeShipping === 0) return 0;
+            return this.deliveryMethod === 'courier' ? 6.90 : 3.90;
         },
 
-        get paymentCost() {
-            return this.paymentMethod === 'cod' ? 1.5 : 0;
-        },
-
+        // Фінальна сума до сплати
         get grandTotal() {
-            return this.cartTotal + this.shippingCost + this.paymentCost;
+            const total = this.subtotal - this.discountAmount + this.shippingCost;
+            return Math.max(0, +total.toFixed(2));
         },
 
-        get selectedShippingLabel() {
-            const labels = {
-                packeta: 'Packeta',
-                courier: 'Kuriér GLS / DPD',
-                pickup: 'Osobný odber'
+        get deliveryMethodLabel() {
+            const map = {
+                'packeta': 'Packeta (výdajné miesto / Z-BOX)',
+                'courier': 'Kuriér na adresu (GLS / DPD)',
+                'pickup': 'Osobný odber (Bratislava)'
             };
-            return labels[this.shippingMethod] || 'Packeta';
+            return map[this.deliveryMethod] || this.deliveryMethod;
         },
 
-        get selectedPaymentLabel() {
-            const labels = {
-                card: 'Karta online',
-                cod: 'Dobierka',
-                bank: 'Bankový prevod'
+        get paymentMethodLabel() {
+            const map = {
+                'card': 'Platobná karta online (Visa / Mastercard)',
+                'apple-google': 'Apple Pay / Google Pay',
+                'cod': 'Dobierka pri prevzatí'
             };
-            return labels[this.paymentMethod] || 'Karta online';
+            return map[this.paymentMethod] || this.paymentMethod;
         },
 
-        formatPrice(value) {
-            return '€' + Number(value || 0).toFixed(2).replace('.', ',');
+        increaseQty(id) {
+            this.updateQty(id, 1);
         },
 
-        persistCart() {
-            try {
-                // Синхронізуємо з localStorage (підтримуємо стандартні ключі сховища)
-                localStorage.setItem('xenova_cart', JSON.stringify(this.cart));
-                localStorage.setItem('cart', JSON.stringify(this.cart));
-            } catch (e) {
-                // Ігноруємо помилки доступу до сховища
+        decreaseQty(id) {
+            this.updateQty(id, -1);
+        },
+
+        removeItem(id) {
+            this.removeFromCart(id);
+        },
+
+        resetCart() {
+            if (this.cart.length === 0) return;
+            this.clearCart();
+            this.appliedPromo = null;
+            this.promoCode = '';
+            this.promoError = '';
+            this.showToast('Košík bol vyprázdnený');
+        },
+
+        applyPromo() {
+            this.promoError = '';
+            const code = this.promoCode.trim().toUpperCase();
+
+            if (!code) {
+                this.promoError = 'Zadajte zľavový kód';
+                return;
             }
-        },
 
-        increaseItemQty(id) {
-            const item = this.cart.find(i => i.id === id);
-            if (item && item.qty < 20) {
-                item.qty += 1;
-                this.persistCart();
-            }
-        },
+            const validPromos = {
+                'XENOVA10': { percent: 10, label: '-10%' },
+                'WARHAMMER15': { percent: 15, label: '-15%' },
+                'IMPERIUM20': { percent: 20, label: '-20%' }
+            };
 
-        decreaseItemQty(id) {
-            const item = this.cart.find(i => i.id === id);
-            if (!item) return;
-            if (item.qty > 1) {
-                item.qty -= 1;
-                this.persistCart();
+            if (validPromos[code]) {
+                this.appliedPromo = {
+                    code,
+                    percent: validPromos[code].percent,
+                    label: validPromos[code].label
+                };
+                this.promoCode = '';
+                this.showToast(`Zľavový kód ${code} bol uplatnený (${this.appliedPromo.label})`);
             } else {
-                this.removeFromCart(id);
+                this.promoError = 'Neplatný alebo neaktívny zľavový kód';
             }
         },
 
-        clearAllCart() {
-            this.cart.splice(0, this.cart.length);
-            this.persistCart();
-            this.showToast('Nákupný košík bol vyprázdnený.');
+        removePromo() {
+            this.appliedPromo = null;
+            this.promoError = '';
+        },
+
+        validateForm() {
+            const errs = {};
+
+            if (!this.form.firstName.trim()) {
+                errs.firstName = 'Zadajte vaše meno';
+            }
+            if (!this.form.lastName.trim()) {
+                errs.lastName = 'Zadajte vaše priezvisko';
+            }
+            if (!this.form.email.trim()) {
+                errs.email = 'Zadajte e-mailovú adresu';
+            } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.form.email.trim())) {
+                errs.email = 'Neplatný formát e-mailu';
+            }
+            if (!this.form.phone.trim()) {
+                errs.phone = 'Zadajte telefónne číslo';
+            } else if (this.form.phone.replace(/\D/g, '').length < 9) {
+                errs.phone = 'Zadajte platné telefónne číslo';
+            }
+
+            if (this.deliveryMethod !== 'pickup') {
+                if (!this.form.city.trim()) {
+                    errs.city = 'Zadajte mesto doručenia';
+                }
+                if (this.deliveryMethod === 'packeta' && !this.form.warehouse.trim()) {
+                    errs.warehouse = 'Vyberte výdajné miesto alebo Z-BOX';
+                }
+                if (this.deliveryMethod === 'courier' && !this.form.address.trim()) {
+                    errs.address = 'Zadajte ulicu a číslo domu';
+                }
+            }
+
+            if (!this.form.agreeTerms) {
+                errs.agreeTerms = 'Je potrebné súhlasiť s obchodnými podmienkami';
+            }
+
+            this.errors = errs;
+            return Object.keys(errs).length === 0;
         },
 
         submitOrder() {
-            this.formError = '';
+            if (this.items.length === 0) return;
 
-            if (!this.form.fullName.trim() || this.form.fullName.trim().length < 3) {
-                this.formError = 'Zadajte prosím vaše meno a priezvisko.';
-                return;
-            }
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(this.form.email.trim())) {
-                this.formError = 'Zadajte prosím platnú e-mailovú adresu.';
-                return;
-            }
-            if (!this.form.phone.trim() || this.form.phone.trim().length < 6) {
-                this.formError = 'Zadajte prosím kontaktné telefónne číslo.';
-                return;
-            }
-            if (this.shippingMethod !== 'pickup') {
-                if (!this.form.street.trim() || !this.form.city.trim() || !this.form.zip.trim()) {
-                    this.formError = 'Vyplňte prosím kompletnú dodaciu adresu (ulica, mesto, PSČ).';
-                    return;
+            if (!this.validateForm()) {
+                this.showToast('Skontrolujte prosím povinné polia vo formulári');
+                const firstErrorEl = document.querySelector('[data-field-error="true"]');
+                if (firstErrorEl) {
+                    firstErrorEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 }
-            }
-            if (!this.form.agreeTerms) {
-                this.formError = 'Pre dokončenie objednávky je potrebný súhlas s obchodnými podmienkami.';
                 return;
             }
 
-            const randomDigits = Math.floor(100000 + Math.random() * 900000);
-            this.lastOrderNumber = `WH-2026-${randomDigits}`;
-            this.lastOrderTotal = this.grandTotal;
-            this.orderSubmitted = true;
+            this.isSubmitting = true;
 
-            this.cart.splice(0, this.cart.length);
-            this.persistCart();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            setTimeout(() => {
+                const randomNum = Math.floor(100000 + Math.random() * 900000);
+                this.orderNumber = `WH-${randomNum}`;
+
+                this.submittedOrderSummary = {
+                    orderNumber: this.orderNumber,
+                    customerName: `${this.form.firstName.trim()} ${this.form.lastName.trim()}`,
+                    email: this.form.email.trim(),
+                    phone: this.form.phone.trim(),
+                    delivery: this.deliveryMethodLabel,
+                    deliveryDetails:
+                        this.deliveryMethod === 'pickup'
+                            ? 'Showroom Warhammer E-Shop, Bratislava'
+                            : `${this.form.city.trim()}, ${this.deliveryMethod === 'packeta'
+                                ? this.form.warehouse.trim()
+                                : this.form.address.trim()
+                            }`,
+                    payment: this.paymentMethodLabel,
+                    itemsCount: this.totalItemsCount,
+                    total: this.grandTotal
+                };
+
+                this.clearCart();
+                this.appliedPromo = null;
+                this.isSubmitting = false;
+                this.orderSubmitted = true;
+
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }, 450);
+        },
+
+        placeOrder() {
+            this.submitOrder();
         }
     });
 }

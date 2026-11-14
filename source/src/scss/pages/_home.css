@@ -17,7 +17,8 @@
 }
 
 .swiper.hero-swiper .swiper-pagination-bullet-active {
-    background-color: #99241d;
+    background-color: var(--color-xenova-blue);
+    box-shadow: 0 0 8px rgba(20, 92, 255, 0.65);
     width: 26px;
     border-radius: 6px;
     opacity: 1;
@@ -34,7 +35,7 @@
 }
 
 /* ==========================================================================
-   НАКЛАДЕНІ КАРТКИ КАТЕГОРІЙ
+   НАКЛАДЕНІ КАРТКИ КАТЕГОРІЙ + ЦЕНТРУВАННЯ НЕПАРНОГО ЕЛЕМЕНТА НА ПЛАНШЕТІ
    ========================================================================== */
 .category-card {
     position: relative;
@@ -45,20 +46,115 @@
 }
 
 .category-card:hover {
-    border-color: #99241d;
+    border-color: var(--color-xenova-green);
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px -5px rgba(153, 36, 29, 0.3);
+    box-shadow: 0 10px 26px -5px rgba(82, 255, 0, 0.28);
 }
 
 .category-card-overlay {
     position: absolute;
     inset: 0;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.75) 60%, rgba(3, 3, 3, 0.95) 100%);
-    transition: opacity 0.3s ease;
+    transition: background 0.3s ease, opacity 0.3s ease;
 }
 
 .category-card:hover .category-card-overlay {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(153, 36, 29, 0.3) 50%, rgba(3, 3, 3, 0.98) 100%);
+    background: linear-gradient(180deg, rgba(82, 255, 0, 0.06) 0%, rgba(82, 255, 0, 0.16) 55%, rgba(3, 3, 3, 0.96) 100%);
+}
+
+/* Центрування останньої непарної картки категорій у 2-колонковій сітці (640px – 1023px) */
+@media (min-width: 640px) and (max-width: 1023px) {
+    .category-cards-grid>.category-card:last-child:nth-child(odd) {
+        grid-column: span 2 / span 2;
+        width: calc(50% - 0.5rem);
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* ==========================================================================
+   ПЕРЕВАГИ МАГАЗИНУ (BENTO USP-КАРТКИ З БЕЙДЖАМИ ІКОНОК)
+   ========================================================================== */
+.benefits-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+}
+
+@media (min-width: 640px) {
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.875rem;
+    }
+
+    /* 5-та картка на планшеті займає всю ширину нижнього ряду без порожніх кутів */
+    .benefits-grid>.benefit-card:last-child:nth-child(odd) {
+        grid-column: span 2 / span 2;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 1024px) {
+    .benefits-grid {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 1rem;
+    }
+
+    .benefits-grid>.benefit-card:last-child:nth-child(odd) {
+        grid-column: auto;
+        justify-content: flex-start;
+    }
+}
+
+.benefit-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.875rem;
+    padding: 0.95rem 1.1rem;
+    border-radius: 6px;
+    background: linear-gradient(180deg, #0d0d11 0%, #08080a 100%);
+    border: 1px solid var(--color-xenova-border, #1e1e24);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(82, 255, 0, 0.45);
+    box-shadow: 0 8px 20px -6px rgba(82, 255, 0, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.benefit-card--blue:hover {
+    border-color: rgba(56, 182, 255, 0.45);
+    box-shadow: 0 8px 20px -6px rgba(20, 92, 255, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.benefit-icon-box {
+    width: 2.65rem;
+    height: 2.65rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.benefit-card:hover .benefit-icon-box {
+    transform: scale(1.05);
+}
+
+.benefit-icon-box--green {
+    background-color: rgba(82, 255, 0, 0.08);
+    border: 1px solid rgba(82, 255, 0, 0.25);
+    color: var(--color-xenova-green, #52FF00);
+}
+
+.benefit-icon-box--blue {
+    background-color: rgba(20, 92, 255, 0.12);
+    border: 1px solid rgba(56, 182, 255, 0.28);
+    color: var(--color-xenova-cyan, #38B6FF);
 }
 
 /* ==========================================================================
@@ -74,14 +170,63 @@
 .products-prev,
 .products-next {
     background-color: rgba(13, 13, 16, 0.9);
-    border: 1px solid #1e1e24;
+    border: 1px solid var(--color-xenova-border);
     color: #f5f4f5;
     transition: all 0.25s ease;
 }
 
 .products-prev:hover,
 .products-next:hover {
-    background-color: #99241d;
-    border-color: #99241d;
-    color: #ffffff;
+    background-color: var(--color-xenova-green);
+    border-color: var(--color-xenova-green);
+    color: #030303;
+    box-shadow: 0 0 12px rgba(82, 255, 0, 0.35);
+}
+
+/* ==========================================================================
+   УТИЛІТИ ДЛЯ МОНОХРОМНОЇ ПІДСВІТКИ ТА ПІДКРЕСЛЕННЯ
+   ========================================================================== */
+.hover-blue-glow {
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.hover-blue-glow:hover {
+    border-color: var(--color-xenova-blue) !important;
+    box-shadow: 0 10px 26px -5px rgba(20, 92, 255, 0.35) !important;
+}
+
+.hover-green-glow {
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.hover-green-glow:hover {
+    border-color: var(--color-xenova-green) !important;
+    box-shadow: 0 10px 26px -5px rgba(82, 255, 0, 0.28) !important;
+}
+
+.link-underline-green {
+    position: relative;
+    padding-bottom: 3px;
+}
+
+.link-underline-green::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-xenova-green);
+    box-shadow: 0 0 8px rgba(82, 255, 0, 0.5);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.25s ease;
+}
+
+.link-underline-green:hover {
+    color: var(--color-xenova-green) !important;
+}
+
+.link-underline-green:hover::after {
+    transform: scaleX(1);
 }

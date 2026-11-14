@@ -15,12 +15,12 @@
 }
 
 .checkout-option-card:hover {
-    border-color: rgba(153, 36, 29, 0.65);
+    border-color: rgba(20, 92, 255, 0.65);
 }
 
 .checkout-option-card.active {
-    border-color: #99241d;
-    background-color: rgba(153, 36, 29, 0.08);
+    border-color: #145CFF;
+    background-color: rgba(20, 92, 255, 0.1);
 }
 
 .checkout-radio-dot {
@@ -31,12 +31,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    shrink: 0;
+    flex-shrink: 0;
     transition: border-color 0.2s ease;
 }
 
 .checkout-option-card.active .checkout-radio-dot {
-    border-color: #c12824;
+    border-color: #00E5FF;
 }
 
 .checkout-option-card.active .checkout-radio-dot::after {
@@ -44,7 +44,7 @@
     width: 8px;
     height: 8px;
     border-radius: 9999px;
-    background-color: #c12824;
+    background-color: #52FF00;
 }
 
 /* Поля форми оформлення замовлення */
@@ -56,7 +56,7 @@
     padding: 0.65rem 0.85rem;
     font-size: 0.8125rem;
     color: #f5f4f5;
-    transition: border-color 0.2s ease;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .wh-input::placeholder {
@@ -65,5 +65,11 @@
 
 .wh-input:focus {
     outline: none;
-    border-color: #99241d;
+    border-color: #145CFF;
+    box-shadow: 0 0 0 1px rgba(20, 92, 255, 0.35);
+}
+
+.wh-input.is-error {
+    border-color: #ef4444;
+    background-color: rgba(239, 68, 68, 0.05);
 }

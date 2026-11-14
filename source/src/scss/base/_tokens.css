@@ -1,11 +1,47 @@
 @theme {
+    /* ======================================================================
+       ПАЛІТРА XENOVA (ТЕМНИЙ БАЗОВИЙ СТИЛЬ + СИНІЙ + ТОЧКОВИЙ ЗЕЛЕНИЙ)
+       Усі кольори сайту керуються з цього файлу
+       ====================================================================== */
+
+    /* Базові темні поверхні (оригінальні темні відтінки) */
+    --color-xenova-bg: #030303;
+    /* Головний фон сторінки */
+    --color-xenova-surface: #08080a;
+    /* Панель переваг, промо-блоки, підписка */
+    --color-xenova-card: #0d0d10;
+    /* Темний фон карток товарів, блогу, футера */
+    --color-xenova-card-media: #141418;
+    /* Підкладка під зображення товару */
+    --color-xenova-input: #0f0f0f;
+    /* Поля вводу та мега-меню */
+    --color-xenova-elevated: #18181c;
+    /* Кнопки іконок, активний пункт у списку */
+    --color-xenova-border: #1e1e24;
+    /* Тонкі рамки та розділювачі */
+
+    /* Основний синій (базові акценти, кнопки, навігація) */
+    --color-xenova-blue: #145CFF;
+    --color-xenova-blue-hover: #2E72FF;
+    --color-xenova-cyan: #38B6FF;
+
+    /* Неоновий зелений (тільки точкові акценти та hover-підсвітка) */
+    --color-xenova-green: #52FF00;
+    --color-xenova-green-hover: #7AFF3B;
+    --color-xenova-on-green: #030303;
+
+    /* Текст та іконки */
+    --color-xenova-text: #f5f4f5;
+    --color-xenova-muted: #888894;
+
+    /* Сумісність зі старими токенами на решті сторінок */
     --color-whDark: #030303;
     --color-whSearchBg: #0f0f0f;
     --color-whText: #f5f4f5;
-    --color-whRed: #99241d;
-    --color-whBadge: #c12824;
+    --color-whRed: #145CFF;
+    --color-whBadge: #145CFF;
     --color-whBorder: #1e1e24;
-    --color-whCard: #0f0f12;
+    --color-whCard: #0d0d10;
     --color-whMuted: #888894;
 
     --font-sans: 'Plus Jakarta Sans', sans-serif;
@@ -16,7 +52,7 @@
    ========================================================================== */
 html,
 body {
-    background-color: #030303;
-    color: #f5f4f5;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--color-xenova-bg);
+    color: var(--color-xenova-text);
+    font-family: var(--font-sans);
 }

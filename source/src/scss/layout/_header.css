@@ -8,6 +8,29 @@
 }
 
 /* ==========================================================================
+   КОНТЕЙНЕРИ ШАПКИ (ФІКСАЦІЯ МАКСИМАЛЬНОЇ ШИРИНИ 1536PX)
+   ========================================================================== */
+.header-top-inner,
+.header-main-inner,
+.nav-container {
+    width: 100%;
+    max-width: 1536px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 1536px) {
+
+    .header-top-inner,
+    .header-main-inner,
+    .nav-container {
+        max-width: 1536px;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+/* ==========================================================================
    АДАПТИВНІ БРЕЙКПОЇНТИ ШАПКИ
    ========================================================================== */
 .announcement-item-1,
@@ -53,9 +76,9 @@
 
 .main-nav {
     width: 100%;
-    background-color: #030303;
-    border-top: 1px solid var(--color-whBorder);
-    border-bottom: 1px solid var(--color-whBorder);
+    background-color: #030303 !important;
+    border-top: 1px solid var(--color-xenova-border, #1e1e24) !important;
+    border-bottom: 1px solid var(--color-xenova-border, #1e1e24) !important;
     position: relative;
     display: none;
 }
@@ -77,9 +100,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    max-width: 1536px;
-    margin: 0 auto;
     padding: 0 1.5rem;
 }
 
@@ -93,8 +113,8 @@
 
 @media (min-width: 1536px) {
     .nav-row {
-        justify-content: center;
-        gap: 2.25rem;
+        justify-content: space-between;
+        gap: 1.5rem;
     }
 }
 
@@ -116,7 +136,7 @@
 
 .nav-link:hover .nav-link-text,
 .nav-link.active .nav-link-text {
-    color: #99241d;
+    color: #52FF00 !important;
 }
 
 .nav-link-text {
@@ -126,15 +146,24 @@
     transition: color 0.25s ease;
 }
 
-.nav-link.active .nav-link-text::after {
+.nav-link-text::after {
     content: '';
     position: absolute;
     bottom: -0.85rem;
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: #99241d;
+    background-color: #52FF00 !important;
+    box-shadow: 0 0 8px rgba(82, 255, 0, 0.65);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.25s ease;
     pointer-events: none;
+}
+
+.nav-link:hover .nav-link-text::after,
+.nav-link.active .nav-link-text::after {
+    transform: scaleX(1);
 }
 
 .btn-accent {
@@ -142,8 +171,9 @@
     align-items: center;
     justify-content: center;
     padding: 0.5rem 1.25rem;
-    background-color: #99241d;
-    color: #ffffff;
+    background-color: #145CFF !important;
+    border: 1px solid #145CFF !important;
+    color: #ffffff !important;
     font-size: 0.9rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -151,9 +181,12 @@
     border-radius: 6px;
     text-decoration: none;
     white-space: nowrap;
-    transition: background-color 0.25s ease;
+    transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .btn-accent:hover {
-    background-color: #b71c1c;
+    background-color: #52FF00 !important;
+    border-color: #52FF00 !important;
+    color: #030303 !important;
+    box-shadow: 0 0 14px rgba(82, 255, 0, 0.45);
 }

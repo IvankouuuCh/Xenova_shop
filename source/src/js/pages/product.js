@@ -84,6 +84,22 @@ export function productApp() {
             }).slice(0, 4);
         },
 
+        prevImage() {
+            const imgs = this.galleryImages;
+            if (imgs.length <= 1) return;
+            const idx = imgs.indexOf(this.activeImage);
+            const prevIdx = idx <= 0 ? imgs.length - 1 : idx - 1;
+            this.activeImage = imgs[prevIdx];
+        },
+
+        nextImage() {
+            const imgs = this.galleryImages;
+            if (imgs.length <= 1) return;
+            const idx = imgs.indexOf(this.activeImage);
+            const nextIdx = idx < 0 || idx >= imgs.length - 1 ? 0 : idx + 1;
+            this.activeImage = imgs[nextIdx];
+        },
+
         incrementQty() {
             if (this.quantity < 20) {
                 this.quantity += 1;
